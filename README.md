@@ -8,9 +8,17 @@ A Collection of Different features all put into separate mods.
 * Experience
 * Loot
 
+Civilizations to incorporate
+* Terra Magna
+  
+* Chinese
+* Yayoi
+* Millenium AD
+  * Carolingians
+
 ## High Damage
 
-[ ] Armor Reduced
+-[ ] Armor Reduced
 [ ] Attack Increased
 [ ] Archers Attack Speed Reduced
 [ ] More Experience Levels
@@ -87,5 +95,3 @@ Unit Experience, Stats, Configuration
 [ ] Players can apoint AI to control certain portions of their troops or build order.
 [ ] Perhaps set an "Officer" over these AIs and have Officers buildable.
 [ ] This can be used for build order, or micro fighting tactics. 
-
-
