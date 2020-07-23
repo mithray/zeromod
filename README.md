@@ -9,6 +9,7 @@ A Collection of Different features all put into separate mods.
 * Loot
 
 ## High Damage
+
 [ ] Armor Reduced
 [ ] Attack Increased
 [ ] Archers Attack Speed Reduced
@@ -17,6 +18,7 @@ A Collection of Different features all put into separate mods.
 ## Permaculuter and City Building 
 
 ### Permaculture
+
 [ ] Fish Farms. 
 [ ] Plant 
   [ ] Fruit Trees
