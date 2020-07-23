@@ -1,0 +1,40 @@
+---
+genericName: Advanced Leather Armor
+specificName:
+  mace: Linothorakes
+  spart: Linothorakes
+  athen: Linothorakes
+  ptol: Linothorakes
+  sele: Linothorakes
+  pers: Linothorakes
+  rome: Linothorakes
+  cart: Linothorakes
+description: Laminated linen body armor for infantrymen.
+cost:
+  food: 1500
+  wood: 0
+  stone: 0
+  metal: 0
+requirements:
+  tech: town_city
+supersedes: armor_leather_01_basic
+requirementsTooltip: Unlocked in Town Phase.
+icon: armor_pteruges.png
+researchTime: 60
+tooltip: Leather armor quality is increased, more effective and less slow.
+modifications:
+- value: Armour/Hack
+  add: 4
+- value: Armour/Pierce
+  add: 4
+- value: Armour/Crush
+  add: 4
+- value: UnitMotion/WalkSpeed
+  multiply: 0.96
+- value: UnitMotion/RunSpeed
+  multiply: 0.96
+- value: Loot/food
+  multiply: 1.2
+affects:
+- AdvancedLeatherArmour
+soundComplete: interface/alarm/alarm_upgradearmory.xml

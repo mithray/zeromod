@@ -1,0 +1,17 @@
+{
+	"genericName": "Bow Making",
+	"description": "Improved Bows",
+	"cost": {"food": 1000, "wood": 1000, "stone": 0, "metal": 500},
+	"icon": "sword.png",
+	"requirements": {"tech": "phase_village"},
+	"researchTime": 30,
+	"tooltip": "No, no, it was China. All Infantry Melee +1.0 Hack attack, -10% Speed",
+	"modifications": [
+    	{"value": "Attack/Melee/Hack", "add": 1.0},
+		{"value": "UnitMotion/WalkSpeed", "multiply": 0.90},
+		{"value": "UnitMotion/RunSpeed", "multiply": 0.90},
+		{"value": "Loot/metal", "add": 3.0}
+	],
+	"affects": ["Infantry Melee"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

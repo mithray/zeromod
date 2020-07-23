@@ -1,0 +1,40 @@
+---
+genericName: Chain Mail Armor - Advanced
+specificName:
+  mace: Armor - Advanced Chain Mail
+  spart: Armor - Advanced Chain Mail
+  athen: Armor - Advanced Chain Mail
+  ptol: Armor - Advanced Chain Mail
+  sele: Armor - Advanced Chain Mail
+  pers: Armor - Advanced Chain Mail
+  rome: Armor - Advanced Chain Mail
+  cart: Armor - Advanced Chain Mail
+description: Laminated linen body armor for infantrymen.
+cost:
+  food: 1500
+  wood: 0
+  stone: 0
+  metal: 1500
+requirements:
+  tech: town_city
+supersedes: armor_chain_01_basic
+requirementsTooltip: Unlocked in Town Phase.
+icon: armor_pteruges.png
+researchTime: 60
+tooltip: Leather armor quality is increased, more effective and less slow.
+modifications:
+- value: Armour/Hack
+  add: 6
+- value: Armour/Pierce
+  add: 6
+- value: Armour/Crush
+  add: 6
+- value: UnitMotion/WalkSpeed
+  multiply: 0.94
+- value: UnitMotion/RunSpeed
+  multiply: 0.94
+- value: Loot/metal
+  add: 8
+affects:
+- ChainMailArmourAdvanced
+soundComplete: interface/alarm/alarm_upgradearmory.xml

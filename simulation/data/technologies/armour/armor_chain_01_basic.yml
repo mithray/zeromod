@@ -1,0 +1,37 @@
+---
+genericName: Basic Chain Mail Armour
+specificName:
+  mace: Armor - Basic Chain Mail
+  spart: Armor - Basic Chain Mail
+  athen: Armor - Basic Chain Mail
+  ptol: Armor - Basic Chain Mail
+  sele: Armor - Basic Chain Mail
+  pers: Armor - Basic Chain Mail
+  rome: Armor - Basic Chain Mail
+  cart: Armor - Basic Chain Mail
+description: Basic Chain Mail Armour
+cost:
+  food: 1000
+  wood: 0
+  stone: 0
+  metal: 1000
+requirementsTooltip: Basic Leather Armor is usually free.
+icon: armor_pteruges.png
+researchTime: 30
+tooltip: Leather armor quality is increased, more effective.
+modifications:
+- value: Armour/Hack
+  add: 5
+- value: Armour/Pierce
+  add: 5
+- value: Armour/Crush
+  add: 5
+- value: UnitMotion/WalkSpeed
+  multiply: .90
+- value: UnitMotion/RunSpeed
+  multiply: .90
+- value: Loot/metal
+  add: 4
+affects:
+- BasicChainMailArmour
+soundComplete: interface/alarm/alarm_upgradearmory.xml

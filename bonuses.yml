@@ -1,0 +1,91 @@
+teacher:
+
+spear:
+ - spear_skill_01
+ - spear_skill_02
+ - spear_skill_03
+ - spear_skill_04
+ - spear_skill_05
+ - spear_skill_06
+ - spear_skill_07
+ - spear_skill_07
+ - spear_skill_08
+ - spear_skill_09
+sword:
+ - sword_skill_01
+ - sword_skill_02
+ - sword_skill_03
+ - sword_skill_04
+ - sword_skill_05
+ - sword_skill_06
+ - sword_skill_07
+ - sword_skill_07
+ - sword_skill_08
+ - sword_skill_09
+mace:
+ - mace_skill_01
+ - mace_skill_02
+ - mace_skill_03
+ - mace_skill_04
+ - mace_skill_05
+ - mace_skill_06
+ - mace_skill_07
+ - mace_skill_07
+ - mace_skill_08
+ - mace_skill_09
+
+javelin:
+ - javelin_skill_01
+ - javelin_skill_02
+ - javelin_skill_03
+ - javelin_skill_04
+ - javelin_skill_05
+ - javelin_skill_06
+ - javelin_skill_07
+ - javelin_skill_07
+ - javelin_skill_08
+ - javelin_skill_09
+archer:
+ - archer_skill_01
+ - archer_skill_02
+ - archer_skill_03
+ - archer_skill_04
+ - archer_skill_05
+ - archer_skill_06
+ - archer_skill_07
+ - archer_skill_07
+ - archer_skill_08
+ - archer_skill_09
+slinger:
+ - slinger_skill_01
+ - slinger_skill_02
+ - slinger_skill_03
+ - slinger_skill_04
+ - slinger_skill_05
+ - slinger_skill_06
+ - slinger_skill_07
+ - slinger_skill_07
+ - slinger_skill_08
+ - slinger_skill_09
+blowgun:
+ - blowgun_skill_01
+ - blowgun_skill_02
+ - blowgun_skill_03
+ - blowgun_skill_04
+ - blowgun_skill_05
+ - blowgun_skill_06
+ - blowgun_skill_07
+ - blowgun_skill_07
+ - blowgun_skill_08
+ - blowgun_skill_09
+
+heal:
+ - heal_01
+ - heal_02
+ - heal_03
+ - heal_04
+ - heal_05
+ - heal_06
+ - heal_07
+ - heal_08
+ - heal_09

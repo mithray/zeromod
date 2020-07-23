@@ -1,0 +1,44 @@
+---
+Code: seub
+Name: Seubians
+Emblem: 
+History: https://en.wikipedia.org/api/rest_v1/page/summary/Seubians
+Sources:
+  - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0001:book=4:chapter=1&highlight=suevi
+SelectableInGameSetup: true
+Government: League
+Cultures: 
+  Primary: 
+    - Germanic
+    - Celtic
+  Architecture:
+    - Nomadic?
+  Genetic: 
+Food: 
+  Vegetables:
+    - Corn
+    - Barley
+    - Wheat
+  Fruit: ["", ""]
+  Meat:
+    - Sheep
+    - Goats
+    - Pork
+    - Cow
+  Trickle: ["milk", "cheese"]
+CivBonuses:
+    - Name: Plunderers
+      History:
+      Description: Loot * 50%
+    - Name: Animal Husbandry
+      History:
+      Description: -10% Farming Rate, +20% Meat Gathering, +20% Stock Raising Speed, -20% Domestic Animal Cost
+    - Name: Agile
+      History:
+      Description: +10% Infantry Speed, +10% Infantry Sight Range
+    - Name: Hardy
+      History:
+      Description: +10% Unit Health
+    - Name: Semi-Nomad
+      History:
+      Description: Buildings cost -50% and -50% hitpoints, Territory -50% influence. Can build in Neutral Territory, but cannot move structures.

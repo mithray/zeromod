@@ -1,0 +1,16 @@
+{
+	"auraName": "Folk Wisdom",
+	"auraDescription": "Small HP Regeneration for nearby units.",
+	"type": "range",
+	"radius": 60,
+	"affects": ["Worker", "Soldier"],
+	"modifications": [
+		{ "value": "Health/RegenRate", "add": 0.1 } 
+	],
+	"rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+	"stackable": "true"
+}

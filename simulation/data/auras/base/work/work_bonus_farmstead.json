@@ -1,0 +1,20 @@
+{
+	"auraName": "Farm Equipment",
+	"auraDescription": "Nearby food collection is improved.",
+	"type": "range",
+	"radius": 40,
+	"affects": ["Worker"],
+	"modifications": [
+		{ "value": "ResourceGatherer/Capacities/food", "multiply": 1.2 },
+	    {"value": "ResourceGatherer/Rates/food.fruit", "multiply": 1.1 },
+	    {"value": "ResourceGatherer/Rates/food.meat", "multiply": 1.1 },
+	    {"value": "ResourceGatherer/Rates/food.grain", "multiply": 1.1 }
+	],
+	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
+    "rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+	"stackable": "true"
+}

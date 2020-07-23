@@ -1,0 +1,40 @@
+---
+genericName: Armor - Elite Chain Mail
+specificName:
+  mace: Elite Chain Mail
+  spart: Elite Chain Mail
+  athen: Elite Chain Mail
+  ptol: Elite Chain Mail
+  sele: Elite Chain Mail
+  pers: Elite Chain Mail
+  rome: Elite Chain Mail
+  cart: Elite Chain Mail
+description: Laminated linen body armor for infantrymen.
+cost:
+  food: 2000
+  wood: 0
+  stone: 0
+  metal: 2000
+requirements:
+  tech: phase_city
+supersedes: armor_chain_02_advanced
+requirementsTooltip: Unlocked in City Phase.
+icon: armor_pteruges.png
+researchTime: 90
+tooltip: Leather armor quality is increased, more effective and less slow.
+modifications:
+- value: Armour/Hack
+  add: 7
+- value: Armour/Pierce
+  add: 7
+- value: Armour/Crush
+  add: 7
+- value: UnitMotion/WalkSpeed
+  multiply: 0.98
+- value: UnitMotion/RunSpeed
+  multiply: 0.98
+- value: Loot/metal
+  add: 12
+affects:
+- ArmorEliteChainMail
+soundComplete: interface/alarm/alarm_upgradearmory.xml

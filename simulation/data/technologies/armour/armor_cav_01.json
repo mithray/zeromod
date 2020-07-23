@@ -1,0 +1,27 @@
+{
+	"genericName": "Heavy Cavalry",
+	"specificName": {
+		"mace": "Prometōpídion",
+		"spart": "Prometōpídion",
+		"athen": "Prometōpídion",
+		"sele": "Prometōpídion",
+		"ptol": "Prometōpídion"
+	},
+	"description": "Metal armor for a horse's face.",
+	"cost": {"food": 0, "wood": 1500, "stone": 0, "metal": 500},
+	"requirementsTooltip": "Unlocked in Town Phase.",
+	"icon": "armor_plates_cavalry.png",
+	"researchTime": 60,
+	"requirements": {"tech": "phase_village"},
+	"tooltip": "Equip your cavalry mounts with armor. All Cavalry +4 Hack and Pierce armor level, but -30% Speed.",
+	"modifications": [
+		{"value": "Armour/Hack", "add": 4.0},
+		{"value": "Armour/Pierce", "add": 3.0},
+		{"value": "UnitMotion/WalkSpeed", "multiply": 0.70},
+		{"value": "UnitMotion/RunSpeed", "multiply": 0.70},
+		{"value": "Loot/metal", "add": 3.0}
+		
+		],
+	"affects": ["Cavalry"],
+	"soundComplete": "interface/alarm/alarm_upgradearmory.xml"
+}

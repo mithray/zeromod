@@ -1,0 +1,73 @@
+{
+    "no_armor":
+    {
+        "hack": 0,
+        "pierce": 0,
+        "crush": 0,
+        "cost": "0"
+    },
+
+    "leather":
+    {
+        "hack": 1,
+        "pierce": 1,
+        "crush": 2,
+        "cost": "unit_cost.food * .05"
+    },
+
+    "quilted":
+    {
+        "hack": 2,
+        "pierce": 2,
+        "crush": 4,
+        "cost": "unit_cost.food * .1"
+    },
+
+    "quilted_thick":
+    {
+        "hack": 3,
+        "pierce": 3,
+        "crush": 8,
+        "cost": "unit_cost.food * .15"
+    },
+
+    "lamilar_leather":
+    {
+        "hack": 5,
+        "pierce": 5,
+        "crush": 10,
+        "cost": "unit_cost.food * .2"
+    },
+
+    "lamilar_iron":
+    {
+        "hack": 10,
+        "pierce": 10,
+        "crush": 12,
+        "cost": {
+            "iron": "unit_cost.food * 1"
+        }
+        "speed": "-.1"
+    },
+
+    "chainmail":
+    {
+        "hack": 15,
+        "pierce": 15,
+        "crush": 12,
+        "cost": {
+            "iron": "unit_cost.food * .5"
+        }
+        "speed": "-.05"
+    },
+
+    "platemail":
+    {
+        "hack": 25,
+        "pierce": 25,
+        "crush": 14,
+        "cost": {
+            "iron": "unit_cost.food * 1"
+        },
+        "speed": "-.15"
+}

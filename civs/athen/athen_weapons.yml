@@ -1,0 +1,13 @@
+Default:
+  Citizen: knife
+
+
+DefaultMelee:
+  Spear: spear_hoplite
+  Head: head_hele_a
+DefaultRanged:
+  Bow: bow_short
+  Arrow: arrow_back
+
+Helmet: headband_color
+Quiver: quiver_greek_back

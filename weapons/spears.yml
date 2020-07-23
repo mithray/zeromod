@@ -1,0 +1,156 @@
+spear:
+  length: 5
+  cost_ratio: 
+    food: 0
+    wood: 9
+    metal: 1
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear.length
+  damage:
+    pierce: 3.5
+    hack: 2.5
+    crush: 0
+  actor:
+    castshadow: ''
+    group:
+      - variant:
+          props:
+            prop:
+              _actor: props/units/weapons/blades/spear_blade.xml
+              _attachpoint: blade
+          textures:
+            texture:
+              _file: props/prop_weap.dds
+              _name: baseTex
+          _frequency: '1'
+          _name: Base
+      - variant:
+          - mesh: props/weap_shaft_wood_a.dae
+            _frequency: '1'
+            _name: spear-ball-darkgold
+          - mesh: props/weap_shaft_wood_b.dae
+            _frequency: '1'
+            _name: darksilver
+          - mesh: props/weap_shaft_wood_c.dae
+            _frequency: '1'
+            _name: lightgold
+          - mesh: props/weap_shaft_wood_d.dae
+            _frequency: '1'
+            _name: medsilver
+          - mesh: props/weap_shaft_wood_e.dae
+            _frequency: '1'
+            _name: medgold
+    material: default.xml
+    _version: '1'
+
+spear_long:
+  length: weapons.spear.length + 1
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_long.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_long.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_long.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_ball:
+  length: weapons.spear.length
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_ball.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_ball.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_ball.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_bamboo:
+  length: weapons.spear.length
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_bamboo.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_bamboo.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_bamboo.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_gold:
+  length: weapons.spear.length
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_gold.length
+    wood: weapons.spear.cost_ratio.gold * weapons.spear_gold.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_gold.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_hoplite:
+  length: weapons.spear.length
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_hoplite.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_hoplite.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_hoplite.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_lance_cavalry:
+  length: weapons.spear.length + 1
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_lance_cavalry.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_lance_cavalry.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_lance_cavalry.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_lance_cavalry_reverse:
+  length: weapons.spear.length + 1
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_lance_cavalry_reverse.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_lance_cavalry_reverse.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_lance_cavalry_reverse.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_lance_persian:
+  length: weapons.spear.length + 1
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_lance_persian.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_lance_persian.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_lance_persian.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_long_iron:
+  length: weapons.spear.length + 1
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_long_iron.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_long_iron.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_long_iron.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush
+
+spear_reverse:
+  length: weapons.spear.length
+  cost:
+    food: weapons.spear.cost_ratio.food * weapons.spear_reverse.length
+    wood: weapons.spear.cost_ratio.wood * weapons.spear_reverse.length
+    metal: weapons.spear.cost_ratio.metal * weapons.spear_reverse.length
+  damage:
+    pierce: weapons.spear.damage.pierce
+    hack: weapons.spear.damage.hack
+    crush: weapons.spear.damage.crush

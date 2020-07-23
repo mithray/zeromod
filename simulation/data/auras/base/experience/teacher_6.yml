@@ -1,0 +1,10 @@
+affects:
+- Soldier
+auraDescription: Decrease required experience to level up.
+auraName: Teacher 6
+modifications:
+- multiply: 0.94
+  value: Promotion/RequiredXp
+overlayIcon: art/textures/ui/session/auras/attack_bonus.png
+stackable: true
+type: formation

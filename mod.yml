@@ -1,0 +1,12 @@
+dependencies:
+- 0ad>=0.0.23
+description: Takes ideas and content from City Building Mod, Formation Fighting Mod, Delenda Est. Armor Reduced. Attack Increased. Archers Reload Slower. More Experience
+  Levels. Can Plant Fruit Trees, Wood Trees and Roads. More Loot. Units Cost Less
+  Wood, Structures Cost More. No Tower and Outpost Restrictions. Agility and Strength
+  Stats. Heroes are just Experienced Soldiers. Fish Farms. City Building Features(auras).
+  Spikes can be built in own territory. Fine Motor Skills(Makes Females more interesting
+  support class).
+label: Realism
+name: muse
+url: ''
+version: 0.0.1

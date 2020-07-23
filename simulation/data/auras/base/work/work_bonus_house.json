@@ -1,0 +1,18 @@
+{
+	"auraName": "Home Spirit",
+	"auraDescription": "Nearby building and gathering is improved.",
+	"type": "range",
+	"radius": 60,
+	"affects": ["Worker"],
+	"modifications": [
+		{ "value": "Builder/Rate", "multiply": 1.03 },
+		{ "value": "ResourceGatherer/BaseSpeed", "multiply": 1.03 }
+	],
+	"overlayIcon": "art/textures/ui/session/auras/buildgather_bonus.png",    
+	"rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+	"stackable": "true"
+}

@@ -1,0 +1,4 @@
+profession: <citizen, mercenary, champion, hero>
+gender: <male, female>
+civilization: athens
+classes: @profession

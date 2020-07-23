@@ -1,0 +1,22 @@
+{
+	"auraName": "Quick Shuttle",
+	"auraDescription": "More efficient wood, stone, and metal working.",
+	"type": "range",
+	"radius": 40,
+	"affects": ["Worker"],
+	"modifications": [
+		{ "value": "ResourceGatherer/Capacities/wood", "multiply": 1.2 },
+		{ "value": "ResourceGatherer/Capacities/stone", "multiply": 1.2 },
+		{ "value": "ResourceGatherer/Capacities/metal", "multiply": 1.2 },
+	    {"value": "ResourceGatherer/Rates/wood", "multiply": 1.1 },
+	    {"value": "ResourceGatherer/Rates/stone", "multiply": 1.1 },
+	    {"value": "ResourceGatherer/Rates/metal", "multiply": 1.1 }
+	],
+	"overlayIcon": "art/textures/ui/session/auras/resource_bonus.png",
+    "rangeOverlay" : {
+        "lineTexture": "overlay/dash.png",
+        "lineTextureMask": "overlay/dash_mask.png",
+        "lineThickness": 0.1
+    },
+	"stackable": "true"
+}
