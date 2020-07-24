@@ -1,0 +1,36 @@
+---
+genericName: Bowmaking 1
+specificName:
+  mace: Átaktoi
+  spart: Átaktoi
+  athen: Átaktoi
+  sele: Átaktoi
+  ptol: Átaktoi
+description: &description Stronger and less cumbersome bows.
+cost:
+  food: 500
+  wood: 500
+  stone: 0
+  metal: 0
+requirements:
+  tech: phase_town
+requirementsTooltip: Unlocked in Town Phase.
+icon: arrow.png
+researchTime: 20
+tooltip: *description
+modifications:
+- value: Attack/Ranged/Hack
+  multiply: 1.15
+- value: Attack/Ranged/Pierce
+  multiply: 1.15
+- value: Attack/Ranged/Crush
+  multiply: 1.15
+- value: UnitMotion/WalkSpeed
+  multiply: 1.05
+- value: UnitMotion/RunSpeed
+  multiply: 1.05
+- value: Loot/wood
+  mutliply: 1.4
+affects:
+- Bow
+soundComplete: interface/alarm/alarm_upgradearmory.xml

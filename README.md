@@ -9,19 +9,32 @@ A Collection of Different features all put into separate mods.
 * Loot
 
 Civilizations to incorporate
-* Terra Magna
-  
-* Chinese
-* Yayoi
-* Millenium AD
+* [Terra Magna](https://github.com/0ADMods/terra_magna)
+  * Xiongnu
+  * Chinese(Plus 7 Warring States factions)
+  * Zapotec
+* [Pre Colonial America](https://github.com/0ADMods/pre-colonial-mod))
+  * Incas
+  * Zapotecs
+  * Aztecs
+* [Millenium AD](https://github.com/0ADMods/millenniumad)
   * Carolingians
+  * Norse
+  * Umayyads
+  * Anglo-Saxons
+* [Thracians](https://github.com/0ADMods/thracians)
+* [Delenda Est](https://github.com/JustusAvramenko/delenda_est)
+  * Thebans
+  * Epirotes
+  * Principate Romans
+* Yayoi
 
 ## High Damage
 
--[ ] Armor Reduced
-[ ] Attack Increased
-[ ] Archers Attack Speed Reduced
-[ ] More Experience Levels
+- [ ] Armor Reduced
+- [ ] Attack Increased
+- [ ] Archers Attack Speed Reduced
+- [ ] More Experience Levels
 
 ## Permaculuter and City Building 
 
