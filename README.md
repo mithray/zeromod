@@ -1,7 +1,6 @@
 # Muse
 
-The first goal of this project is to unify as much of the game data as possible from other mods into a single mod. This is done by having a much smaller amount of configuration files by removing redundancy in the configuration files. With redundancy removed, it's possible to generate config files for particular periods, and easy to add new civilizations and factions based on existing files, with very small changes needed. This project seeks to reduce time needed editing XML files so that more
-time can be spent in historical research and art design.
+The first goal of this project is to unify as much of the game data as possible from other mods into a single mod. This is done by having a much smaller amount of configuration files by removing redundancy in the configuration files. With redundancy removed, it's possible to generate config files for particular periods, and easy to add new civilizations and factions based on existing files, with very small changes needed. This project seeks to reduce time needed editing XML files so that more time can be spent in historical research and art design.
 
 A Collection of Different features all put into separate mods.
 
