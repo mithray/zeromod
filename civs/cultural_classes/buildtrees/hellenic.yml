@@ -1,0 +1,6 @@
+hellenic: &hellenic
+- ${buildtree.standard}
+# Town Phase
+- stoa
+# City Phase
+- theatron

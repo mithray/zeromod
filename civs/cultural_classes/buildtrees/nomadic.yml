@@ -1,0 +1,5 @@
+nomad: &nomad
+- ${buildtree.standard}
+- -market
+- -farmstead
+- farmstead_market

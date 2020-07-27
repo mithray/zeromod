@@ -1,0 +1,26 @@
+Entity:
+  Armour:
+    Hack: 4
+    Pierce: 4
+  Attack:
+    Melee:
+      Damage:
+        Hack: 12
+        Pierce: 10
+        Crush: 0
+      MaxRange: 4.5
+      PrepareTime: 450
+      RepeatTime: 900
+      Bonuses:
+        BonusCavMelee:
+          Classes: Cavalry
+          Multiplier: 3
+      PreferredClasses: Human
+  Identity:
+    VisibleClasses: Melee Spearman
+    GenericName: Hero Spearman
+    Tooltip: "Counters: 3x vs. Cavalry."
+    Formations: special/formations/testudo
+  Sound:
+    SoundGroups:
+      attack_melee: attack/weapon/spear_attack.xml

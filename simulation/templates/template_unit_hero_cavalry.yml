@@ -1,0 +1,32 @@
+Entity:
+  Armour:
+    Hack: 10
+    Pierce: 8
+    Crush: 25
+  Cost:
+    BuildTime: 50
+    Resources:
+      food: 300
+      wood: 200
+      metal: 250
+  Footprint:
+    Circle: ""
+    Height: 5
+  Health:
+    Max: 1500
+  Identity:
+    VisibleClasses: Cavalry
+    GenericName: Hero Cavalry
+    Formations: special/formations/wedge
+  Sound:
+    SoundGroups:
+      trained: interface/alarm/alarm_create_cav.xml
+      walk: actor/mounted/movement/walk.xml
+      run: actor/mounted/movement/walk.xml
+      death: actor/fauna/death/death_horse.xml
+  StatusBars:
+    HeightOffset: 6.5
+  UnitMotion:
+    WalkSpeed: 2
+  Vision:
+    Range: 100

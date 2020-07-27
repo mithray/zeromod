@@ -1,4 +1,5 @@
 const convert = require('xml-js')
+const parser = require('fast-xml-parser');
 const format = require('xml-formatter')
 const yaml = require('yaml')
 const fs = require('fs')
@@ -33,25 +34,42 @@ var filePath = file_path;
 function readFile(filePath){
     fs.readFile(filePath, {encoding: 'utf-8'}, function(err,data){
         if (!err) {
-            var newLine2Array = function(val) {
-                val = val.replace(/ /g,'')
+            var newLine2Array = function(val, parent) {
+    //            val = val.replace(/ /g,'')
                 val = val.trim()
-                val = val.split("\n")
+                if(val.includes('\n')){
+                    val = val.split("\n")
+                    val = val.map(s => s.trim());
+//                    val = val.trim()
+                }
                 return val
             }
             var array2NewLine = function(val, elementName, currentElementObject) {
                 return val
             }
-            var options1 = { compact: true, textFn: newLine2Array}
+            var options1 = { compact: true, textFn: newLine2Array, nativeType: true, ignoreDeclaration: true, ignoreText: false}
             var options2 = { compact: true, spaces: 2, textFn: array2NewLine}
 
+            var options3 = { tagValueProcessor:  newLine2Array}
+            var tObj = parser.getTraversalObj(data,options3)
+            var json = parser.convertToJson(tObj,{})
+        var res_yaml = yaml.stringify(json)
+
+ //       console.log(res_yaml)
+//            console.log(json)
+ //           console.log(JSON.stringify(json))
+            /*
         var res = convert.xml2js(data,options1)
-            console.log(res)
-//        var res_yaml = yaml.stringify(res)
+            console.log(res.Entity.Health.Max)
+            */
+            var writeDestination = path.join(__dirname,'./simulation/templates/')
+            var newFileName = path.basename(filePath,'.xml') + '.yml'
+            var writePath = path.join(writeDestination,newFileName)
+            fs.writeFileSync(writePath, res_yaml)
+
 //        console.log(res_yaml)
 //        console.log(res["Entity"].Builder.Entities._text)
 //        var js = yaml.parse(res_yaml)
-//        console.log(res_yaml)
 //        var json = JSON.stringify(js).trim()
 //        console.log(json)
 //        var xml = convert.json2xml(json,options2)

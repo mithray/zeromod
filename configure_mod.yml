@@ -1,0 +1,51 @@
+civilizations: ["hellenic"]   
+name: Greek States 
+    #  athen: true
+    #  brit: false
+    #  cart: false
+    #  gaul: false
+    #  iber: false
+    #  kush: false
+    #  mace: false
+    #  maur: false
+    #  pers: false
+    #  ptol: false
+    #  rome: false
+    #  sele: false
+    #  spart: false
+citizen_soldier: true
+soldiers_construct_siege: true
+
+loot:
+  collect_as: resource # treasure|resource|instant
+  trade_carts_collect: true
+
+defensive_houses: true
+garrison_civic: true
+
+battle:
+  armor: low
+  health: medium
+  damage: high
+  wounded: true
+
+experience:
+  promote_across_class: true
+  classes:
+    - citizen soldier
+    - professional
+    - champion
+    - hero
+
+agriculture:
+  farms_used_and_regrow: true
+  bushes_regrow: true
+  farms_tiny_fields: true
+  fauna_manure: true
+  fauna_trickle: true
+  fauna_consume_farms: true
+
+phase:
+  type: phase # <phase|age> whether to make phase researchable or to apply automatically when certain conditions - such as number of buildings - are met 
+  territory: contiguous # <contiguous|global> whether to apply the phase to contiguous territories or globally.
+

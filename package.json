@@ -18,8 +18,13 @@
   },
   "homepage": "https://github.com/mithrayls/0ad_realism#readme",
   "dependencies": {
+    "change-case": "^4.1.1",
+    "fast-xml-parser": "^3.17.4",
     "htmlparser2": "^4.1.0",
     "js-yaml": "^3.14.0",
+    "node-fetch": "^2.6.0",
+    "safe-eval": "^0.4.1",
+    "wikijs": "^6.0.1",
     "xml-formatter": "^2.1.2",
     "xml-js": "^1.6.11",
     "yaml": "^1.10.0"

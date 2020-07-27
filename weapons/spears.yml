@@ -12,7 +12,16 @@ spear:
     pierce: 3.5
     hack: 2.5
     crush: 0
+  max_range: 4.5
+  bonuses:
+    bonus_cav_melee:
+      classes: Cavalry
+      multiplier: 3
+  preferred_classes: Human
+  tooltip: "Counters: 3x vs. Cavalry."
   actor:
+    shaft: props/weap_shaft_wood_[a-z]*.dae
+    blade: props/units/weapons/blades/spear_blade.xml
     castshadow: ''
     group:
       - variant:
@@ -27,6 +36,9 @@ spear:
           _frequency: '1'
           _name: Base
       - variant:
+          - mesh: props/weap_shaft_wood_[a-z]*.dae
+            frequency: '1'
+            name: shaft
           - mesh: props/weap_shaft_wood_a.dae
             _frequency: '1'
             _name: spear-ball-darkgold

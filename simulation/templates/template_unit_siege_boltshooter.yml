@@ -1,0 +1,61 @@
+Entity:
+  Attack:
+    Ranged:
+      Damage:
+        Hack: 0
+        Pierce: 150
+        Crush: 25
+      MaxRange: 80
+      MinRange: 26
+      PrepareTime: 5000
+      RepeatTime: 6000
+      Delay: 0
+      Splash:
+        Shape: Linear
+        Range: 8
+        FriendlyFire: false
+        Damage:
+          Hack: 0
+          Pierce: 75
+          Crush: 5
+      Projectile:
+        Speed: 150
+        Spread: 2
+        Gravity: 9.81
+        FriendlyFire: false
+        LaunchPoint: ""
+      PreferredClasses: Human Siege
+  Capturable:
+    RegenRate: 20
+  Cost:
+    BuildTime: 20
+    Resources:
+      wood: 250
+      metal: 250
+    Population: 2
+  Footprint:
+    Square: ""
+    Height: 2
+  Health:
+    Max: 200
+  Identity:
+    VisibleClasses: Ranged BoltShooter
+    GenericName: Bolt Shooter
+  Loot:
+    xp: 200
+    food: 0
+    wood: 10
+    stone: 0
+    metal: 10
+  Pack:
+    Time: 10000
+  Sound:
+    SoundGroups:
+      attack_impact_ranged: attack/impact/arrow_metal.xml
+      attack_ranged: attack/weapon/arrowfly.xml
+  UnitAI:
+    DefaultStance: standground
+  UnitMotion:
+    WalkSpeed: 0.9
+  Vision:
+    Range: 120

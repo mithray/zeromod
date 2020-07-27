@@ -1,0 +1,4 @@
+attic: &attic
+- structures/wallset_palisade
+- structures/athen_wallset_stone
+

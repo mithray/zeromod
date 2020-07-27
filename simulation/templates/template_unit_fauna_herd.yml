@@ -1,0 +1,10 @@
+Entity:
+  Identity:
+    Tooltip: Kill to gather meat for food.
+  ResourceSupply:
+    KillBeforeGather: true
+    Amount: 100
+    Type: food.meat
+    MaxGatherers: 8
+  Vision:
+    Range: 20

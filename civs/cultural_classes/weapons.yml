@@ -1,0 +1,22 @@
+# Hellenic Cultures
+Default:
+  Citizen: knife
+DefaultMelee:
+  Spear: spear_hoplite
+  Head: head_hele_a
+DefaultRanged:
+  Bow: bow_short
+  Arrow: arrow_back
+
+Helmet: headband_color
+Quiver: quiver_greek_back
+# Celtic Cultures
+# Germanic Cultures
+# Frankish Cultures
+# African Cultures
+# Indian Cultures
+# Near East Cultures
+# Mediterranean Cultures
+# Latin Cultures
+# East Asian Cultures
+# Pre-Columbian American Cultures

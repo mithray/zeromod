@@ -1,0 +1,107 @@
+---
+standard: &standard
+- special/formations/null
+- special/formations/box
+- special/formations/column_closed
+- special/formations/line_closed
+- special/formations/column_open
+- special/formations/line_open
+- special/formations/flank
+- special/formations/skirmish
+- special/formations/wedge
+- special/formations/battle_line
+
+# Hellenic Cultures
+hellenic: &hellenic
+- *standard
+- special/formations/phalanx
+attic: &attic
+- *standard
+- special/formations/phalanx
+spartan: &hellenic
+- *standard
+- special/formations/phalanx
+macedonian: &hellenic
+- *standard
+- special/formations/phalanx
+- special/formations/syntagma
+ptolemaic: &ptolmaic
+- *standard
+- special/formations/phalanx
+- special/formations/syntagma
+seleucid: &seleucid
+- *standard
+- special/formations/phalanx
+- special/formations/syntagma
+
+# Celtic Cultures
+celtic: &celtic
+- *standard
+gallic: &gallic
+- *standard
+brittonic: &brittonic
+- *standard
+
+# Germanic Cultures
+norse: &norse
+- *standard
+- special/formations/shieldwall
+anglo: &anglo
+- *standard
+- special/formations/shieldwall
+
+# Frankish Cultures
+carolingian: &carolingian
+- *standard
+- special/formations/shieldwall
+
+# African Cultures
+egyptian: &egyptian
+- *standard
+kushite: &kushite
+- *standard
+- special/formations/syntagma
+
+# Indian Cultures
+mauryan: &mauryan
+- *standard
+
+# Near East Cultures
+persian: &persian
+- *standard
+- special/formations/phalanx
+byzantine: &byzantine
+- *standard
+- special/formations/shieldwall
+umayyad: &umayyad
+- *standard
+
+# Mediterranean Cultures
+iberian: &iberian
+- *standard
+carthaginian: &carthaginian
+- *standard
+- special/formations/phalanx
+
+# Latin Cultures
+roman: &testudo
+- *standard
+- special/formations/testudo
+- special/formations/anti_cavalry
+
+# East Asian Cultures
+chinese: &chinese
+- *standard
+- special/phalanx
+xiongnu: &xiongnu
+- *standard
+
+# Pre-Columbian American Cultures
+pre_columbian: &pre_columbian
+- *standard
+inca: &inca
+- *standard
+mex: &mex
+- *standard
+zapo: &zapo
+- *standard

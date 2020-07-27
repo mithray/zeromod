@@ -1,0 +1,3 @@
+celts: &celts
+- ${buildtree.standard}
+- rotary mill

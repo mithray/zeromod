@@ -1,0 +1,25 @@
+Entity:
+  Armour:
+    Hack: 9
+    Pierce: 9
+  Attack:
+    Melee:
+      Damage:
+        Hack: 4
+        Pierce: 20
+        Crush: 0
+      MaxRange: 7
+      PrepareTime: 1000
+      RepeatTime: 2000
+      Bonuses:
+        BonusCavMelee:
+          Classes: Cavalry
+          Multiplier: 3
+      PreferredClasses: Human
+  Identity:
+    VisibleClasses: Melee Pikeman
+    GenericName: Hero Pikeman
+    Tooltip: "Counters: 3x vs. Cavalry."
+    Formations: special/formations/testudo
+  UnitMotion:
+    WalkSpeed: 0.95

@@ -1,0 +1,20 @@
+Entity:
+  Armour:
+    Hack: 1
+    Pierce: 3
+    Crush: 1
+  Footprint:
+    Square: ""
+    Height: 1.5
+  Identity:
+    VisibleClasses: Elephant
+  ResourceSupply:
+    Amount: 100
+  Sound:
+    SoundGroups:
+      select: actor/fauna/animal/elephant_select.xml
+      order_attack: actor/fauna/animal/elephant_attack_order.xml
+      order_walk: actor/fauna/animal/elephant_order.xml
+      attack_melee: actor/fauna/animal/elephant_attack.xml
+      death: actor/fauna/animal/elephant_death.xml
+      trained: actor/fauna/animal/elephant_trained.xml

@@ -1,0 +1,21 @@
+Entity:
+  Armour: ${armor.leather_l01c01}
+  Attack: ${weapons.spear}
+  Cost: ${weapons.spear.cost}
+  Identity:
+    VisibleClasses:
+    - Citizen Soldier
+    - Citizen
+    - Soldier
+    - ${mount.class}
+    - ${weapon.class}
+    - ${}
+    GenericName: Spearman
+    Tooltip: ${weapons.spear.tooltip}
+  Loot:
+    wood: 5
+  UnitMotion:
+    WalkSpeed: 0.95
+  Sound:
+    SoundGroups:
+      attack_melee: attack/weapon/spear_attack.xml

@@ -1,0 +1,72 @@
+Entity:
+  Armour:
+    Hack: 5
+    Pierce: 10
+    Crush: 5
+  Cost:
+    Population: 1
+    BuildTime: 20
+    Resources:
+      food: 0
+      wood: 50
+      stone: 0
+      metal: 0
+  Decay:
+    SinkingAnim: true
+    DelayTime: 0
+    SinkRate: 0.5
+    SinkAccel: 7
+  Footprint:
+    Square: ""
+    Height: 8
+    MaxSpawnDistance: 10
+  Health:
+    Unhealable: true
+    Max: 200
+  Identity:
+    Classes: -Organic
+    VisibleClasses: Ship
+    GenericName: Ship
+    Formations: ""
+  Loot:
+    xp: 60
+    food: 0
+    wood: 50
+    stone: 0
+    metal: 25
+  Position:
+    Anchor: upright
+    Floating: true
+    FloatDepth: 0
+    TurnRate: 3
+  Repairable:
+    RepairTimeRatio: 4
+  ResourceGatherer:
+    MaxDistance: 4
+    BaseSpeed: 1
+    Capacities:
+      food: 40
+      wood: 20
+      stone: 20
+      metal: 20
+  Selectable:
+    Overlay:
+      Texture:
+        MainTexture: 128x512/ellipse.png
+        MainTextureMask: 128x512/ellipse_mask.png
+  Sound:
+    SoundGroups:
+      trained: interface/alarm/alarm_create_warship.xml
+      select: actor/ship/ship_select_01.xml
+      order_walk: actor/ship/warship_move_01.xml
+      order_attack: actor/ship/warship_move_01.xml
+      order_gather: actor/ship/warship_move_01.xml
+      death: actor/ship/warship_death.xml
+  StatusBars:
+    BarWidth: 6
+    BarHeight: 0.5
+    HeightOffset: 6
+  UnitMotion:
+    PassabilityClass: ship
+  Vision:
+    Range: 90

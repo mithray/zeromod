@@ -2,16 +2,25 @@
 autoResearch: true
 icon: upgrade_advanced.png
 tooltip: 'Units promoted to the advanced class are much stronger.'
-multiplier_attack: &attack 1.1
-multiplier_armor: &armor 1.1
-multiplier_loot: &loot 1.2
-multiplier_speed: &speed 1.2
-multiplier_vision: &vision 1.1
-multiplier_range: &range 1.1
-multiplier_spread: &range 0.9
-multiplier_xp: &experience 1.2
-multiplier_gather: &gather 0.7
-multiplier_health: &health 1.1
+multiplier:
+  armor: &armor 1.1
+  xp: &experience 1.2
+  gather: &gather 0.7
+  health: &health 1.1
+  loot: &loot 1.2
+  speed: &speed 1.2
+  vision: &vision 1.1
+  attack:
+    ranged: 
+      damage: &ranged_damage 1.1
+      spread: &spread 0.9
+      range: &range 1.05
+    melee:
+      damage: &melee_damage 1.1
+    heal:
+      value: &heal_value 1.5
+    capture:
+      value: &capture_value 1.5
 modifications:
 - value: Health/Max
   multiply: *health 
@@ -24,7 +33,7 @@ modifications:
 - value: Armour/Crush
   multiply: *armor
 - value: Attack/Capture/Value
-  multiply: *attack
+  multiply: *capture_value
 - value: ResourceGatherer/BaseSpeed
   multiply: *gather
 - value: UnitMotion/WalkSpeed
@@ -48,32 +57,32 @@ modifications:
 - value: Attack/Ranged/Spread
   multiply: *spread
   affects: Ranged
-- value: Attack/Melee/Damge/Hack
-  multiply: *attack
+- value: Attack/Melee/Damage/Hack
+  multiply: *melee_damage
   affects: Melee
-- value: Attack/Ranged/Damege/Hack
-  multiply: *attack
+- value: Attack/Ranged/Damage/Hack
+  multiply: *ranged_damage
   affects: Ranged
 - value: Attack/Melee/Damage/Pierce
-  multiply: *attack
+  multiply: *melee_damage
   affects: Melee
 - value: Attack/Ranged/Damage/Pierce
-  multiply: *attack
+  multiply: *ranged_damage
   affects: Ranged
 - value: Attack/Melee/Damage/Crush
-  multiply: *attack
+  multiply: *melee_damage
   affects: Melee
 - value: Attack/Ranged/Damage/Crush
-  multiply: *attack
+  multiply: *ranged_damage
   affects: Ranged
 - value: Vision/Range
-  multiply: *attack
+  multiply: *vision
   affects: Healer
 - value: Heal/Range
   multiply: *range
   affects: Healer
 - value: Heal/HP
-  multiply: *attack
+  multiply: *heal_value
   affects: Healer
 - value: Loot/food
   multiply: *loot

@@ -1,0 +1,51 @@
+# Mediterranean Diets
+mediterranean: &mediterranean
+  vegetables: 
+    - barley
+    - wheat
+  fruit:
+    - grapes
+    - olives
+  meat: 
+    - goats
+    - sheep
+  trickle: 
+    - eggs
+    - milk
+
+# Pastoral Diets
+pastoral: &pastoral
+  meat:
+    - Sheep
+    - Goats
+    - Pork
+    - Cow
+  trickle: 
+    - eggs
+    - milk
+    - cheese
+scythian: &pastoral
+seubian: &pastoral
+xiongnu: &pastoral
+
+# East Asian Diets
+east_asian: &east_asian
+  vegetables: 
+    - rice
+  meat:
+    - Pork
+    - Sheep
+    - Goats
+    - Cow
+  trickle: 
+    - eggs
+
+# Hellenic Diets
+# Celtic Diets
+# Germanic Diets
+# Frankish Diets
+# African Diets
+# Indian Diets
+# Near East Diets
+# Latin Diets
+# Pre-Columbian American Diets

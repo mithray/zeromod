@@ -1,0 +1,15 @@
+Entity:
+  Attack:
+    Melee:
+      Damage:
+        Hack: 1
+        Pierce: 1
+        Crush: 0
+      MaxRange: 4
+      PrepareTime: 500
+      RepeatTime: 1000
+      RestrictedClasses: Structure Ship Siege
+  UnitAI:
+    NaturalBehaviour: violent
+  Vision:
+    Range: 10

@@ -1,0 +1,7 @@
+Entity:
+  Identity:
+    Classes: Domestic
+  UnitAI:
+    NaturalBehaviour: domestic
+  Vision:
+    Range: 6

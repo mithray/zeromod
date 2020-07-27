@@ -1,0 +1,31 @@
+Entity:
+  Armour:
+    Hack: 10
+    Pierce: 10
+  Attack:
+    Melee:
+      Damage:
+        Hack: 1
+        Pierce: 3
+      MaxRange: 7
+      RepeatTime: 2000
+      Bonuses:
+        BonusCavMelee:
+          Classes: Cavalry
+          Multiplier: 3
+      PreferredClasses: Human
+  Cost:
+    Resources:
+      wood: 50
+  Identity:
+    VisibleClasses: Pikeman
+    GenericName: Pikeman
+    Tooltip: "Counters: 3x vs. Cavalry."
+    Formations: special/formations/syntagma
+  Loot:
+    wood: 5
+  UnitMotion:
+    WalkSpeed: 0.8
+  Sound:
+    SoundGroups:
+      attack_melee: attack/weapon/pike_attack.xml

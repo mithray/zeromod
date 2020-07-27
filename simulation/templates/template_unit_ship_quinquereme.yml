@@ -1,0 +1,69 @@
+Entity:
+  Attack:
+    Ranged:
+      Damage:
+        Hack: 0
+        Pierce: 10
+        Crush: 100
+      MaxRange: 72
+      MinRange: 10
+      PrepareTime: 2000
+      RepeatTime: 5000
+      Delay: 0
+      Splash:
+        Shape: Circular
+        Range: 10
+        FriendlyFire: false
+        Damage:
+          Hack: 0
+          Pierce: 15
+          Crush: 35
+      Projectile:
+        Speed: 37.5
+        Spread: 4
+        Gravity: 9.81
+        FriendlyFire: false
+        LaunchPoint: ""
+      PreferredClasses: Ship Structure
+  BuildingAI:
+    DefaultArrowCount: 1
+    MaxArrowCount: 10
+    GarrisonArrowMultiplier: 1
+    GarrisonArrowClasses: StoneThrower
+  Cost:
+    Population: 3
+    BuildTime: 30
+    Resources:
+      wood: 350
+      metal: 200
+      stone: 350
+  Footprint:
+    Square: ""
+    Height: 8
+  GarrisonHolder:
+    Max: 50
+    EjectHealth: 0
+    EjectClassesOnDestroy: FemaleCitizen Infantry Healer Dog
+    List: Support Infantry Cavalry Dog Siege Elephant
+    BuffHeal: 0
+    LoadingRange: 10
+    Pickup: true
+  Health:
+    Max: 2000
+  Identity:
+    VisibleClasses: Ranged Warship Quinquereme
+    GenericName: Heavy Warship
+    RequiredTechnology: phase_city
+    Tooltip: Garrison units for transport and to increase firepower.
+  Loot:
+    xp: 150
+    wood: 40
+    metal: 30
+  ResourceGatherer: ""
+  Sound:
+    SoundGroups:
+      attack_ranged: attack/siege/ballist_attack.xml
+  UnitMotion:
+    WalkSpeed: 1.8
+  Vision:
+    Range: 110

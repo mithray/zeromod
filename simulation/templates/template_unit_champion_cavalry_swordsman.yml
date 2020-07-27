@@ -1,0 +1,25 @@
+Entity:
+  Armour:
+    Hack: 1
+    Pierce: 2
+  Attack:
+    Melee:
+      Damage:
+        Hack: 13
+        Pierce: 0
+        Crush: 0
+      MaxRange: 3.5
+      PrepareTime: 375
+      RepeatTime: 750
+      PreferredClasses: Unit+!Ship
+  Cost:
+    Resources:
+      wood: 75
+      metal: 125
+  Health:
+    Max: 300
+  Identity:
+    VisibleClasses: Melee Swordsman
+    GenericName: Champion Cavalry Swordsman
+  UnitMotion:
+    WalkSpeed: 1.2

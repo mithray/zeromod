@@ -1,0 +1,65 @@
+Entity:
+  Armour:
+    Hack: 2
+    Pierce: 5
+    Crush: 2
+  Attack:
+    Melee:
+      Damage:
+        Hack: 10
+        Pierce: 0
+        Crush: 0
+      MaxRange: 5
+      PrepareTime: 500
+      RepeatTime: 1000
+      RestrictedClasses: "!SeaCreature"
+  Footprint:
+    Square: ""
+    Height: 6
+  GarrisonHolder:
+    Max: 1
+    EjectHealth: 0
+    EjectClassesOnDestroy: FemaleCitizen Infantry Healer
+    List: Support Infantry
+    BuffHeal: 0
+    LoadingRange: 10
+    Pickup: true
+  Identity:
+    Classes: -ConquestCritical
+    VisibleClasses: FishingBoat
+    Formations: ""
+    GenericName: Fishing Boat
+    SelectionGroupName: template_unit_ship_fishing
+    Tooltip: Fish the waters for food.
+  Loot:
+    xp: 1
+    wood: 10
+    metal: 0
+  ResourceGatherer:
+    MaxDistance: 6
+    BaseSpeed: 1
+    Rates:
+      food.fish: 1.8
+      treasure: ""
+  Selectable:
+    Overlay:
+      Texture:
+        MainTexture: 128x256/ellipse.png
+        MainTextureMask: 128x256/ellipse_mask.png
+  Sound:
+    SoundGroups:
+      order_walk: actor/ship/boat_move.xml
+      order_attack: actor/ship/boat_move.xml
+  StatusBars:
+    BarWidth: 2
+    BarHeight: 0.333
+    HeightOffset: 5
+  UnitAI:
+    DefaultStance: passive
+    CanGuard: false
+    CanPatrol: false
+  UnitMotion:
+    PassabilityClass: ship-small
+    WalkSpeed: 1.1
+  Vision:
+    Range: 30

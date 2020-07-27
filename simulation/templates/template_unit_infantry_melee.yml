@@ -1,0 +1,16 @@
+Entity:
+  Attack:
+    Melee:
+      Damage:
+        Hack: 1
+        Pierce: 0
+        Crush: 0
+      MaxRange: 3.5
+      PrepareTime: 500
+      RepeatTime: 1000
+  Health:
+    Max: 100
+  Identity:
+    GenericName: Melee Infantry
+    VisibleClasses: Melee
+    Formations: special/formations/testudo

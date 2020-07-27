@@ -1,0 +1,179 @@
+# Hellenic Cultures
+hellenic: &hellenic
+- File: Harvest_Festival.ogg
+  Type: peace
+- File: Helen_Leaves_Sparta.ogg
+  Type: peace
+- File: Peaks_of_Atlas.ogg
+  Type: peace
+- File: Forging_a_City-State.ogg
+  Type: peace
+- File: The_Hellespont.ogg
+  Type: peace
+- File: Highland_Mist.ogg
+  Type: peace
+
+attic: &attic
+- File: Harvest_Festival.ogg
+  Type: peace
+- File: Forging_a_City-State.ogg
+  Type: peace
+- File: Highland_Mist.ogg
+  Type: peace
+- File: The_Hellespont.ogg
+  Type: peace
+
+spartan: &spartan
+- File: Helen_Leaves_Sparta.ogg
+  Type: peace
+- File: Peaks_of_Atlas.ogg
+  Type: peace
+- File: Forging_a_City-State.ogg
+  Type: peace
+- File: The_Hellespont.ogg
+  Type: peace
+
+macedonian: &macedonian
+- File: Rise_of_Macedon.ogg
+  Type: peace
+- File: In_the_Shadow_of_Olympus.ogg
+  Type: peace
+- File: Elysian_Fields.ogg
+  Type: peace
+- File: The_Hellespont.ogg
+  Type: peace
+seleucid: &seleucid
+- File: Rise_of_Macedon.ogg
+  Type: peace
+- File: In_the_Shadow_of_Olympus.ogg
+  Type: peace
+- File: The_Hellespont.ogg
+  Type: peace
+
+
+
+ptolmaic: &ptolmaic
+- File: Ammon_Ra.ogg
+  Type: peace
+- File: Sands_of_Time.ogg
+  Type: peace
+- File: Land_between_the_Two_Seas.ogg
+  Type: peace
+- File: Valley_of_the_Nile.ogg
+  Type: peace
+- File: Eastern_Dreams.ogg
+  Type: peace
+
+
+# Indian Cultures
+indian: &indian
+- File: An_old_Warhorse_goes_to_Pasture.ogg
+  Type: peace
+- File: Land_between_the_two_Seas.ogg
+  Type: peace
+- File: Eastern_Dreams.ogg
+  Type: peace
+- File: Karmic_Confluence.ogg
+  Type: peace
+
+mauryan: &mauryan
+- *indian
+
+carthaginian: &carthaginian
+- File: Harsh_Lands_Rugged_People.ogg
+  Type: peace
+- File: Mediterranean_Waves.ogg
+  Type: peace
+- File: Peaks_of_Atlas.ogg
+  Type: peace
+
+# Latin Cultures
+roman: &roman
+- File: Juno_Protect_You.ogg
+  Type: peace
+- File: Mediterranean_Waves.ogg
+  Type: peace
+- File: Elysian_Fields.ogg
+  Type: peace
+- File: The_Governor.ogg
+  Type: peace
+
+# Celtic Cultures
+brittonic: &brittonic
+- File: Highland_Mist.ogg
+  Type: peace
+- File: Waters_Edge.ogg
+  Type: peace
+- File: Celtic_Pride.ogg
+  Type: peace
+- File: Cisalpine_Gaul.ogg
+  Type: peace
+- File: Celtica.ogg
+  Type: peace
+gallic: &gallic
+- File: Celtic_Pride.ogg
+  Type: peace
+- File: Cisalpine_Gaul.ogg
+  Type: peace
+- File: Harvest_Festival.ogg
+  Type: peace
+- File: Waters_Edge.ogg
+  Type: peace
+- File: Sunrise.ogg
+  Type: peace
+
+# Germanic Cultures
+# Frankish Cultures
+# African Cultures
+kushite: &kushite
+- File: Ammon-Ra.ogg
+  Type: peace
+- File: Sands_of_Time.ogg
+  Type: peace
+- File: Land_between_the_two_Seas.ogg
+  Type: peace
+- File: Valley_of_the_Nile.ogg
+  Type: peace
+# Near East Cultures
+persian: &persian
+- File: Valley_of_the_Nile.ogg
+  Type: peace
+- File: Land_between_the_Two_Seas.ogg
+  Type: peace
+- File: Sands_of_Time.ogg
+  Type: peace
+# Mediterranean Cultures
+iberian: &iberian
+- File: An_old_Warhorse_goes_to_Pasture.ogg
+  Type: peace
+- File: Celtica.ogg
+  Type: peace
+- File: Harsh_Lands_Rugged_People.ogg
+  Type: peace
+
+# East Asian Cultures
+chinese: &chinese
+- File: Omri_Lahev-Red_Dawn.ogg
+  Type: peace
+- File: Omri_Lahev-Hill_of_Sorrows.ogg
+  Type: peace
+han: &han
+- *chinese
+xiongnu: &xiongnu
+- *chinese
+
+
+# Pre-Columbian American Cultures
+pre_columbian: &pre_columbian
+- File: Old_New_World.ogg
+  Type: peace
+- File: Cloud_People.ogg
+  Type: peace
+- File: Tradition.ogg
+  Type: peace
+zapotec: &zapotec
+- *pre_columbian
+inca: &inca
+- *pre_columbian
+mexicas: &mexicas
+- *pre_columbian
