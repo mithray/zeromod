@@ -3,51 +3,51 @@ It is planned to create a script to create documentation about each civilization
 
 ## Main Game Civilizations
 - Celts
-  - [  ] Britons
-  - [  ] Gauls
+  - [ ] Britons
+  - [ ] Gauls
 - European
-  - [  ] Romans
-  - [  ] Iberians
+  - [ ] Romans
+  - [ ] Iberians
 - Hellenes
-  - [  ] Athenians
-  - [  ] Spartans
-  - [  ] Macedonians
+  - [ ] Athenians
+  - [ ] Spartans
+  - [ ] Macedonians
 - Hellenic Successors
-  - [  ] Ptolemies
-  - [  ] Seleucids
+  - [ ] Ptolemies
+  - [ ] Seleucids
 - Asian
-  - [  ] Mauryans
-  - [  ] Persians
+  - [ ] Mauryans
+  - [ ] Persians
 - African
-  - [  ] Carthaginians
-  - [  ] Kushites
+  - [ ] Carthaginians
+  - [ ] Kushites
 
 ## From Other Mods
-* [Terra Magna](https://github.com/0ADMods/terra_magna)
-  * Xiongnu
-  * Chinese(Plus 7 Warring States factions)
-  * Zapotec
-* [Pre Colonial America](https://github.com/0ADMods/pre-colonial-mod))
-  * Incas
-  * Zapotecs
-  * Aztecs
-* [Millenium AD](https://github.com/0ADMods/millenniumad)
-  * Carolingians
-  * Norse
-  * Umayyads
-  * Anglo-Saxons
-* [Thracians](https://github.com/0ADMods/thracians)
-* [Delenda Est](https://github.com/JustusAvramenko/delenda_est)
-  * Thebans
-  * Epirotes
-  * Goths
-  * Huns
-  * Scythians
-  * Suebians
-  * Principate Romans
-* [Yayoi](https://github.com/0ADMods/yayoi_japan)
-* [Illyrians](https://github.com/0ADMods/illyrians)
-* [Hasmonean Judeans](https://github.com/0ADMods/judeans)
+- [ ] [Terra Magna](https://github.com/0ADMods/terra_magna)
+  - [ ] Xiongnu
+  - [ ] Chinese(Plus 7 Warring States factions)
+  - [ ] Zapotec
+- [ ] [Pre Colonial America](https://github.com/0ADMods/pre-colonial-mod))
+  - [ ] Incas
+  - [ ] Zapotecs
+  - [ ] Aztecs
+- [ ] [Millenium AD](https://github.com/0ADMods/millenniumad)
+  - [ ] Carolingians
+  - [ ] Norse
+  - [ ] Umayyads
+  - [ ] Anglo-Saxons
+- [ ] [Thracians](https://github.com/0ADMods/thracians)
+- [ ] [Delenda Est](https://github.com/JustusAvramenko/delenda_est)
+  - [ ] Thebans
+  - [ ] Epirotes
+  - [ ] Goths
+  - [ ] Huns
+  - [ ] Scythians
+  - [ ] Suebians
+  - [ ] Principate Romans
+- [ ] [Yayoi](https://github.com/0ADMods/yayoi_japan)
+- [ ] [Illyrians](https://github.com/0ADMods/illyrians)
+- [ ] [Hasmonean Judeans](https://github.com/0ADMods/judeans)
 
 ## Mini-Factions(Probably little custom art)
 
@@ -69,10 +69,10 @@ It is planned to create a script to create documentation about each civilization
   - [ ] (Sythians)
 
 ### 7 Kingdoms in China
-  - [  ] Chu
-  - [  ] Hann
-  - [  ] Qin
-  - [  ] Qi
-  - [  ] Wei
-  - [  ] Yan
-  - [  ] Zhao
+  - [ ] Chu
+  - [ ] Hann
+  - [ ] Qin
+  - [ ] Qi
+  - [ ] Wei
+  - [ ] Yan
+  - [ ] Zhao
