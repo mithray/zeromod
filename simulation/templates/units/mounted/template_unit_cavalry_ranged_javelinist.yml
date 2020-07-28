@@ -1,0 +1,26 @@
+Entity:
+  Attack:
+    Ranged:
+      Damage:
+        Hack: 0
+        Pierce: 18
+        Crush: 0
+      MaxRange: 28
+      MinRange: 0
+      PrepareTime: 750
+      RepeatTime: 1250
+      Projectile:
+        Speed: 62.5
+        Gravity: 39.81
+        Spread: 4
+      PreferredClasses: Human
+  Cost:
+    Resources:
+      wood: 50
+  Identity:
+    VisibleClasses: Javelinist
+    GenericName: Cavalry Skirmisher
+  Sound:
+    SoundGroups:
+      attack_ranged: attack/weapon/javelin_attack.xml
+      attack_impact_ranged: attack/impact/javelin_impact.xml

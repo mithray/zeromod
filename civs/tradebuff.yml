@@ -1,0 +1,36 @@
+---
+type: player
+affects:
+- Player
+affectedPlayers:
+- ExclusiveMutualAlly
+modifications:
+- value: Player/BarterMultiplier/Sell/food
+  multiply: 1.2
+- value: Player/BarterMultiplier/Sell/wood
+  multiply: 1.2
+- value: Player/BarterMultiplier/Sell/stone
+  multiply: 1.2
+- value: Player/BarterMultiplier/Sell/metal
+  multiply: 1.2
+- value: Market/InternationalBonus
+  add: 0.1
+auraName: Standardized Currency
+auraDescription: Allies +20% barter sell prices.
+---
+type: player
+affects:
+- Player
+modifications:
+- value: Player/BarterMultiplier/Sell/food
+  multiply: 1.3
+- value: Player/BarterMultiplier/Sell/wood
+  multiply: 1.3
+- value: Player/BarterMultiplier/Sell/stone
+  multiply: 1.3
+- value: Player/BarterMultiplier/Sell/metal
+  multiply: 1.3
+- value: Market/InternationalBonus
+  add: 0.2
+auraName: Standardized Currency
+auraDescription: Allies +20% barter sell prices.

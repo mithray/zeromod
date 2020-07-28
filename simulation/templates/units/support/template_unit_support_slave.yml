@@ -1,0 +1,73 @@
+Entity:
+  Builder:
+    Rate: 0.5
+    Entities:
+      - structures/{civ}_house
+      - structures/{civ}_storehouse
+      - structures/{civ}_farmstead
+      - structures/{civ}_field
+      - structures/{civ}_corral
+      - structures/{civ}_outpost
+      - structures/wallset_palisade
+      - structures/{civ}_dock
+      - structures/{civ}_barracks
+      - structures/{civ}_blacksmith
+      - structures/{civ}_temple
+      - structures/{civ}_market
+      - structures/{civ}_defense_tower
+      - structures/{civ}_wallset_stone
+      - structures/{civ}_civil_centre
+      - structures/{civ}_fortress
+  Cost:
+    Population: 0
+    BuildTime: 20
+    Resources:
+      food: 0
+      wood: 0
+      stone: 0
+      metal: 50
+  Health:
+    RegenRate: -0.25
+    Unhealable: true
+  Identity:
+    VisibleClasses: Slave Worker
+    GenericName: Slave
+    SelectionGroupName: template_unit_support_slave
+    Tooltip: Gatherer with a finite life span. Bonused at mining and lumbering.
+  Loot:
+    xp: 1
+    food: 0
+    wood: 1
+    stone: 1
+    metal: 1
+  ResourceGatherer:
+    BaseSpeed: 1
+    Rates:
+      food.fish: 0.5
+      food.fruit: 0.5
+      food.grain: 0.35
+      food.meat: 1
+      wood.tree: 1
+      wood.ruins: 5
+      stone.rock: 1
+      stone.ruins: 5
+      metal.ore: 1
+      treasure: ""
+  Sound:
+    SoundGroups:
+      select: voice/{lang}/civ/civ_{phenotype}_select.xml
+      order_walk: voice/{lang}/civ/civ_{phenotype}_walk.xml
+      order_gather: voice/{lang}/civ/civ_{phenotype}_gather.xml
+      order_repair: voice/{lang}/civ/civ_{phenotype}_repair.xml
+      order_build: voice/{lang}/civ/civ_{phenotype}_build.xml
+      order_garrison: voice/{lang}/civ/civ_{phenotype}_garrison.xml
+      walk: actor/human/movement/walk.xml
+      run: actor/human/movement/run.xml
+      death: actor/human/death/{phenotype}_death.xml
+      build: resource/construction/con_wood.xml
+      gather_fruit: resource/foraging/forage_leaves.xml
+      gather_grain: resource/farming/farm.xml
+      gather_wood: resource/lumbering/lumbering.xml
+      gather_stone: resource/mining/pickaxe.xml
+      gather_metal: resource/mining/mining.xml
+      trained: actor/singlesteps/steps_gravel_trained.xml

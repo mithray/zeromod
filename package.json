@@ -19,8 +19,10 @@
   "homepage": "https://github.com/mithrayls/0ad_realism#readme",
   "dependencies": {
     "change-case": "^4.1.1",
+    "commander": "^6.0.0",
     "fast-xml-parser": "^3.17.4",
     "htmlparser2": "^4.1.0",
+    "inquirer": "^7.3.3",
     "js-yaml": "^3.14.0",
     "node-fetch": "^2.6.0",
     "safe-eval": "^0.4.1",

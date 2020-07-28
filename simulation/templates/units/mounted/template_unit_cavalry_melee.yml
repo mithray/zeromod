@@ -1,0 +1,16 @@
+Entity:
+  Armour:
+    Hack: 4
+    Pierce: 3
+  Attack:
+    Melee:
+      Damage:
+        Hack: 13
+        Pierce: 0
+        Crush: 0
+      MaxRange: 3.5
+      PrepareTime: 375
+      RepeatTime: 750
+  Identity:
+    VisibleClasses: Melee
+    GenericName: Melee Cavalry

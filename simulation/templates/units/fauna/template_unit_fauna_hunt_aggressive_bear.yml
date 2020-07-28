@@ -1,0 +1,19 @@
+Entity:
+  Attack:
+    Melee:
+      Damage:
+        Hack: 20
+        Pierce: 0
+        Crush: 20
+      MaxRange: 6
+      RepeatTime: 2000
+  Footprint:
+    Square: ""
+    Height: 2
+  ResourceSupply:
+    Amount: 300
+  Sound:
+    SoundGroups:
+      select: actor/fauna/animal/lion_select.xml
+      attack_melee: actor/fauna/animal/lion_attack.xml
+      death: actor/fauna/animal/lion_death.xml

@@ -1,0 +1,26 @@
+Entity:
+  Armour:
+    Hack: 3
+    Pierce: 3
+  Attack:
+    Melee:
+      Damage:
+        Hack: 11
+        Pierce: 0
+        Crush: 0
+      MaxRange: 3.5
+      PrepareTime: 375
+      RepeatTime: 750
+      PreferredClasses: Unit+!Ship
+  Cost:
+    Resources:
+      wood: 75
+      metal: 100
+  Health:
+    Max: 200
+  Identity:
+    VisibleClasses: Melee Swordsman
+    GenericName: Champion Swordsman
+    Formations: special/formations/testudo
+  UnitMotion:
+    WalkSpeed: 1.4

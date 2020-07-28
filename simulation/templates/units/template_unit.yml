@@ -1,0 +1,104 @@
+Entity:
+  AIProxy: ""
+  Cost:
+    Population: 1
+    PopulationBonus: 0
+    BuildTime: 1
+    Resources:
+      food: 0
+      wood: 0
+      stone: 0
+      metal: 0
+  Decay:
+    Active: false
+    SinkingAnim: false
+    DelayTime: 30
+    SinkRate: 0.01
+    SinkAccel: 0
+  Footprint:
+    Circle: ""
+    Height: 2.5
+  Garrisonable: ""
+  Guard: ""
+  Health:
+    DeathType: corpse
+    Max: 100
+    RegenRate: 0
+    IdleRegenRate: 0
+    Unhealable: false
+  Identity:
+    Classes: Unit Organic ConquestCritical
+    GenericName: Unit
+    Phenotype: male
+    Undeletable: false
+  Looter: ""
+  Minimap:
+    Type: unit
+  Obstruction:
+    Unit: ""
+    Active: true
+    BlockMovement: true
+    BlockPathfinding: false
+    BlockFoundation: false
+    BlockConstruction: true
+    DisableBlockMovement: false
+    DisableBlockPathfinding: false
+    DeleteUponConstruction: false
+  OverlayRenderer: ""
+  Ownership: ""
+  Position:
+    Altitude: 0
+    Anchor: pitch
+    Floating: false
+    FloatDepth: 0
+    TurnRate: 6
+  RangeOverlayManager: ""
+  RangeOverlayRenderer: ""
+  ResourceGatherer:
+    MaxDistance: 2
+    BaseSpeed: 1
+    Rates:
+      treasure: 1
+    Capacities:
+      food: 10
+      wood: 10
+      stone: 10
+      metal: 10
+  Selectable:
+    Overlay:
+      Texture:
+        MainTexture: 128x128/ellipse.png
+        MainTextureMask: 128x128/ellipse_mask.png
+  Sound:
+    SoundGroups:
+      attacked: interface/alarm/alarm_attackplayer.xml
+      attack_slaughter: attack/weapon/sword_attack.xml
+  StatusBars:
+    BarWidth: 2
+    BarHeight: 0.333
+    HeightOffset: 5
+  StatusEffectsReceiver: ""
+  UnitAI:
+    DefaultStance: aggressive
+    FleeDistance: 12
+    FormationController: false
+    CanGuard: true
+    CanPatrol: true
+  UnitMotion:
+    FormationController: false
+    PassabilityClass: default
+    WalkSpeed: 9
+    RunMultiplier: 1.67
+  Visibility:
+    RetainInFog: false
+    AlwaysVisible: false
+    Corpse: false
+    Preview: false
+  Vision:
+    Range: 12
+  VisionSharing:
+    Bribable: false
+  VisualActor:
+    SilhouetteDisplay: true
+    SilhouetteOccluder: false
+    VisibleInAtlasOnly: false

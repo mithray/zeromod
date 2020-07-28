@@ -1,0 +1,34 @@
+Entity:
+  Armour:
+    Hack: 4
+    Pierce: 8
+    Crush: 4
+  Attack: ""
+  Cost:
+    Resources:
+      food: 200
+      wood: 150
+      metal: 200
+  Heal:
+    Range: 20
+    HP: 6
+    Rate: 2000
+    UnhealableClasses: ""
+    HealableClasses: Human
+    RangeOverlay:
+      LineTexture: heal_overlay_range.png
+      LineTextureMask: heal_overlay_range_mask.png
+      LineThickness: 0.35
+  Health:
+    Max: 1000
+  Identity:
+    VisibleClasses: -Soldier Healer Support
+  Position:
+    Anchor: upright
+  Selectable:
+    Overlay:
+      Texture:
+        MainTexture: 128x128/star.png
+        MainTextureMask: 128x128/star_mask.png
+  Vision:
+    Range: 30

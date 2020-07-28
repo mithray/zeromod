@@ -1,0 +1,25 @@
+Entity:
+  Builder:
+    Entities:
+    - Civic
+    - Military
+  Identity:
+    Civ: athen
+    Lang: greek
+    GenericName: Athenian Hoplite
+    SpecificName: Hoplítēs Athēnaîos
+    Classes:
+      Mobility: Unit
+      HumanMechanical: Human
+      Profession: CitizenSoldier
+      Mount: Infantry 
+      Attack: Melee
+      Weapon: Spear
+      #Weapon_Bearer: ${weapon.bearer_name}
+      #    VisibleClasses: ${classes.profession} ${classes.mount} ${profession.weapon_bearer}
+      #    SelectionGroupName: units/${civ.code}_${classes.mount}_${weapon.bearer_name}_b
+      #    Icon: units/${civ.code}_${classes.mount}_${weapon.bearer_name}.png
+      #  Promotion:
+      #    Entity: units/${civ.code}_${classes.mount}_${weapon.bearer_name}_a
+      #  VisualActor:
+      #    Actor: units/${civ.name}/${classes.mount}_${weapon.bearer_name}_b.xml

@@ -20,8 +20,15 @@ loot:
   collect_as: resource # treasure|resource|instant
   trade_carts_collect: true
 
-defensive_houses: true
-garrison_civic: true
+defensive_structures: 
+  houses_shoot: true
+  houses_weaker: true
+  houses_barricade_upgrade: true
+  garrison_economic: true
+  garrison_resource: true
+  garrison_civic: true
+  structures_less_capture_recovery: true
+  structures_weaker: true
 
 battle:
   armor: low

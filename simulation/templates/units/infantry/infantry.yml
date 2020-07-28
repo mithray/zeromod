@@ -1,0 +1,70 @@
+Entity:
+  Health:
+    Max: 100
+  Builder: 
+    Rate: 1
+    Entities:
+      - civic
+      - military
+  Cost:
+    BuildTime: 10
+    Resources:
+      food: 50
+      wood: 0
+      stone: 0
+      metal: 0
+  Footprint:
+    Circle: ""
+    Height: 2.5
+  Identity:
+    Classes: Human CitizenSoldier
+    VisibleClasses: Citizen Worker Soldier Infantry
+    GenericName: Infantry
+    Rank: Basic
+  Loot:
+    xp: 100
+    food: 0
+    wood: 0
+    stone: 0
+    metal: 0
+  Position:
+    Anchor: upright
+  Promotion:
+    RequiredXp: 100
+  ResourceGatherer:
+    MaxDistance: 2
+    BaseSpeed: 1
+    Rates:
+      food.fruit: 0.5
+      food.grain: 0.25
+      food.meat: 1
+      wood.tree: 0.75
+      wood.ruins: 5
+      stone.rock: 0.5
+      stone.ruins: 2
+      metal.ore: 0.5
+  Sound:
+    SoundGroups:
+      select: voice/{lang}/civ/civ_{phenotype}_select.xml
+      order_walk: voice/{lang}/civ/civ_{phenotype}_walk.xml
+      order_attack: voice/{lang}/civ/civ_{phenotype}_attack.xml
+      order_gather: voice/{lang}/civ/civ_{phenotype}_gather.xml
+      order_repair: voice/{lang}/civ/civ_{phenotype}_repair.xml
+      order_build: voice/{lang}/civ/civ_{phenotype}_build.xml
+      order_garrison: voice/{lang}/civ/civ_{phenotype}_garrison.xml
+      walk: actor/human/movement/walk.xml
+      run: actor/human/movement/run.xml
+      attack_impact_ranged: attack/impact/arrow_impact.xml
+      attack_melee: attack/weapon/sword_attack.xml
+      attack_ranged: attack/weapon/bow_attack.xml
+      death: actor/human/death/{phenotype}_death.xml
+      build: resource/construction/con_wood.xml
+      gather_fruit: resource/foraging/forage_leaves.xml
+      gather_grain: resource/farming/farm.xml
+      gather_tree: resource/lumbering/lumbering.xml
+      gather_rock: resource/mining/pickaxe.xml
+      gather_ore: resource/mining/mining.xml
+      gather_ruins: resource/mining/mining.xml
+      trained: interface/alarm/alarm_create_infantry.xml
+  Vision:
+    Range: 80

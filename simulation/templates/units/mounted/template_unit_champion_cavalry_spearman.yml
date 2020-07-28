@@ -1,0 +1,32 @@
+Entity:
+  Armour:
+    Hack: 1
+    Pierce: 2
+  Attack:
+    Melee:
+      Damage:
+        Hack: 8
+        Pierce: 6
+        Crush: 0
+      MaxRange: 4.5
+      Bonuses:
+        BonusCavMelee:
+          Classes: Cavalry
+          Multiplier: 1.5
+      PrepareTime: 500
+      RepeatTime: 1250
+      PreferredClasses: Human
+  Cost:
+    Resources:
+      wood: 100
+  Health:
+    Max: 300
+  Identity:
+    VisibleClasses: Melee Spearman
+    GenericName: Champion Cavalry Spearman
+    Tooltip: "Counters: 1.5x vs. Cavalry."
+  Sound:
+    SoundGroups:
+      attack_melee: attack/weapon/spear_attack.xml
+  UnitMotion:
+    WalkSpeed: 1.1

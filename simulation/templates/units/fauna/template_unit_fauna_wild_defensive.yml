@@ -1,0 +1,5 @@
+Entity:
+  Loot:
+    xp: 15
+  UnitAI:
+    NaturalBehaviour: defensive
