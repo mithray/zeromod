@@ -49,30 +49,38 @@ It is planned to create a script to create documentation about each civilization
 - [ ] [Illyrians](https://github.com/0ADMods/illyrians)
 - [ ] [Hasmonean Judeans](https://github.com/0ADMods/judeans)
 
-## Mini-Factions(Probably little custom art)
+## Mini-Factions(Probably wont personally do much custom art)
 
 ### Baltic Kingdoms [The central Balkan tribes in pre-Roman times: Triballi, Autariatae, Dardanians, Scordisci and Moesians](https://books.google.co.nz/books/about/The_Central_Balkan_Tribes_in_Pre_Roman_T.html?id=Up4JAQAAIAAJ&redir_esc=y)
-  - [ ] (Macedonia)
-  - [ ] (Epirus)
-  - [ ] (Illyrian)
-  - [ ] Dardanian
-  - [ ] Paeonia
-  - [ ] Dacians/Getae
-  - [ ] Triballi
-  - [ ] Autariatae
-  - [ ] Scordisci(Celts Mixed with Thracians and Illyrians)
+
+- [ ] (Macedonia)
+- [ ] (Epirus)
+- [ ] (Illyrian)
+- [ ] Dardanian
+- [ ] Paeonia
+- [ ] Dacians/Getae
+- [ ] Triballi
+- [ ] Autariatae
+- [ ] Scordisci(Celts Mixed with Thracians and Illyrians)
 
 ![Scordisci Warrior](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/National_museum_in_Po%C5%BEarevac%2C_Scordisci_warrior.jpg/800px-National_museum_in_Po%C5%BEarevac%2C_Scordisci_warrior.jpg)
 
-  - [ ] Moesian
-  - [ ] (Thracians)
-  - [ ] (Sythians)
+- [ ] Moesian
+- [ ] (Thracians)
+- [ ] (Sythians)
 
 ### 7 Kingdoms in China
-  - [ ] Chu
-  - [ ] Hann
-  - [ ] Qin
-  - [ ] Qi
-  - [ ] Wei
-  - [ ] Yan
-  - [ ] Zhao
+- [ ] Chu
+- [ ] Hann
+- [ ] Qin
+- [ ] Qi
+- [ ] Wei
+- [ ] Yan
+- [ ] Zhao
+
+###  Oceana
+
+- [ ] Samoan
+- [ ] Filipino
+- [ ] Maori
+- [ ] Aboriginee
