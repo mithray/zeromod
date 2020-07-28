@@ -62,7 +62,7 @@ It is planned to create a script to create documentation about each civilization
   - [ ] Autariatae
   - [ ] Scordisci(Celts Mixed with Thracians and Illyrians)
 
-![Scordisci Warrior](https://en.wikipedia.org/wiki/Scordisci#/media/File:National_museum_in_Po%C5%BEarevac,_Scordisci_warrior.jpg)
+![Scordisci Warrior](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/National_museum_in_Po%C5%BEarevac%2C_Scordisci_warrior.jpg/800px-National_museum_in_Po%C5%BEarevac%2C_Scordisci_warrior.jpg)
 
   - [ ] Moesian
   - [ ] (Thracians)
