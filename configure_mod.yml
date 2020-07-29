@@ -17,8 +17,9 @@ citizen_soldier: true
 soldiers_construct_siege: true
 
 loot:
-  collect_as: resource # treasure|resource|instant
-  trade_carts_collect: true
+  collect_as: instant_resource # <treasure|instant_resource|loot>
+  trade_carts_dropsite: true # <true|false|extra_unit>
+  equipment_ratio: 0.2
 
 defensive_structures: 
   houses_shoot: true

@@ -1,0 +1,8 @@
+Entity:
+  Health:
+    _op: mul
+    Max: 1
+  Identity:
+    GenericName: Melee Infantry
+    VisibleClasses: Melee Infantry
+    Formations: {formations.standard_infantry_melee}

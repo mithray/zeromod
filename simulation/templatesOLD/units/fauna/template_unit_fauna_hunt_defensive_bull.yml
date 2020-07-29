@@ -1,0 +1,28 @@
+Entity:
+  Attack:
+    Melee:
+      Damage:
+        Hack: 1
+        Pierce: 5
+        Crush: 2
+      MaxRange: 1.5
+      PrepareTime: 500
+      RepeatTime: 1000
+      RestrictedClasses: Structure Ship Siege
+  Footprint:
+    Square: ""
+    Height: 2
+  Loot:
+    xp: 50
+  Sound:
+    SoundGroups:
+      select: actor/fauna/animal/cattle_select.xml
+      order_attack: actor/fauna/animal/cattle_attack_order.xml
+      order_walk: actor/fauna/animal/cattle_order.xml
+      attack_melee: actor/fauna/animal/cattle_attack.xml
+      death: actor/fauna/animal/cattle_death.xml
+      trained: actor/fauna/animal/cattle_trained.xml
+  UnitMotion:
+    PassabilityClass: large
+    WalkSpeed: 0.4
+    RunMultiplier: 2

@@ -1,0 +1,16 @@
+Entity:
+  Attack:
+    Melee:
+      Damage:
+        Hack: 2.5
+        Pierce: 5
+        Crush: 0
+      MaxRange: 3
+      PrepareTime: 500
+      RepeatTime: 1000
+      RestrictedClasses: Structure Ship Siege
+  Footprint:
+    Square: ""
+    Height: 1.5
+  Health:
+    Max: 50

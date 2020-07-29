@@ -1,0 +1,23 @@
+Entity:
+  Armour:
+    Hack: 4
+    Pierce: 2
+  Attack:
+    Melee:
+      Damage:
+        Hack: 6.5
+        Pierce: 0
+        Crush: 0
+      PreferredClasses: Unit+!Ship
+  Cost:
+    Resources:
+      wood: 30
+      metal: 20
+  Identity:
+    VisibleClasses: Swordsman
+    GenericName: Cavalry Swordsman
+  Loot:
+    wood: 0
+    metal: 5
+  UnitMotion:
+    WalkSpeed: 1.2

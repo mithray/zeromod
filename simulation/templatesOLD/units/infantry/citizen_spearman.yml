@@ -1,0 +1,17 @@
+Entity:
+  Armour: ${armor.leather_l01c01}
+  Attack: ${weapons.spear}
+  Cost: ${weapons.spear.cost}
+  Identity:
+    VisibleClasses:
+    - Unit
+    - Biological
+    - ${mount.class}
+    - ${experience.class}
+    - ${weapon.class}
+    - ${attack.class}
+    - ${armor.class}
+    GenericName: Spearman
+    Tooltip: ${weapons.spear.tooltip}
+  Loot: ${()weapons.spear.cost + armor.leather_l01c01.cost) * 0.2}
+  UnitMotion: ${ infantry.speed * (1 - weight/100) }

@@ -21,6 +21,10 @@ It is planned to create a script to create documentation about each civilization
 - African
   - [ ] Carthaginians
   - [ ] Kushites
+  - [ ] [Malians](https://wildfiregames.com/forum/index.php?/topic/28138-civ-malians/)
+  - [ ] [Zimbabweans](https://wildfiregames.com/forum/index.php?/topic/28328-civ-zimbabweans/)
+  - [ ] [Ethiopians](https://wildfiregames.com/forum/index.php?/topic/28294-civ-ethiopians/)
+  - [ ] [Moroccans](https://wildfiregames.com/forum/index.php?/topic/28353-civ-moroccans/)
 
 ## From Other Mods
 - [ ] [Terra Magna](https://github.com/0ADMods/terra_magna)
@@ -61,13 +65,14 @@ It is planned to create a script to create documentation about each civilization
 - [ ] Dacians/Getae
 - [ ] Triballi
 - [ ] Autariatae
+- [ ] Ardiaei
 - [ ] Scordisci(Celts Mixed with Thracians and Illyrians)
+- [ ] Phrygians(Outside Time Period?)
 
 ![Scordisci Warrior](https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/National_museum_in_Po%C5%BEarevac%2C_Scordisci_warrior.jpg/800px-National_museum_in_Po%C5%BEarevac%2C_Scordisci_warrior.jpg)
 
 - [ ] Moesian
 - [ ] (Thracians)
-- [ ] (Sythians)
 
 ### 7 Kingdoms in China
 - [ ] Chu
@@ -84,3 +89,15 @@ It is planned to create a script to create documentation about each civilization
 - [ ] Filipino
 - [ ] Maori
 - [ ] Aboriginee
+
+### Iranians
+
+- [ ] Persians
+- [ ] Medes
+- [ ] Parthians
+- [ ] Scythians
+- [ ] Saka
+- [ ] Sarmatians
+- [ ] Massagetae
+- [ ] Alans
+- [ ] (Sythians)

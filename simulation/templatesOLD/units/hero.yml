@@ -1,0 +1,60 @@
+Entity:
+  Armour:
+    Hack: 10
+    Pierce: 20
+    Crush: 15
+  Attack:
+    Capture:
+      Capture: 10
+      MaxRange: 4
+      RepeatTime: 1000
+      RestrictedClasses: Field Palisade SiegeWall StoneWall
+  Auras: units/heroes/hero_garrison
+  Cost:
+    Population: 2
+    BuildTime: 40
+    Resources:
+      food: 100
+      metal: 250
+  Health:
+    Max: 600
+  Identity:
+    Classes: Human
+    VisibleClasses: Soldier Hero
+    GenericName: Hero
+    Icon: technologies/laurel_wreath.png
+    RequiredTechnology: phase_city
+  Loot:
+    xp: 400
+    food: 10
+    wood: 0
+    stone: 0
+    metal: 25
+  Minimap:
+    Type: hero
+  Selectable:
+    Overlay:
+      AlwaysVisible: ""
+      Texture:
+        MainTexture: 256x256/star.png
+        MainTextureMask: 256x256/star_mask.png
+  Sound:
+    SoundGroups:
+      select: voice/{lang}/civ/civ_{phenotype}_select.xml
+      trained: interface/alarm/alarm_create_infantry.xml
+      order_heal: voice/{lang}/civ/civ_{phenotype}_heal.xml
+      order_walk: voice/{lang}/civ/civ_{phenotype}_walk.xml
+      order_attack: voice/{lang}/civ/civ_{phenotype}_attack.xml
+      order_gather: voice/{lang}/civ/civ_{phenotype}_gather.xml
+      order_repair: voice/{lang}/civ/civ_{phenotype}_repair.xml
+      order_garrison: voice/{lang}/civ/civ_{phenotype}_garrison.xml
+      attack_melee: attack/weapon/sword_attack.xml
+      attack_impact_ranged: attack/impact/arrow_impact.xml
+      attack_ranged: attack/weapon/bow_attack.xml
+      walk: actor/human/movement/walk.xml
+      run: actor/human/movement/walk.xml
+      death: actor/human/death/{phenotype}_death.xml
+  TrainingRestrictions:
+    Category: Hero
+  Vision:
+    Range: 88

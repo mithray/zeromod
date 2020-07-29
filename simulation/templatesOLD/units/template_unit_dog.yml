@@ -1,0 +1,69 @@
+Entity:
+  Armour:
+    Hack: 1
+    Pierce: 2
+    Crush: 1
+  Attack:
+    Melee:
+      Damage:
+        Hack: 7
+        Pierce: 2
+        Crush: 0
+      MaxRange: 3
+      PrepareTime: 500
+      RepeatTime: 1000
+      RestrictedClasses: Structure Ship Siege
+  Cost:
+    BuildTime: 15
+    Population: 0
+    Resources:
+      food: 100
+      wood: 0
+      stone: 0
+      metal: 0
+  Footprint:
+    Circle: ""
+    Height: 3
+  Health:
+    Max: 90
+  Identity:
+    Classes: Human
+    VisibleClasses: Dog Melee
+    GenericName: War Dog
+    Rank: Basic
+    Tooltip: Cannot attack structures.
+  Loot:
+    xp: 100
+    food: 10
+    wood: 0
+    stone: 0
+    metal: 0
+  Promotion:
+    RequiredXp: 100
+  ResourceGatherer: ""
+  Selectable:
+    Overlay:
+      Texture:
+        MainTexture: 128x256/ellipse.png
+        MainTextureMask: 128x256/ellipse_mask.png
+  Sound:
+    SoundGroups:
+      select: voice/global/civ_dog_bark.xml
+      order_walk: voice/global/civ_dog_move.xml
+      order_attack: voice/global/civ_dog_move.xml
+      order_gather: voice/global/civ_dog_move.xml
+      order_repair: voice/global/civ_dog_move.xml
+      walk: actor/mounted/movement/walk.xml
+      run: actor/mounted/movement/walk.xml
+      attack_melee: attack/weapon/sword.xml
+      death: actor/fauna/death/death_animal_gen.xml
+      trained: interface/complete/building/complete_kennel.xml
+  StatusBars:
+    HeightOffset: 6.5
+  TrainingRestrictions:
+    Category: WarDog
+  UnitMotion:
+    WalkSpeed: 1.6
+    RunMultiplier: 2.5
+  Vision:
+    Range: 30

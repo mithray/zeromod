@@ -1,0 +1,76 @@
+Entity:
+  Armour:
+    Hack: 3
+    Pierce: 1
+    Crush: 15
+  Attack:
+    Capture:
+      Capture: 2.5
+      MaxRange: 4
+      RepeatTime: 1000
+      RestrictedClasses: Field Palisade SiegeWall StoneWall
+    Slaughter:
+      Damage:
+        Hack: 100
+        Pierce: 0
+        Crush: 0
+      MaxRange: 2
+  Cost:
+    Population: 1
+    BuildTime: 15
+    Resources:
+      food: 100
+  Footprint:
+    Square: ""
+    Height: 7.5
+  Health:
+    Max: 160
+  Identity:
+    Classes: Human CitizenSoldier
+    VisibleClasses: Citizen Soldier Cavalry
+    GenericName: Cavalry
+    Rank: Basic
+    Formations: special/formations/wedge
+  Loot:
+    xp: 130
+    food: 10
+    wood: 5
+    stone: 0
+    metal: 0
+  Promotion:
+    RequiredXp: 150
+  ResourceGatherer:
+    MaxDistance: 2
+    BaseSpeed: 1
+    Rates:
+      food.meat: 5
+    Capacities:
+      food: 20
+      wood: 20
+      stone: 20
+      metal: 20
+  Selectable:
+    Overlay:
+      Texture:
+        MainTexture: 128x256/ellipse.png
+        MainTextureMask: 128x256/ellipse_mask.png
+  Sound:
+    SoundGroups:
+      select: voice/{lang}/civ/civ_{phenotype}_select.xml
+      order_walk: voice/{lang}/civ/civ_{phenotype}_walk.xml
+      order_attack: voice/{lang}/civ/civ_{phenotype}_attack.xml
+      order_gather: voice/{lang}/civ/civ_{phenotype}_gather.xml
+      order_garrison: voice/{lang}/civ/civ_{phenotype}_garrison.xml
+      walk: actor/mounted/movement/walk.xml
+      run: actor/mounted/movement/walk.xml
+      attack_impact_ranged: attack/impact/arrow_impact.xml
+      attack_melee: attack/weapon/sword_attack.xml
+      attack_ranged: attack/weapon/bow_attack.xml
+      death: actor/fauna/death/death_horse.xml
+      trained: interface/alarm/alarm_create_cav.xml
+  StatusBars:
+    HeightOffset: 6.5
+  UnitMotion:
+    WalkSpeed: 2
+  Vision:
+    Range: 92

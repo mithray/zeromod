@@ -1,0 +1,33 @@
+Entity:
+  Armour:
+    Hack: 1
+    Pierce: 1
+  Attack:
+    Ranged:
+      Damage:
+        Hack: 0
+        Pierce: 9.2
+        Crush: 0.9
+      MaxRange: 48
+      MinRange: 0
+      PrepareTime: 500
+      RepeatTime: 1000
+      Projectile:
+        Speed: 62.5
+        Spread: 3.5
+        Gravity: 29.81
+      PreferredClasses: Human
+  Cost:
+    Resources:
+      stone: 30
+      wood: 20
+  Identity:
+    VisibleClasses: Slinger
+    GenericName: Slinger
+  Loot:
+    stone: 5
+  UnitMotion:
+    WalkSpeed: 1.2
+  Sound:
+    SoundGroups:
+      attack_ranged: attack/weapon/sling_attack.xml

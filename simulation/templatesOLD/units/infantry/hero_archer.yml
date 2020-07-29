@@ -1,0 +1,23 @@
+Entity:
+  Attack:
+    Ranged:
+      Damage:
+        Hack: 0
+        Pierce: 8
+        Crush: 0
+      MaxRange: 80
+      MinRange: 0
+      PrepareTime: 200
+      RepeatTime: 300
+      Delay: 0
+      Projectile:
+        Speed: 75
+        Spread: 0.5
+        Gravity: 39.81
+        FriendlyFire: false
+        LaunchPoint: ""
+      PreferredClasses: Human
+  Identity:
+    VisibleClasses: Ranged Archer
+    GenericName: Hero Archer
+    Formations: special/formations/skirmish
