@@ -1,5 +1,0 @@
-Entity:
-  UnitAI:
-    NaturalBehaviour: passive
-  Vision:
-    Range: 10

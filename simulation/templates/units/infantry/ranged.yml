@@ -1,8 +1,0 @@
-Entity:
-  Health:
-    _op: mul
-    Max: 0.8
-  Identity:
-    VisibleClasses: Infantry Ranged
-    GenericName: Infantry Ranged
-    Formations: ${formations.standard_infantry_ranged} 

@@ -1,0 +1,328 @@
+athenians:
+# Special
+- Name: catafalque
+  SpecificName: Solon
+  Classes:
+    Mobility: Unit
+    Organic: false
+    ConquestCritical: false
+
+# Cavalry
+- Name: cavalry_javelinist_b
+  SpecificName: Pródromos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Cavalry 
+    Horse: ['maneless']
+    Attack: Melee
+    Weapon:
+      Primary: javelin
+    Phenotype: Male
+    Armor: Leather
+    ConquestCritical: false
+- Name: cavalry_swordsman_b
+  SpecificName: Hippeús
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Cavalry
+    Horse: ['maneless']
+    Attack: Melee
+    Weapon:
+      Primary: sword
+    Phenotype: Male
+    Armor: Leather
+    ConquestCritical: false
+
+# Infantry Melee
+- Name: Infantry Spearman
+  SpecificName: Hoplítēs Athēnaîos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+
+- Name: champion_infantry
+  SpecificName: Epílektos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: champion_marine
+  SpecificName: Epibátēs Athēnaîos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: hero_pericles
+  SpecificName: Periklēs
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: hero_themistocles
+  SpecificName: Themistoklēs
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: hero_xenophon
+  SpecificName: Xenophōn
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+
+# Infantry Ranged
+- Name: champion_ranged
+  SpecificName: Toxótēs Skythikós
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: infantry_javelinist_b
+  SpecificName: Peltastḗs Thrâx
+- Name: infantry_marine_archer_b
+  SpecificName: Toxótēs Krētikós
+- Name: infantry_slinger_b
+  SpecificName: Psilòs Athēnaîos
+- Name: hero_iphicrates
+  SpecificName: Iphikratēs
+
+# Ships
+- Name: ship_bireme
+  SpecificName: Pentēkóntoros
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: ship_fishing
+  SpecificName: Ploîon Halieutikón
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: ship_merchant
+  SpecificName: Ploîon Phortēgikón
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: ship_trireme
+  SpecificName: Triḗrēs Athēnaía
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+
+# Siege
+- Name: siege_lithobolos_packed
+  SpecificName: Lithobólos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: siege_oxybeles_packed
+  SpecificName: Oxybelḗs
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+
+# Support
+- Name: support_female_citizen
+  SpecificName: Gýnē Athēnaía
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: support_healer_b
+  SpecificName: Iatros
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: support_slave
+  SpecificName: Doûlos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: Slave
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+- Name: support_trader
+  SpecificName: Émporos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapon:
+      Primary: Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
