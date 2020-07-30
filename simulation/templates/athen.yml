@@ -8,34 +8,29 @@ athenians:
     ConquestCritical: false
 
 # Cavalry
-- Name: cavalry_javelinist_b
+- Name: cavalry_javelinist
   SpecificName: Pródromos
   Classes:
     Mobility: Unit
     Organic: true
     Profession: CitizenSoldier
     Mount: Cavalry 
-    Horse: ['maneless']
     Attack: Melee
-    Weapon:
-      Primary: javelin
+    Weapons:
+    - javelin
     Phenotype: Male
-    Armor: Leather
-    ConquestCritical: false
-- Name: cavalry_swordsman_b
+
+- Name: cavalry_swordsman
   SpecificName: Hippeús
   Classes:
     Mobility: Unit
     Organic: true
     Profession: CitizenSoldier
     Mount: Cavalry
-    Horse: ['maneless']
     Attack: Melee
-    Weapon:
-      Primary: sword
+    Weapons:
+    - sword
     Phenotype: Male
-    Armor: Leather
-    ConquestCritical: false
 
 # Infantry Melee
 - Name: Infantry Spearman
@@ -46,62 +41,52 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
     Extra: Hoplite
-    ConquestCritical: false
 
 - Name: champion_infantry
   SpecificName: Epílektos
   Classes:
     Mobility: Unit
     Organic: true
-    Profession: CitizenSoldier
+    Profession: Champion
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
     Extra: Hoplite
-    ConquestCritical: false
+
 - Name: champion_marine
   SpecificName: Epibátēs Athēnaîos
   Classes:
     Mobility: Unit
     Organic: true
-    Profession: CitizenSoldier
+    Profession: Champion
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+
 - Name: hero_pericles
   SpecificName: Periklēs
   Classes:
     Mobility: Unit
     Organic: true
-    Profession: CitizenSoldier
+    Profession: Hero
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
     Extra: Hoplite
-    ConquestCritical: false
+
 - Name: hero_themistocles
   SpecificName: Themistoklēs
   Classes:
@@ -110,14 +95,10 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
+    Weapons:
+    - Sword
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+
 - Name: hero_xenophon
   SpecificName: Xenophōn
   Classes:
@@ -126,14 +107,9 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
+    Weapons:
+    - Spear
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
 
 # Infantry Ranged
 - Name: champion_ranged
@@ -144,22 +120,80 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
     Armor: Leather
     Shield: Aspis
     Extra: Hoplite
     ConquestCritical: false
-- Name: infantry_javelinist_b
+
+- Name: infantry_javelinist
   SpecificName: Peltastḗs Thrâx
-- Name: infantry_marine_archer_b
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapons:
+    - Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+
+- Name: infantry_marine_archer
   SpecificName: Toxótēs Krētikós
-- Name: infantry_slinger_b
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapons:
+    - Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    Extra: Hoplite
+    ConquestCritical: false
+
+- Name: infantry_slinger
   SpecificName: Psilòs Athēnaîos
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapons:
+    - Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    ConquestCritical: false
+
 - Name: hero_iphicrates
   SpecificName: Iphikratēs
+  Classes:
+    Mobility: Unit
+    Organic: true
+    Profession: CitizenSoldier
+    Mount: Infantry 
+    Attack: Melee
+    Weapons:
+    - Spear
+      Secondary:
+    Phenotype: Male
+    Armor: Leather
+    Shield: Aspis
+    ConquestCritical: false
 
 # Ships
 - Name: ship_bireme
@@ -170,8 +204,8 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
     Armor: Leather
@@ -186,8 +220,8 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
     Armor: Leather
@@ -202,8 +236,8 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
     Armor: Leather
@@ -218,8 +252,8 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
     Armor: Leather
@@ -236,8 +270,8 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
+    Weapons:
+    - Spear
       Secondary:
     Phenotype: Male
     Armor: Leather
@@ -252,14 +286,9 @@ athenians:
     Profession: CitizenSoldier
     Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
+    Weapons:
+    - Spear
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
 
 # Support
 - Name: support_female_citizen
@@ -267,62 +296,41 @@ athenians:
   Classes:
     Mobility: Unit
     Organic: true
-    Profession: CitizenSoldier
-    Mount: Infantry 
+    Profession: Citizen
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
-    Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+    Weapons:
+    - knife
+    Phenotype: Female
+
 - Name: support_healer_b
   SpecificName: Iatros
   Classes:
     Mobility: Unit
     Organic: true
     Profession: CitizenSoldier
-    Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
+    Weapons:
+    - Spear
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+
 - Name: support_slave
   SpecificName: Doûlos
   Classes:
     Mobility: Unit
     Organic: true
     Profession: Slave
-    Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
+    Weapons:
+    - Hands
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+
 - Name: support_trader
   SpecificName: Émporos
   Classes:
     Mobility: Unit
     Organic: true
     Profession: CitizenSoldier
-    Mount: Infantry 
     Attack: Melee
-    Weapon:
-      Primary: Spear
-      Secondary:
+    Weapons:
+    - Spear
     Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false

@@ -2,13 +2,29 @@ const parser = require('fast-xml-parser')
 const yaml = require('yaml')
 const fs = require('fs')
 const path = require('path')
-const { program } = require('commander')
+
 const inquirer = require('inquirer')
+const packageJson = require('./package.json')
+const commands = require('./cli_command_heirarchy.js')
 
-program.version('0.0.1')
-program
-  .option('-d, --debug', 'output extra debugging')
-  .option('-s, --small', 'small pizza size')
-  .option('-p, --pizza-type <type>', 'flavour of pizza')
+//program.version(packageJson.version)
+const program = require('commander').program
 
+console.log(commands)
+
+function buildCommandHeirarchy(){
+  commands.forEach( (command) => {
+    program
+      .command(command.command)
+    program
+      .description(command.description)
+
+    if ( typeof command.action === 'string'){
+      program
+      .action(command.action)
+    } elseif ( typeof command.action === 'object'){
+
+    }
+  })
+}
 program.parse(process.argv)

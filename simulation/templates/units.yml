@@ -1,0 +1,30 @@
+- Name: New Unit General Name
+  SpecificName: New Unit Specific Name
+  Classes:
+    Mobility:
+      options: ["Unit", "Structure"]
+      default: Unit
+    Organic:
+      options: ["true","false"]
+      default: true    
+    Profession: 
+      options: ["Slave", "Citizen", "CitizenSoldier", "Professional", "Champion", "Hero"]
+      default: CitizenSoldier
+    Mount: 
+      options: ["Infantry", "Cavalry", "Camel", "Elephant"]
+      default: Infantry
+    Attack: 
+      options: ["Melee", "Ranged"]
+    Phenotype: 
+      options: ["Male","Female"]
+      default: Male
+    Armor: 
+      options: ["None","Leather","Chain","Plate"]
+      default: None
+    Horse: 
+      options: ["base", "bay", "alt", "beige", "black", "spotted", "breed", "brown", "cherrybay", "chestnut", "cream", "dark", "fading", "gray", "halflinger", "lusitano", "palomino", "skewbald", "tan", "white", "maneless", "pure", "pony"]
+      default: ["halflinger"]
+    Shield:
+      Melee: Aspis
+      Ranged: Peltast
+    ConquestCritical: false

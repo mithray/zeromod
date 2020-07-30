@@ -9,6 +9,7 @@
 ## High Damage
 
 - [ ] Armor Reduced
+  - [ ] Armor Cost dependent on hitpoints of unit to be armed
 - [ ] Attack Increased
 - [ ] Archers Attack Speed Reduced
 - [ ] More Experience Levels
@@ -21,6 +22,7 @@
 - [ ] Plant 
   - [ ] Fruit Trees
   - [ ] Wood Trees
+  - [ ] Farms(Farms work like bushes, but also grow back)
 - [ ] Fauna have "manure" aura which make 
   [x] workers collect from farms faster
   - [ ] trees grow faster

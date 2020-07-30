@@ -1,33 +1,52 @@
 ---
+# Generic
 code: athen
 name: athenians
 culture: hele
-deity: 
-  name: athena
+deities: 
+- name: athena
   description:
 emblem: session/portraits/emblems/emblem_athenians.png
 history: Athens, is the capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence started somewhere between the 11th and 7th millennium BC.
-combat:
-  preferred_distance: melee # defines starting entities and basic unit build tree
-  primary_melee: spear
-  primary_ranged: slinger
-  scout_cavalry: javelinist
 selectable_in_game_setup: true
-government: city states # <city states, league, empire, monarchy>
-architecture: attic
-genetic: attic
-diet: mediterranean
-formations: attic
-music: attic
-communality: civilized # Independent,
-structures: attic
-wall_sets: attic
+
+
 start_entities: standard
 civ_bonuses: attic
 team_bonuses: attic
-weapons: attic
-armor: attic, thracian, phrygian, hellenic
-clothing: attic, thracian
+
+combat:
+  formations: attic
+  preferred_distance: melee # defines starting entities and basic unit build tree
+  melee: 
+  - spear
+  - sword
+  ranged:
+  - slinger
+  - javelin
+  - archer
+  cavalry: 
+  - javelin
+  - sword
+  weapons: attic
+  armor: leather
+  shield:
+    melee: aspis
+    ranged: peltast
+
+culture:
+  clothing: attic, thracian
+  architecture: attic
+  genetic: attic
+  diet: mediterranean
+  music: attic
+  structures: attic
+  wall_sets: attic
+  ai_names: attic
+
+politics:
+  government: city states # <city states, league, empire, monarchy>
+  communality: civilized # <Independent, civilized>
+
 factions: attic
-ai_names: attic
 house_size: large # <small|large> (celts, iberians, indians, ptol are small) 
