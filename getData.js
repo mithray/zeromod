@@ -42,8 +42,6 @@ function readFile(filePath){
     if (filePath.endsWith('.yml')){
         res = YAML.parse(res)
     }
-    /*
-    */
     return res
 }
 

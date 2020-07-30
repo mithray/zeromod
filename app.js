@@ -8,23 +8,28 @@ const packageJson = require('./package.json')
 const commands = require('./cli_command_heirarchy.js')
 
 //program.version(packageJson.version)
-const program = require('commander').program
+var program = require('commander').program
 
-console.log(commands)
+function buildCommandHeirarchy(program, commands){
 
-function buildCommandHeirarchy(){
   commands.forEach( (command) => {
     program
       .command(command.command)
-    program
       .description(command.description)
-
-    if ( typeof command.action === 'string'){
-      program
       .action(command.action)
-    } elseif ( typeof command.action === 'object'){
 
+    if ( command.subcommands) {
+      var subprogram = require('commander').program
+      subprogram
+        .command(command.command)
+        .description(command.description)
+        .action( (options) => {
+          buildCommandHeirarchy(subprogram, command.action)
+      })
     }
   })
+    program.parse(process.argv)
+    return program
 }
-program.parse(process.argv)
+
+buildCommandHeirarchy(program, commands)

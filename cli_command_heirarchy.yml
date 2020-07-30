@@ -1,0 +1,18 @@
+---
+- command: generate
+  description: Generate 0AD Mod
+  action: ''
+- command: resources
+  description: Manage 0AD Resources
+  action:
+  - command: list
+    description: Manage 0AD Resources
+    action:
+    options:
+      isDefault: true
+  - command: add
+    description: Manage 0AD Resources
+    action:
+  - command: delete
+    description: Manage 0AD Resources
+    action:
