@@ -1,0 +1,20 @@
+---
+- command: generate
+  description: Generate 0AD Mod
+  action: lib/generate
+- command: init
+  description: Initialize the working directory
+  action: lib/init
+- command: resources
+  description: Manage 0AD Resources
+  action: lib/resource-list
+  subcommands:
+  - command: list
+    description: List 0AD Resources
+    action: lib/resource-list
+  - command: add
+    description: Add 0AD Resources
+    action: lib/resource-add
+  - command: delete
+    description: Delete 0AD Resources
+    action: lib/resource-delete
