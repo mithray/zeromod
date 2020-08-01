@@ -1,5 +1,5 @@
 {
-  "name": "zero_mod",
+  "name": "zeromod",
   "version": "0.0.1",
   "description": "A Collection of Different features all put into separate mods.",
   "main": "main.js",
@@ -14,9 +14,9 @@
   "author": "mithrayls <mithray@protonmail.com> (https://mithrayls.github.io/)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/mithrayls/0ad_realism/issues"
+    "url": "https://github.com/mithrayls/zeromod/issues"
   },
-  "homepage": "https://github.com/mithrayls/0ad_realism#readme",
+  "homepage": "https://github.com/mithrayls/zeromod#readme",
   "dependencies": {
     "change-case": "^4.1.1",
     "commander": "^6.0.0",
