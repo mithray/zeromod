@@ -1,0 +1,105 @@
+# https://trac.wildfiregames.com/wiki/ArtFileNamingConventions
+
+######################
+# Civilization Names
+######################
+athen: athenians
+brit: britons
+celt: celts
+gaul: gauls
+hele: hellenes
+iber: iberians
+illy: illyrians
+illyrian: illyrians
+imp: imperial romans #imperial
+kart: carthaginians
+cart: carthaginians
+kush: kushites
+mace: macedonians
+pers: persians
+ptol: ptolemies
+rome: romans
+samnite: samnites
+sele: seleucids
+spart: spartans
+thes: thespians
+thespian: thespians
+thrac: thracians
+thracian: thracians
+thra: thracians
+nuba: nubians
+nub: nubians
+hun: huns
+huns: huns
+zapo: zapotecs
+xion: xiongnu
+
+######################
+# Suffixes
+######################
+b: basic
+a: advanced
+e: elite
+c: champion
+h: hero # hero, horse, head ? 
+r: rider
+m: mount
+
+
+######################
+# Names
+######################
+
+isw: infantry swordsman
+isp: infantry spearman
+ijv: infantry javelinist
+isl: infantry slinger
+iar: infantry archer
+csw: cavalry sword
+csp: cavalry spear
+cjv: cavalry javelin
+car: cavalry archer
+fem: female worker
+med: healer
+trd: trader
+mer: merchantman ship
+bir: bireme
+tri: trireme
+qui: quinquereme
+su1: super unit 1
+su2: super unit 2
+su3: super unit 3
+hr1: hero 1
+hr2: hero 2
+hr3: hero 3
+
+######################
+# Structures
+######################
+cc: civilization center
+ho: house
+fc: farm center
+fv: farm vegetation
+fa: corral animal
+rc: resource center
+tf: free standing tower scout tower
+wc: wall
+wg: wall gate
+wt: wall tower
+pc: port center
+mc: military center
+tc: trade center
+hc: health center
+ff: fortress
+sb: special building
+
+######################
+#General
+######################
+ui: User Interface
+prop: prop
+wrld: world
+f: fall
+s: summer
+p: spring
+w: winter

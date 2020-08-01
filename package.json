@@ -1,8 +1,8 @@
 {
-  "name": "muse_source",
+  "name": "zero_mod",
   "version": "0.0.1",
   "description": "A Collection of Different features all put into separate mods.",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -24,6 +24,7 @@
     "inquirer": "^7.3.3",
     "js-yaml": "^3.14.0",
     "node-fetch": "^2.6.0",
+    "readdirp": "^3.4.0",
     "safe-eval": "^0.4.1",
     "wikijs": "^6.0.1",
     "xml-formatter": "^2.1.2",

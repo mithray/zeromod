@@ -1,0 +1,123 @@
+# https://trac.wildfiregames.com/wiki/ArtFileNamingConventions
+
+######################
+# Civilization Names
+######################
+civilization:
+- anglo-saxons
+- athenians
+- britons
+- carolingians
+- carthaginians
+- celts
+- epirotes
+- gauls
+- han chinese
+- hellenes
+- hopis
+- huns
+- iberians
+- illyrians
+- imperial romans
+- kushites
+- macedonians
+- maurya indians
+- mexicas
+- norse
+- nubas
+- persians
+- ptolemaic egyptians
+- romans
+- republican romans
+- samnites
+- scythians
+- seleucids
+- spartans
+- seubian germans
+- tawantinsuyu
+- thracians
+- thespians
+- umayyads
+- thebans
+- xiongnu
+- yayoi
+- zapotecs
+
+file_extension:
+- xml
+- js
+- dae
+- dds
+- png
+
+######################
+# Suffixes
+######################
+class:
+- slave
+- citizen
+- citizen soldier
+- professional
+- basic
+- advanced
+- elite
+- champion
+- hero # hero, horse, head ? 
+
+- r: rider
+- m: mount
+
+color:
+- silver
+- black
+- white
+- green
+- blue
+- chestnut
+- brown
+
+material:
+- bronze
+- iron
+- wood
+- wicker
+- leather
+
+resource_type:
+- armor
+- weapon
+- helmet
+- helmets
+armor_type:
+- greaves
+- greave
+- neckguard
+
+
+######################
+# Names
+######################
+
+mount:
+- infantry
+- camel
+- horse
+- elephant
+
+weapon:
+- sword
+- spear
+- javelin
+- slinger
+- archer
+- bow
+- worker
+- blowgun
+
+phenotype:
+- male
+- female
+
+organic: 
+- true
+- false
