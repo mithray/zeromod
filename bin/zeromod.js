@@ -3,5 +3,7 @@
 const path = require('path')
 const createProgram = require('@mithray/fcli')
 
-var program = createProgram(path.join(__dirname,'commands.yml'))
+var commands = path.join(process.cwd(),'commands.yml')
+
+var program = createProgram(commands)
 program.parse(process.argv)

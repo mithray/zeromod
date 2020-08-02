@@ -63,6 +63,7 @@ class:
 - elite
 - champion
 - hero # hero, horse, head ? 
+- priest
 
 - r: rider
 - m: mount
@@ -88,6 +89,8 @@ resource_type:
 - weapon
 - helmet
 - helmets
+- head
+- shield
 armor_type:
 - greaves
 - greave
@@ -105,6 +108,7 @@ mount:
 - elephant
 
 weapon:
+- axe
 - sword
 - spear
 - javelin
@@ -121,3 +125,6 @@ phenotype:
 organic: 
 - true
 - false
+
+clothing:
+- capes
