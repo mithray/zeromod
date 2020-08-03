@@ -1,0 +1,11 @@
+{
+	"type": "garrison",
+	"affects": ["Unit"],
+	"modifications": [
+        { "value": "UnitMotion/WalkSpeed", "multiply": 0.85 }
+	],
+	"auraName": "Heavy Burden",
+	"auraDescription": "Unit will reduce a horses speed when mounted",
+    "stackable": true
+}
+

@@ -1,0 +1,14 @@
+{
+	"type": "garrison",
+	"affects": ["Soldier"],
+	"modifications": [
+        { "value": "Attack/Ranged/Damage/Hack", "replace": "0"},
+        { "value": "Attack/Ranged/Damage/Pierce", "replace": "0"},
+        { "value": "Attack/Ranged/Damage/Crush", "replace": "0"},
+        { "value": "Attack/Ranged/MaxRange", "replace": "72"},
+        { "value": "Attack/Ranged/MinRange", "replace": "15"}
+	],
+	"auraName": "Mount Switch Ranged",
+	"auraDescription": "Mount Switch Ranged"
+}
+

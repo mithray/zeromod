@@ -1,22 +1,26 @@
-Sheep
+Sheep:
   - Meat
   - Cheaper padded armor?
   - More Efficient Meat
-Goat
+Goat:
   - Meat
   - Cheaper padded armor
   - Milk Trickle
   - Cheese Trickle
   - Butter Trickle
-Chicken
+Chicken:
   - Meat
   - Eggs Trickle
   - Feather Trickle
-Cow
+Cow:
   - Meat
   - Cheaper padded armor
   - Milk Trickle
   - Cheese Trickle
   - Butter Trickle
-Pork
+Pork:
   - More Efficient Meat
+
+#war https://www.livescience.com/60518-animals-used-in-warfare/2.html
+scorpions:
+bees:
