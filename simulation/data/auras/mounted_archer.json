@@ -1,0 +1,12 @@
+{
+	"type": "garrison",
+	"affects": ["Soldier"],
+	"modifications": [
+        { "value": "UnitMotion/WalkSpeed", "multiply": 0.85 },
+        { "value": "VisualActor/Actor", "replace": "units/persians/cavalry_archer_b_r.xml" }
+	],
+	"auraName": "Mounted Archer",
+	"auraDescription": "Mount a horse",
+    "stackable": true
+}
+
