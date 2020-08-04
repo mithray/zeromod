@@ -63,3 +63,6 @@ phase:
   type: phase # <phase|age> whether to make phase researchable or to apply automatically when certain conditions - such as number of buildings - are met
   territory: contiguous # <contiguous|global> whether to apply the phase to contiguous territories or globally.
 ```
+
+
+

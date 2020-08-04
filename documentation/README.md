@@ -87,3 +87,7 @@ Unit Experience, Stats, Configuration
 - [ ] Players can apoint AI to control certain portions of their troops or build order.
 - [ ] Perhaps set an "Officer" over these AIs and have Officers buildable.
 - [ ] This can be used for build order, or micro fighting tactics. 
+
+## Siege Units
+- [ ] Must be garrisoned to move
+- [ ] Can garrison up to four men and two(or four?) horse, depending on the siege weapon. A horse enables movement. Each man increase the movement rate and attack rate.

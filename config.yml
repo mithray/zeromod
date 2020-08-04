@@ -1,4 +1,10 @@
-name: Greek States 
+meta:
+  name: Greek States 
+  version: 0.0.1
+  label: Greek States
+  url: 
+  description: Presently just a test mod
+  dependencies: ["0ad>=0.0.23"]
 civilizations: ["hellenic"]   
     #  athen: true
     #  brit: false
@@ -56,4 +62,3 @@ agriculture:
 phase:
   type: phase # <phase|age> whether to make phase researchable or to apply automatically when certain conditions - such as number of buildings - are met 
   territory: contiguous # <contiguous|global> whether to apply the phase to contiguous territories or globally.
-

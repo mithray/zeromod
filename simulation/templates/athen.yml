@@ -3,334 +3,166 @@ athenians:
 - Name: catafalque
   SpecificName: Solon
   Classes:
-    Mobility: Unit
     Organic: false
-    ConquestCritical: false
 
 # Cavalry
 - Name: cavalry_javelinist
   SpecificName: Pródromos
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
     Mount: Cavalry 
-    Attack: Melee
-    Weapons:
-    - javelin
-    Phenotype: Male
+    Weapons: [ "javelin" ]
 
 - Name: cavalry_swordsman
   SpecificName: Hippeús
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
     Mount: Cavalry
-    Attack: Melee
-    Weapons:
-    - sword
-    Phenotype: Male
+    Weapons: [ "sword" ]
 
 # Infantry Melee
 - Name: Infantry Spearman
   SpecificName: Hoplítēs Athēnaîos
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-    Phenotype: Male
+    Weapons: [ "spear" ]
     Extra: Hoplite
 
 - Name: champion_infantry
   SpecificName: Epílektos
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: Champion
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "spear" ]
     Extra: Hoplite
 
 - Name: champion_marine
   SpecificName: Epibátēs Athēnaîos
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: Champion
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
-
+    Weapons: [ "sword" ]
+    
 - Name: hero_pericles
   SpecificName: Periklēs
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: Hero
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "spear" ]
     Extra: Hoplite
 
 - Name: hero_themistocles
   SpecificName: Themistoklēs
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
+    Profession: Hero
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Sword
-    Phenotype: Male
-
-- Name: hero_xenophon
-  SpecificName: Xenophōn
-  Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
-    Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-    Phenotype: Male
-
+    Weapons: [ "sword" ]
+    
 # Infantry Ranged
 - Name: champion_ranged
   SpecificName: Toxótēs Skythikós
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
+    Profession: Champion
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "Bow" ]
     Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
 
 - Name: infantry_javelinist
   SpecificName: Peltastḗs Thrâx
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "Javelin" ]
     Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+    Shield: Pelte
 
 - Name: infantry_marine_archer
   SpecificName: Toxótēs Krētikós
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
+    Profession: Mercenary
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "Bow" ]
     Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+    Shield: Buckler
 
 - Name: infantry_slinger
   SpecificName: Psilòs Athēnaîos
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "Spear" ]
     Armor: Leather
-    Shield: Aspis
-    ConquestCritical: false
 
 - Name: hero_iphicrates
   SpecificName: Iphikratēs
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
+    Profession: Hero
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
+    Weapons: [ "Javelin" ]
     Armor: Leather
     Shield: Aspis
-    ConquestCritical: false
 
 # Ships
 - Name: ship_bireme
   SpecificName: Pentēkóntoros
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
-    Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+    Weapons: [ "Bow" ]
+    Extra: Bireme
+
 - Name: ship_fishing
   SpecificName: Ploîon Halieutikón
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
     Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+
 - Name: ship_merchant
   SpecificName: Ploîon Phortēgikón
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
-    Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+
 - Name: ship_trireme
   SpecificName: Triḗrēs Athēnaía
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: CitizenSoldier
-    Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+    Weapons: [ "Spear" ]
+    Extra: Trireme
+    Build: ["infantry_marine_archer","champion_marine"]
 
 # Siege
 - Name: siege_lithobolos_packed
   SpecificName: Lithobólos
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
-    Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-      Secondary:
-    Phenotype: Male
-    Armor: Leather
-    Shield: Aspis
-    Extra: Hoplite
-    ConquestCritical: false
+    Weapons: [ "Catapult" ]
+
 - Name: siege_oxybeles_packed
   SpecificName: Oxybelḗs
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
-    Mount: Infantry 
-    Attack: Melee
-    Weapons:
-    - Spear
-    Phenotype: Male
+    Weapons: [ "Balista" ]
 
 # Support
 - Name: support_female_citizen
   SpecificName: Gýnē Athēnaía
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: Citizen
-    Attack: Melee
-    Weapons:
-    - knife
+    Weapons: [ "knife" ]
     Phenotype: Female
 
 - Name: support_healer_b
   SpecificName: Iatros
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
-    Attack: Melee
-    Weapons:
-    - Spear
-    Phenotype: Male
-
+    Profession: Priest
+    Weapons: [ "Spear" ]
+    
 - Name: support_slave
   SpecificName: Doûlos
   Classes:
-    Mobility: Unit
-    Organic: true
     Profession: Slave
-    Attack: Melee
-    Weapons:
-    - Hands
-    Phenotype: Male
-
+    Weapons: [ "Hands" ]
+    
 - Name: support_trader
   SpecificName: Émporos
   Classes:
-    Mobility: Unit
-    Organic: true
-    Profession: CitizenSoldier
-    Attack: Melee
-    Weapons:
-    - Spear
-    Phenotype: Male
+    Profession: Citizen
+    Weapons: [ "Spear" ]
