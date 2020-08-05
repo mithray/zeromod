@@ -7,6 +7,7 @@ const changeCase = require('change-case')
 const filePath= path.join(__dirname ,"civs/hellenic/athenians.yml")
 const path_classes = path.join(__dirname,"civs/cultural_classes/")
 const wiki_api_url="https://en.wikipedia.org/api/rest_v1/page/summary/"
+const parse = require('./parse.js')
 
 async function getWiki(title){
 
@@ -17,11 +18,6 @@ async function getWiki(title){
             return main
         })
     return info
-}
-
-function getData(category, subcategory){
-  var data = readYamlFile(path.join(path_classes,`${category}.yml`))
-    return data[subcategory]
 }
 
 async function createCivObject(civinfo){

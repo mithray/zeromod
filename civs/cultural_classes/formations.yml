@@ -11,7 +11,7 @@ standard: &standard
 - special/formations/wedge
 - special/formations/battle_line
 
-standard: &standard_infantry_melee
+standard_melee: &standard_infantry_melee
 - special/formations/null
 - special/formations/box
 - special/formations/column_closed
@@ -21,7 +21,7 @@ standard: &standard_infantry_melee
 - special/formations/flank
 - special/formations/battle_line
 
-standard: &standard_ranged
+standard_ranged: &standard_ranged
 - special/formations/null
 - special/formations/box
 - special/formations/column_closed
@@ -32,7 +32,7 @@ standard: &standard_ranged
 - special/formations/battle_line
 - special/formations/skirmish
 
-standard: &standard_cavalry
+standard_cavalry: &standard_cavalry
 - special/formations/null
 - special/formations/box
 - special/formations/column_closed

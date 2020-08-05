@@ -46,10 +46,14 @@ battle:
 experience:
   promote_across_class: true
   classes:
+    - slave
+    - citizen
     - citizen soldier
     - professional
     - champion
     - hero
+    - mercenary
+    - priest
 
 agriculture:
   farms_used_and_regrow: true

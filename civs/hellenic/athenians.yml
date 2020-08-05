@@ -2,7 +2,6 @@
 # Generic
 code: athen
 name: athenians
-culture: hele
 deities: 
 - name: athena
   description:
@@ -35,6 +34,7 @@ combat:
     ranged: peltast
 
 culture:
+  main: hele
   clothing: attic, thracian
   architecture: attic
   genetic: attic

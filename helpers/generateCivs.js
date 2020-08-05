@@ -1,33 +1,28 @@
-const safeEval = require('safe-eval')
-const YAML = require('yaml')
-const fetch = require('node-fetch')
-const fs = require('fs')
 const path = require('path')
 const changeCase = require('change-case')
-const filePath= path.join(__dirname ,"civs/hellenic/athenians.yml")
-const path_classes = path.join(__dirname,"civs/cultural_classes/")
+const fetch = require('node-fetch')
 const wiki_api_url="https://en.wikipedia.org/api/rest_v1/page/summary/"
+const parse = require('./parse.js')
+const readdirp = require('readdirp')
+const culturalClasses = {}
 
 async function getWiki(title){
 
-    const info = await fetch(wiki_api_url+title)
+    const info = await fetch( wiki_api_url + title )
         .then(res => res.text())
         .then( body => {
             let main = JSON.parse(body).extract
             return main
         })
-    return info
-}
 
-function getData(category, subcategory){
-  var data = readYamlFile(path.join(path_classes,`${category}.yml`))
-    return data[subcategory]
+    return info
+
 }
 
 async function createCivObject(civinfo){
     const civ = {}
     civ["Code"] = changeCase.noCase(civinfo.code)
-    civ["Culture"] = changeCase.noCase(civinfo.culture)
+    civ["Culture"] = changeCase.noCase(civinfo.culture.main)
     civ["Name"] = changeCase.sentenceCase(civinfo.name)
     civ["Emblem"] = civinfo.emblem
     if (civinfo.history){
@@ -52,38 +47,31 @@ async function createCivObject(civinfo){
     return civ
 }
 
-function readYamlFile(filePath){
-//    console.log(filePath)
-    var res = fs.readFileSync(filePath,{ encoding: 'utf-8' })
-    res = YAML.parse(res)
+const culturalClassesPath = path.join(process.cwd(),"civs/cultural_classes")
+async function getCulturalClasses(){
+    for await (const entry of readdirp(culturalClassesPath)){
+        console.log('hi1')
+        console.log(entry)
+        let obj = parse(entry.fullPath)
+        console.log('hi2')
+        let basename = entry.basename.replace(/.yml$/,'')
+        console.log(basename)
     /*
-    var res = await fs.readFile(filePath, {encoding: 'utf-8'}, async function(err,data){
-        if (!err) {
-            console.log('here2')
-
-            return await YAML.parse(data)
-        } else {
-            console.log(err)
-        }
-    });
+        culturalClasses[]
+    let obj = {}
+    obj.modname = modname
+    obj.fullPath = entry.fullPath
+    obj.modRelativePath=path.join(modname,resourceTypePaths[j],entry.basename)
+    files.push(obj)
     */
-    return res
-}
-function interpolate(match, p1 ){
-    var civ = civinfo
-    var context = {
-        civ: civ
     }
-    return safeEval(p1,context)
-
+    console.log('hi')
 }
-var civinfo
-async function execute(){
-    var obj = await readYamlFile(filePath)
-    var civ = await createCivObject(obj)
-    civinfo = obj
-    console.log(JSON.stringify(civ).replace(/\$\{(.*?)\}/g, interpolate))
-    return civ
-}
+//culturalCategories.
+getCulturalClasses()
+let civinfo = parse(path.join(process.cwd(),'civs/hellenic/athenians.yml'))
+//civinfo = createCivObject(civinfo)
 
-execute()
+//console.log(civinfo)
+
+module.exports = createCivObject

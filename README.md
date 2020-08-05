@@ -9,6 +9,7 @@ zeromod generate --input "conf.yml" --ouput "mymod"
 ```
 
 ```shell
+zeromod init
 zeromod resources list <shields, maps, etc>
 zeromod resources add
 zeromod resources delete
@@ -63,6 +64,3 @@ phase:
   type: phase # <phase|age> whether to make phase researchable or to apply automatically when certain conditions - such as number of buildings - are met
   territory: contiguous # <contiguous|global> whether to apply the phase to contiguous territories or globally.
 ```
-
-
-

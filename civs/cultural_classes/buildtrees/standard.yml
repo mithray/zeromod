@@ -1,5 +1,5 @@
-standard: &standard
 # Village Phase
+standard: &standard
 - civic_center:
     village_phase: 
     - Female Citizen
@@ -118,19 +118,21 @@ standard: &standard
     - trade_convoys_armor
     - advanced handicraft
 - blacksmith:
+    town_phase:
     - armor infantry 01 
-    - armor infantry 02
     - armor cavalry 01 
-    - armor cavalry 02
-    - iron hero armor
     - attack infantry melee 01
-    - attack infantry melee 02
     - attack infantry ranged 01
-    - attack infantry ranged 02
     - attack cavalry melee 01
-    - attack cavalry melee 02
     - attack cavalry ranged 01
+    city_phase:
+    - armor infantry 02
+    - armor cavalry 02
+    - attack infantry melee 02
+    - attack infantry ranged 02
+    - attack cavalry melee 02
     - attack cavalry ranged 02
+    - iron hero armor
 - defense_tower:
     town_phase:
     - sentries
