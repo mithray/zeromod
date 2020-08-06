@@ -10,8 +10,66 @@ const config = parse('./config.yml')
 const mkdirp = require('mkdirp')
 const fs = require('fs')
 const getWikiData = require('./getWikiData.js')
+const YAML = require('yaml')
 
-async function interpolateCivTemplates(){
+async function interpolateCivTemplate(culturalClassesPath, civPath){
+
+    const classes = await getCulturalClasses(culturalClassesPath)
+    var dates = []
+    const civinfo = parse(civPath)
+    const factions = classes['factions'][civinfo.factions]
+    for (let i = 0; i < factions.length; i++){
+        const faction = factions[i]
+        for (let j = 0; j < faction["heroes"].length; j++){
+            const hero = faction["heroes"][j]
+            var deathDate
+            await getWikiData(hero["name"]).then( async (res) => {
+
+                deathDate = await res.info('deathDate')
+                var summary = await res.summary()
+                summary = summary.replace(/\n+.*/,'')
+                if(!hero.history){
+                    classes['factions'][civinfo.factions][i]['heroes'][j]['history'] = summary
+                }
+                if(deathDate){
+                    let dateRegex = /.*(\b[0-9]{1,4}\s*BC).*/g
+                    deathDate = deathDate.replace(dateRegex,`$1`)
+                    classes['factions'][civinfo.factions][i]['heroes'][j]['deathDate'] = deathDate
+                    await dates.push(deathDate)
+                }
+                else {
+                    const dateStringRegex = /\(.*[0-9]{1,4}\s*BC.*\)/;
+                    const dateString = summary.match(dateStringRegex)[0];
+                    const datesRegex = /[0-9]{1,4}\s*BC/g
+                    const datesTmp = dateString.match(datesRegex)
+                    deathDate = datesTmp[ datesTmp.length - 1 ]
+                    classes['factions'][civinfo.factions][i]['heroes'][j]['deathDate'] = deathDate
+                    await dates.push(deathDate)
+                }
+            })
+
+        }
+    }
+    function greaterThan(first,second){
+        return first > second
+    }
+    dates.sort(greaterThan)
+    civinfo.period = {
+        beginning: dates[0],
+        end: dates[dates.length - 1]
+    }
+
+    const options = {indentSeq: false}
+    const obj = {}
+    obj[civinfo.factions] = classes['factions'][civinfo.factions]
+    const interpolated = YAML.stringify(obj,options)
+    const writePath = classes['factions'].fullPath
+    fs.writeFileSync(writePath,interpolated)
+            /*
+            await deathDate.then((res)=>{
+                console.log(`death date found ${res}`)
+            })
+            */
 
 }
 
@@ -26,6 +84,7 @@ async function createCivObject(civinfo, classes){
     } else {
       civ["History"] = await getWiki(civinfo.name)
     }
+    civ["Period"] = civinfo.period
 
 //    console.log(civinfo)
     if (typeof(civinfo.culture.music) === "string" || typeof(civinfo.culture.music[0]) === "string" ) {
@@ -33,37 +92,9 @@ async function createCivObject(civinfo, classes){
     }
     civ["Factions"] = classes['factions'][civinfo.factions]
 
-    console.log(civ["Factions"])
+//    console.log(civ["Factions"])
 
 
-    for (let i = 0; i < civ["Factions"].length; i++){
-        const faction = civ["Factions"][i]
-        for (let j = 0; j < faction["Heroes"].length; j++){
-            const hero = faction["Heroes"][j]
-            getWikiData(hero["Name"]).then( async (res) => {
-                var deathDate = await res.info('deathDate')
-                var summary = await res.summary()
-
-                console.log(summary)
-                if(deathDate){
-                    let dateRegex = /.*(\b[0-9]{1,4}\s*BC).*/g
-                    deathDate = deathDate.replace(dateRegex,`$1`)
-                    console.log(`death date is ${deathDate} (found in infobox)`)
-                }
-                else {
-                    const dateStringRegex = /\(.*[0-9]{1,4}\s*BC.*\)/;
-                    const dateString = summary.match(dateStringRegex)[0];
-                    const datesRegex = /[0-9]{1,4}\s*BC/g
-                    const dates = dateString.match(datesRegex)
-                    deathDate = dates[ dates.length - 1 ]
-
-
-                    console.log(`death date is ${deathDate} (found in summary)`)
-                }
-            })
-
-        }
-    }
     /*
     civ["Factions"].forEach(faction=>{
         faction["Heroes"].forEach( async (hero) => {
@@ -104,16 +135,22 @@ async function getCulturalClasses(culturalClassesPath){
     const obj = {}
     for await (const entry of readdirp(culturalClassesPath)){
         let basename = entry.basename.replace(/.yml$/,'')
-        obj[basename] = parse(entry.fullPath)
+        const fullPath = entry.fullPath
+        obj[basename] = parse(fullPath)
+        obj[basename].fullPath = fullPath
+   //console.log(obj)
     }
     return obj
 }
 //culturalCategories.
 async function generateCivs(){
+    const civPath = path.join(process.cwd(),'simulation/data/civs/hellenic/athenians.yml')
     const culturalClassesPath = path.join(process.cwd(),"simulation/data/civs/cultural_classes")
-    const civinfo = parse(path.join(process.cwd(),'simulation/data/civs/hellenic/athenians.yml'))
-    const classes = await getCulturalClasses(culturalClassesPath)
+    interpolateCivTemplate(culturalClassesPath, civPath)
+//    const civinfo = parse(civPath)
 //    console.log(classes)
+
+/*
     const civ = await createCivObject(civinfo, classes)
     const civWriteDir = path.join(
         process.cwd(),
@@ -121,7 +158,6 @@ async function generateCivs(){
         changeCase.snakeCase(config.name),
         'simulation/data/civs'
     )
-
     try {
       fs.accessSync(civWriteDir, fs.constants.R_OK | fs.constants.W_OK);
     } catch (err) {
@@ -129,9 +165,11 @@ async function generateCivs(){
     }
     const writePath = path.join(civWriteDir, civinfo.code + '.json')
     fs.writeFileSync(writePath, JSON.stringify(civ,null,'  '))
+    */
+
+
 /*
     console.log(writeDir)
-
     console.log(civ)
     console.log(config)
     */

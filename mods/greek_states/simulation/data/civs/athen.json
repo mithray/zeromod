@@ -56,14 +56,14 @@
           "Class": "",
           "Armament": "",
           "Emblem": "",
-          "History": "https://en.wikipedia.org/api/rest_v1/page/summary/Pericles"
+          "History": null
         },
         {
           "Name": "Iphicrates",
           "Class": "",
           "Armament": "",
           "Emblem": "",
-          "History": "https://en.wikipedia.org/api/rest_v1/page/summary/Iphicrates"
+          "History": null
         }
       ]
     }
