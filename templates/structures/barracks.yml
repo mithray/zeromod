@@ -1,0 +1,10 @@
+barracks:
+  village: 
+  - Infantry ${weapon.primary.melee}
+  - Infantry ${weapon.primary.ranged}
+  - Cavalry ${weapon.primary.default}
+  town: 
+  - Infantry ${weapon.secondary.melee}
+  - Infantry ${weapon.secondary.ranged}
+  - Cavalry ${weapon.primary.default}
+  city: 

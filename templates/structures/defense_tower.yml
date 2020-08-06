@@ -1,0 +1,8 @@
+defense_tower:
+  town:
+  - sentries
+  - crenallations
+  - arrow shooters
+  city:
+  - murder_holes
+  - sturdy foundations

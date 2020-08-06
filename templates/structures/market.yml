@@ -1,0 +1,11 @@
+market:
+  town:
+  - trader
+  - cartography
+  - diaspora
+  - trade_convoys_speed
+  - handicraft
+  - commercial treaty
+  city:
+  - trade_convoys_armor
+  - advanced handicraft

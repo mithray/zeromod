@@ -1,0 +1,14 @@
+---
+arrows:
+  code: arrows
+  name: Arrows
+  description: Arrows for using for arming your archers.
+  order: 5
+  subtypes:
+    arrows: Arrows
+  properties:
+    - barterable
+    - tradable
+    - tributable
+  truePrice: 100
+  aiAnalysisInfluenceGroup: sparse

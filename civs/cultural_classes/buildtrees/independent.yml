@@ -1,4 +1,0 @@
-independent: &independent
-- ${buildtree.standard}
-- -house
-- house_dropsite

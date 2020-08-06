@@ -1,0 +1,42 @@
+---
+# Hellenic Cultures
+# Celtic Cultures
+# Germanic Cultures
+# Frankish Cultures
+# African Cultures
+# Indian Cultures
+# Near East Cultures
+# Mediterranean Cultures
+# Latin Cultures
+# East Asian Cultures
+# Pre-Columbian American Cultures
+
+# Standard
+standard: &standard
+- Template: structures/standard_civil_centre
+- Template: units/${civ.code}_support_female_citizen
+  Count: 4
+- Template: units/${civ.code}_infantry_${civ.combat.melee[0]}_b
+  Count: 2
+- Template: units/${civ.code}_infantry_${civ.combat.ranged[0]}_b
+  Count: 2
+- Template: units/${civ.code}_cavalry_${civ.combat.cavalry[0]}_b
+
+hellenic: &hellenic
+- Template: structures/athen_civil_centre
+- Template: units/athen_support_female_citizen
+  Count: 4
+- Template: units/athen_infantry_spearman_b
+  Count: 2
+- Template: units/athen_infantry_slinger_b
+  Count: 2
+- Template: units/athen_cavalry_javelinist_b
+attic: &attic
+- *hellenic
+
+mauryan: &mauryan
+- *standard
+- Template: units/${civ.code}_infantry_${civ.combat.ranged[0]}_b
+  Count: 1
+- Template: units/${civ.code}_support_elephant
+  Count: 1

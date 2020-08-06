@@ -27,6 +27,7 @@
     "fast-xml-parser": "^3.17.4",
     "inquirer": "^7.3.3",
     "js-yaml": "^3.14.0",
+    "mkdirp": "^1.0.4",
     "node-fetch": "^2.6.0",
     "readdirp": "^3.4.0",
     "safe-eval": "^0.4.1",

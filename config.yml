@@ -1,10 +1,9 @@
-meta:
-  name: Greek States 
-  version: 0.0.1
-  label: Greek States
-  url: 
-  description: Presently just a test mod
-  dependencies: ["0ad>=0.0.23"]
+name: Greek States 
+version: 0.0.1
+label: Greek States
+url: 
+description: Presently just a test mod
+dependencies: ["0ad>=0.0.23"]
 civilizations: ["hellenic"]   
     #  athen: true
     #  brit: false

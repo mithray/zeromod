@@ -1,4 +1,0 @@
-hellenistic: &hellenistic
-- ${buildtree.standard}
-- Library
-- Siege Tower

@@ -1,0 +1,14 @@
+---
+javelins:
+  code: javelins
+  name: Javelins
+  description: Javelins for arming your javelinists.
+  order: 6
+  subtypes:
+    javelins: Javelins
+  properties:
+    - barterable
+    - tradable
+    - tributable
+  truePrice: 100
+  aiAnalysisInfluenceGroup: sparse

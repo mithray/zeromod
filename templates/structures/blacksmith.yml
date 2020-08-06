@@ -1,0 +1,16 @@
+blacksmith:
+  town:
+  - armor infantry 01 
+  - armor cavalry 01 
+  - attack infantry melee 01
+  - attack infantry ranged 01
+  - attack cavalry melee 01
+  - attack cavalry ranged 01
+  city:
+  - armor infantry 02
+  - armor cavalry 02
+  - attack infantry melee 02
+  - attack infantry ranged 02
+  - attack cavalry melee 02
+  - attack cavalry ranged 02
+  - iron hero armor

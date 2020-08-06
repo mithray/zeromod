@@ -1,0 +1,5 @@
+celts: &celts
+  classes: 
+  - standard
+  city:
+  - rotary mill

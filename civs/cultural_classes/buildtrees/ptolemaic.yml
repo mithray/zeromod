@@ -1,3 +1,0 @@
-ptolmaic: &ptolmaic
-- ${buildtree.hellenistic}
-- Lighthouse

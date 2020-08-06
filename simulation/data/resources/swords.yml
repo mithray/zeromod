@@ -1,0 +1,14 @@
+---
+swords:
+  code: swords
+  name: Swords
+  description: Swords for arming your swordsmen.
+  order: 7
+  subtypes:
+    swords: Swords
+  properties:
+    - barterable
+    - tradable
+    - tributable
+  truePrice: 100
+  aiAnalysisInfluenceGroup: sparse

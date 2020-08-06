@@ -1,0 +1,12 @@
+civic_center:
+  village: 
+  - Female Citizen
+  - Infantry ${weapon.primary.melee}
+  - Infantry ${weapon.primary.ranged}
+  - Cavalry ${weapon.primary.default}
+  - Town Phase
+  town:
+  - City Phase
+  city:
+  - Espionage
+  - Counterintelligence

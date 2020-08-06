@@ -1,0 +1,14 @@
+---
+spears:
+  code: spears
+  name: Spears
+  description: Swords for arming your swordsmen.
+  order: 8
+  subtypes:
+  spears: Spears
+  properties:
+    - barterable
+    - tradable
+    - tributable
+  truePrice: 100
+  aiAnalysisInfluenceGroup: sparse
