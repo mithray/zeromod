@@ -146,11 +146,11 @@ async function getCulturalClasses(culturalClassesPath){
 async function generateCivs(){
     const civPath = path.join(process.cwd(),'simulation/data/civs/hellenic/athenians.yml')
     const culturalClassesPath = path.join(process.cwd(),"simulation/data/civs/cultural_classes")
-    interpolateCivTemplate(culturalClassesPath, civPath)
-//    const civinfo = parse(civPath)
+//    interpolateCivTemplate(culturalClassesPath, civPath)
+    const civinfo = parse(civPath)
+    const classes = await getCulturalClasses(culturalClassesPath)
 //    console.log(classes)
 
-/*
     const civ = await createCivObject(civinfo, classes)
     const civWriteDir = path.join(
         process.cwd(),
@@ -165,6 +165,7 @@ async function generateCivs(){
     }
     const writePath = path.join(civWriteDir, civinfo.code + '.json')
     fs.writeFileSync(writePath, JSON.stringify(civ,null,'  '))
+/*
     */
 
 

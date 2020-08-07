@@ -5,7 +5,7 @@
 - command: init
   description: Initialize the working directory
   action: lib/init
-- command: resources
+- command: resource
   description: Manage 0AD Resources
   action: lib/resource-list
   subcommands:
