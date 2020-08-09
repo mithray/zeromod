@@ -1,7 +1,9 @@
 ---
 # Generic
 code: athen
-name: athenians
+name: athenian
+demonym: athenian
+demonym_plural: athenian
 deities: 
 - name: athena
   description:
@@ -13,6 +15,9 @@ selectable_in_game_setup: true
 start_entities: standard
 civ_bonuses: attic
 team_bonuses: attic
+physical:
+  height: 1.77 #metres
+  weight: 90 #kg
 
 formations: attic
 combat:
