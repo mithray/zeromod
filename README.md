@@ -4,6 +4,7 @@ The main goal of this project is to unify content from other mods and to make mo
 
 Once this project is finished, it should be easy to create a custom mod with different settings from other mods and civilization restrictions, such as including in the released mod only Baltic or Hellenic civilizations, or many other economic settings such as low armor, balancing adjustments etc.
 
+
 ```shell
 zeromod generate --input "conf.yml" --ouput "mymod"
 ```
