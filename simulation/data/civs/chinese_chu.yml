@@ -1,6 +1,7 @@
-Culture
-- Chinese
-CivBonuses
-Heroes
-
-Armored Heavy Crossbows
+chichu:
+  culture:
+  - chinese
+  CivBonuses
+  Heroes
+  
+  Armored Heavy Crossbows

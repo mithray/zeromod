@@ -1,14 +1,14 @@
-Culture:
-- Chinese
-CivBonuses:
-- Name: Defensive Formations
-  History:
-  Description: +20% Armor - 20% Speed
-- Name: Frontier Traders
-  History: Yan Lived next to Northern Nomadic Tribes and Traded with them
-  Description: +20% International Bonus
-- Name: Frontier Defense
-  History: Yan Lived next to Northern Tribes and Built Walls to defend themselves 
-  Description: -20% Wall Cost
-Heroes:
-
+chiyan:
+  Culture:
+  - Chinese
+  CivBonuses:
+  - Name: Defensive Formations
+    History:
+    Description: +20% Armor - 20% Speed
+  - Name: Frontier Traders
+    History: Yan Lived next to Northern Nomadic Tribes and Traded with them
+    Description: +20% International Bonus
+  - Name: Frontier Defense
+    History: Yan Lived next to Northern Tribes and Built Walls to defend themselves 
+    Description: -20% Wall Cost
+  Heroes:

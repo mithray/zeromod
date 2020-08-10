@@ -5,6 +5,9 @@
 - command: init
   description: Initialize the working directory
   action: lib/init
+- command: build-cache
+  description: build a cache of 0ad resources from the detected mods
+  action: lib/build-cache
 - command: resource
   description: Manage 0AD Resources
   action: lib/resource-list

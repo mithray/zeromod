@@ -1,22 +1,22 @@
----
-Culture:
-  - Chinese
-  - Xiongnu
-Build: Can build Cav Archers + Chariot Archers
-CivBonuses:
-    - Name: Frontier Defense
-    - History: The Zhao were bordered by the Xiongnu to their North and defended against them often.
-    - Description: +10% Garrison, +1 Default Projectiles , +10% Projectile Limit
-Strengths: Cavalry, Fortresses
-Heroes:
-  Lian Po:
-    Source: https://en.wikipedia.org/wiki/Lian_Po
-    Aura: Fortresses and Towers, 20% cheaper and -20% build time, +20% Garrison, +20% Projectiles
-  Zhao She:
-    Source: https://en.wikipedia.org/wiki/Zhao_She
-    Aura: Guerrilla - Infantry 20% Sight Range and Movement Speed
-    Aura: Defensive Genius - +20% Capture Recovery Rate + 10% Territory Influence
-  Li Mu:
-    Source: https://en.wikipedia.org/wiki/Li_Mu
-    Aura: Guerrilla - Infantry 20% Sight Range and Movement Speed
-    Aura: Fein Defeat +20% Capture Recovery Rate - 20% Territory Influence(ability switch), Territory Degen Aura 1/s
+  ---
+  Culture:
+    - Chinese
+    - Xiongnu
+  Build: Can build Cav Archers + Chariot Archers
+  CivBonuses:
+      - Name: Frontier Defense
+      - History: The Zhao were bordered by the Xiongnu to their North and defended against them often.
+      - Description: +10% Garrison, +1 Default Projectiles , +10% Projectile Limit
+  Strengths: Cavalry, Fortresses
+  Heroes:
+    Lian Po:
+      Source: https://en.wikipedia.org/wiki/Lian_Po
+      Aura: Fortresses and Towers, 20% cheaper and -20% build time, +20% Garrison, +20% Projectiles
+    Zhao She:
+      Source: https://en.wikipedia.org/wiki/Zhao_She
+      Aura: Guerrilla - Infantry 20% Sight Range and Movement Speed
+      Aura: Defensive Genius - +20% Capture Recovery Rate + 10% Territory Influence
+    Li Mu:
+      Source: https://en.wikipedia.org/wiki/Li_Mu
+      Aura: Guerrilla - Infantry 20% Sight Range and Movement Speed
+      Aura: Fein Defeat +20% Capture Recovery Rate - 20% Territory Influence(ability switch), Territory Degen Aura 1/s

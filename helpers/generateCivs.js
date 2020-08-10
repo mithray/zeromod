@@ -131,24 +131,26 @@ async function createCivObject(civinfo, classes){
     return civInterpolated
 }
 
-async function getCulturalClasses(culturalClassesPath){
-    const obj = {}
-    for await (const entry of readdirp(culturalClassesPath)){
+async function readFiles(readPath){
+    const classes = {}
+    for await (const entry of readdirp(readPath)){
         let basename = entry.basename.replace(/.yml$/,'')
         const fullPath = entry.fullPath
-        obj[basename] = parse(fullPath)
-        obj[basename].fullPath = fullPath
+        classes[basename] = parse(fullPath)
+        classes[basename].fullPath = fullPath
    //console.log(obj)
     }
-    return obj
+    return classes
 }
 //culturalCategories.
 async function generateCivs(){
-    const civPath = path.join(process.cwd(),'simulation/data/civs/hellenic/athenians.yml')
+    const civsPath = path.join(process.cwd(),'simulation/data/civs/')
     const culturalClassesPath = path.join(process.cwd(),"simulation/data/civs/cultural_classes")
 //    interpolateCivTemplate(culturalClassesPath, civPath)
-    const civinfo = parse(civPath)
-    const classes = await getCulturalClasses(culturalClassesPath)
+//    const civinfo = parse(civPath)
+    const civinfo = readFiles(civsPath)
+//    const classes = await getCulturalClasses(culturalClassesPath)
+    const classes = await readFiles(culturalClassesPath)
 //    console.log(classes)
 
     const civ = await createCivObject(civinfo, classes)
