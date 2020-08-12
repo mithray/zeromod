@@ -13,15 +13,24 @@
     <BlockPathfinding>false</BlockPathfinding>
   </Obstruction>
   <ResourceSupply>
-    <MaxAmount>200</MaxAmount>
+    <MaxAmount>190</MaxAmount>
     <Amount>200</Amount>
     <Type>food.fruit</Type>
     <Change>
-      <Fattening>
-        <Value>1</Value>
-        <Interval>4000</Interval>
-      </Fattening>
+      <Ripening>
+        <Value>100</Value>
+        <Interval>180000</Interval>
+      </Ripening>
     </Change>
+    <Renewable>true</Renewable>
+    <LowSupplyActor>
+        <Threshold>
+            0.5
+        </Threshold>
+        <Actor>
+            berry_bush_autumn_02
+        </Actor>
+    </LowSupplyActor>
   </ResourceSupply>
   <Sound>
     <SoundGroups>
