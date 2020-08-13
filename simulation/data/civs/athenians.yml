@@ -38,8 +38,11 @@ athen:
       melee: aspis
       ranged: pelte
     mercenaries:
-      - thracians
-      - scythians
+    - thracians
+    - scythians
+    champions:
+    - spear
+    - archer
   
   culture:
     main: hele

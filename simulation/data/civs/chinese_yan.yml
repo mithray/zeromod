@@ -1,7 +1,7 @@
 chiyan:
-  Culture:
+  culture:
   - Chinese
-  CivBonuses:
+  civ_bonuses:
   - Name: Defensive Formations
     History:
     Description: +20% Armor - 20% Speed

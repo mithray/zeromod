@@ -1,11 +1,14 @@
-  Culture:
-  - Chinese
-  Philosophy: Legalist
-  CivBonuses:
-    Name: Armor Mastery
+chihann:
+  culture:
+  - chinese
+  philosophy:
+  - legalist
+  civ_bonuses:
+  - chinese
+  - Name: Armor Mastery
     History: Known for making the best armor
-    Description: Armor Techs -50% cost, -50% Research Time, Armor 50% Cheaper
+    Description: Armor Techs -50% cost, -50% Research Time, Armor 50% Cheaper, Available in Village Phase.
     Source: https://www.ancient.eu/article/1143/armour-in-ancient-chinese-warfare/
-  Heroes:
-  Champions: Iron Face Masks
+  heroes:
+  champions: Iron Face Masks
   

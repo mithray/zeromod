@@ -1,14 +1,34 @@
-Champions:
-  - Two handed Falx, no shields, (light armor), very high attack.
-emblem: https://en.wikipedia.org/wiki/Dacian_Draco syncretism between wolf, serpent, dragon
-Beehives    
-First to make Potters Wheel?
+dacian:
+  sources:
+  - https://romaniatourstore.com/blog/vlad-tepes-eat-culinary-habits-romanian-rulers/
+  - https://www.transylvaniaworld.com/concepts/traditional-transylvania-village.html
+  culture:
+    diet: 
+      vegetables:
+      - millet
+      - wheat
+      - oats
+      - barley
+      fruit:
+      - grapes
+      meat:
+      - beef
+      - horse
+      - sheep
+      - pig
+      - goat
+      trickle:
+      - honey
+      - milk 
 
-Created Two story houses?
-https://www.transylvaniaworld.com/concepts/traditional-transylvania-village.html
-
-Hero:
-- https://en.wikipedia.org/wiki/Decebalus
-
-
-Trickle: Honey and Milk in Temple? Priests heal?
+  emblem: https://en.wikipedia.org/wiki/Dacian_Draco syncretism between wolf, serpent, dragon
+  combat:
+    champions:
+    - Two handed Falx, no shields, (light armor), very high attack.
+  unique:
+  - beehives
+  - pottery? First to make Potters Wheel?
+  - Created Two story houses?
+  factions:
+    Heroes:
+    - https://en.wikipedia.org/wiki/Decebalus
