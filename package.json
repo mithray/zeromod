@@ -1,6 +1,6 @@
 {
   "name": "@mithray/zeromod",
-  "version": "0.0.1",
+  "version": "0.0.101",
   "description": "A Collection of Different features all put into separate mods.",
   "main": "main.js",
   "scripts": {
