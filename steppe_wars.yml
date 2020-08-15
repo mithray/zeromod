@@ -1,6 +1,31 @@
 civilizations:
-- scythians
-- parthians
-- sarmatians
-- xiongnu
+# Balkans
+- illyrians
+- scordisci
+- dardani
 - dacians
+- getaea
+- thracians
+# Western Steppes
+- sarmatians
+- alans/aorsi
+- dahae
+- venedae
+- iberians
+- parthians
+# Greco-Persian
+# India
+- indo-scythians
+- indo-greeks
+- shunga empire
+- satavahana empire
+# Eastern Steppes
+- paleo-siberians
+- yue-zhi
+- wusun
+- kangjun
+# China
+- xiongnu
+- tocharians
+- han
+source: url("https://upload.wikimedia.org/wikipedia/commons/e/ed/East-Hem_100bc.jpg")
