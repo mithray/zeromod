@@ -47,14 +47,37 @@ battle:
 experience:
   promote_across_class: true
   classes:
-    - slave
-    - citizen
-    - citizen soldier
-    - professional
-    - champion
-    - hero
-    - mercenary
-    - priest
+
+  - name: slave
+    ranks: 3
+    promotion: 
+
+  - name: citizen
+    ranks: 3
+    promotion: citizen soldier
+  - name: citizen soldier
+    ranks: 3
+    promotion: soldier
+  - name: soldier
+    ranks: 3
+    promotion: champion
+  - name: champion
+    ranks: 3
+    promotion: hero
+  - name: hero
+    ranks: 3
+    promotion: 
+
+  - name: mercenary
+    ranks: 3
+    promotion: champion
+
+  - name: priest
+    ranks: 3
+    promotion: prophet
+  - name: prophet
+    ranks: 3
+    promotion:
 
 agriculture:
   farms_used_and_regrow: true
