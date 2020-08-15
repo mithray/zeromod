@@ -3,7 +3,7 @@
 code: athen
 name: athenians
 deities: 
-- name: athena
+- name: getOptions('deities')
   description:
 emblem: session/portraits/emblems/emblem_athenians.png
 history: Athens, is the capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence started somewhere between the 11th and 7th millennium BC.
@@ -17,13 +17,8 @@ team_bonuses: attic
 formations: attic
 combat:
   preferred_distance: melee # defines starting entities and basic unit build tree
-  melee: 
-  - spear
-  - sword
-  ranged:
-  - slinger
-  - javelin
-  - archer
+  melee: getMeleeWeapons() 
+  ranged: getRangedWeapons()
   cavalry: 
   - javelin
   - sword
@@ -37,15 +32,15 @@ combat:
     - scythians
 
 culture:
-  main: <cart, celt, egyptian, germanic, hele, iber, maur, pers, ptol, rome, sele>
-  clothing: attic, thracian
-  architecture: attic
-  genetic: attic
-  diet: mediterranean
-  music: attic
-  structures: attic
-  wall_sets: attic
-  ai_names: attic
+  main: 
+  clothing: 
+  architecture: 
+  genetic: 
+  diet: 
+  music: 
+  structures: 
+  wall_sets: 
+  ai_names: 
 
 politics:
   government: city states # <city states, league, empire, monarchy>

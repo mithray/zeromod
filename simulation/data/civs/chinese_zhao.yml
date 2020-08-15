@@ -1,29 +1,29 @@
 ---
-chizhao:
-  culture:
-    - Chinese
-    - Xiongnu
-  build: Can build Cav Archers + Chariot Archers
-  civ_bonuses:
-      - name: Frontier Defense
-      - history: The Zhao were bordered by the Xiongnu to their North and defended against them often.
-      - description: +10% Garrison, +1 Default Projectiles , +10% Projectile Limit
-  strengths: Cavalry, Fortresses
-  heroes:
-  - name: Lian Po
-    emblem:
-    history: url(https://en.wikipedia.org/wiki/Lian_Po)
-    aura: 
-    - Fortresses and Towers, 20% cheaper and -20% build time, +20% Garrison, +20% Projectiles
-  - name: Zhao She
-    emblem:
-    history: url(https://en.wikipedia.org/wiki/Zhao_She)
-    aura:
-    - Guerrilla - Infantry 20% Sight Range and Movement Speed
-    - Defensive Genius - +20% Capture Recovery Rate + 10% Territory Influence
-  - name: Li Mu
-    emblem:
-    history: url(https://en.wikipedia.org/wiki/Li_Mu)
-    aura: 
-    - Guerrilla - Infantry 20% Sight Range and Movement Speed
-    - Fein Defeat +20% Capture Recovery Rate - 20% Territory Influence(ability switch), Territory Degen Aura 1/s
+code: chizhao
+culture:
+  - Chinese
+  - Xiongnu
+build: Can build Cav Archers + Chariot Archers
+civ_bonuses:
+    - name: Frontier Defense
+    - history: The Zhao were bordered by the Xiongnu to their North and defended against them often.
+    - description: +10% Garrison, +1 Default Projectiles , +10% Projectile Limit
+strengths: Cavalry, Fortresses
+heroes:
+- name: Lian Po
+  emblem:
+  history: url(https://en.wikipedia.org/wiki/Lian_Po)
+  aura: 
+  - Fortresses and Towers, 20% cheaper and -20% build time, +20% Garrison, +20% Projectiles
+- name: Zhao She
+  emblem:
+  history: url(https://en.wikipedia.org/wiki/Zhao_She)
+  aura:
+  - Guerrilla - Infantry 20% Sight Range and Movement Speed
+  - Defensive Genius - +20% Capture Recovery Rate + 10% Territory Influence
+- name: Li Mu
+  emblem:
+  history: url(https://en.wikipedia.org/wiki/Li_Mu)
+  aura: 
+  - Guerrilla - Infantry 20% Sight Range and Movement Speed
+  - Fein Defeat +20% Capture Recovery Rate - 20% Territory Influence(ability switch), Territory Degen Aura 1/s

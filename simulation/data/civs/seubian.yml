@@ -1,13 +1,13 @@
 ---
-Code: seub
-Name: Seubians
-Emblem: 
-History: https://en.wikipedia.org/api/rest_v1/page/summary/Seubians
-Sources:
+code: seub
+name: Seubians
+emblem: 
+history: https://en.wikipedia.org/api/rest_v1/page/summary/Seubians
+sources:
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0001:book=4:chapter=1&highlight=suevi
-SelectableInGameSetup: true
-Government: League
-Cultures: 
+selectableInGameSetup: true
+government: League
+cultures: 
   Primary: 
     - Germanic
     - Celtic

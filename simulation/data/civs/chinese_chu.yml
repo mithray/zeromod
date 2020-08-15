@@ -1,16 +1,16 @@
-chichu:
-  culture:
-  - chinese
+code: chichu
+culture:
+- chinese
 
-  combat:
-    preferred_distance: melee # defines starting entities and basic unit build tree
-    melee: 
-    - ge
-    - sword
-    ranged:
-    - crossbow
-    - bow
-    - Armored Heavy Crossbows
-    cavalry: 
-    - spear
-    - crossbow
+combat:
+  preferred_distance: melee # defines starting entities and basic unit build tree
+  melee: 
+  - ge
+  - sword
+  ranged:
+  - crossbow
+  - bow
+  - Armored Heavy Crossbows
+  cavalry: 
+  - spear
+  - crossbow
