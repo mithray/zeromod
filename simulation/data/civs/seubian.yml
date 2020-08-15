@@ -7,7 +7,7 @@ sources:
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0001:book=4:chapter=1&highlight=suevi
 selectableInGameSetup: true
 government: League
-cultures: 
+culture: 
   Primary: 
     - Germanic
     - Celtic

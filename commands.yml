@@ -2,6 +2,9 @@
 - command: generate
   description: Generate 0AD Mod
   action: lib/generate
+  options: 
+  - name: --config <file>
+    description: specify path to mod configuration file
 - command: init
   description: Initialize the working directory
   action: lib/init

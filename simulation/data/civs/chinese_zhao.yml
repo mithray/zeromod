@@ -1,8 +1,8 @@
 ---
 code: chizhao
 culture:
-  - Chinese
-  - Xiongnu
+  main: chinese
+  other: xiongnu
 build: Can build Cav Archers + Chariot Archers
 civ_bonuses:
     - name: Frontier Defense

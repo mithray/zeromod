@@ -1,6 +1,5 @@
 code: chiyan
-culture:
-- Chinese
+culture: chinese
 civ_bonuses:
 - Name: Defensive Formations
   History:

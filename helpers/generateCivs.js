@@ -6,7 +6,6 @@ const parse = require('./parse.js')
 const readdirp = require('readdirp')
 const culturalClasses = {}
 const safeEval = require('safe-eval')
-const config = parse('./config.yml')
 const mkdirp = require('mkdirp')
 const fs = require('fs')
 const getWikiData = require('./getWikiData.js')
@@ -132,20 +131,23 @@ async function createCivObject(civinfo, classes){
 }
 
 async function readFiles(readPath){
-    const classes = {}
+    const data = {}
     for await (const entry of readdirp(readPath)){
         let basename = entry.basename.replace(/.yml$/,'')
         const fullPath = entry.fullPath
-        classes[basename] = parse(fullPath)
-        classes[basename].fullPath = fullPath
+        data[basename] = parse(fullPath)
+        console.log(data[basename])
+        data[basename].fullPath = fullPath
    //console.log(obj)
     }
-    return classes
+    return data
 }
 //culturalCategories.
-async function generateCivs(){
+async function generateCivs(configPath){
+
+    const config = parse(configPath)
     const civsPath = path.join(process.cwd(),'simulation/data/civs/')
-    const culturalClassesPath = path.join(process.cwd(),"simulation/data/civs/cultural_classes")
+    const culturalClassesPath = path.join(process.cwd(),"config")
 //    interpolateCivTemplate(culturalClassesPath, civPath)
 //    const civinfo = parse(civPath)
     const civinfo = readFiles(civsPath)
