@@ -1,10 +1,12 @@
-code: dacian:
+---
+code: dacian
 
 sources:
 - https://romaniatourstore.com/blog/vlad-tepes-eat-culinary-habits-romanian-rulers/
 - https://www.transylvaniaworld.com/concepts/traditional-transylvania-village.html
 
 culture:
+  main: greek
   diet: 
     vegetables:
     - millet

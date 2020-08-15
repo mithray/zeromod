@@ -1,6 +1,5 @@
 code: chichu
-culture:
-- chinese
+culture: chinese
 
 combat:
   preferred_distance: melee # defines starting entities and basic unit build tree
