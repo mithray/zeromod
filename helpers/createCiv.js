@@ -7,9 +7,10 @@ const getOptions = require('./getOptions.js')
 async function createCiv(name){
     const template = parse(path.join(process.cwd(),templatePath))
     const answers = await createMenu(template)
-    const selection = answers.property
-    const options = await getOptions(selection)
-    createMenu(options)
+//    console.log(answers)
+//    const selection = answers.property
+//    const options = await getOptions(selection)
+//    createMenu(options)
 }
 
 module.exports = createCiv

@@ -16,7 +16,7 @@ inquirer
     {
       type: 'list',
       message: 'Select the closest culture from the list to use as a default for empty configuration values.',
-      name: 'primary_culture',
+      name: 'default_culture',
       choices: [
         {
           name: 'athens',
