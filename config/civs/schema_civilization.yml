@@ -1,54 +1,155 @@
 ---
-- name: Civilization code
+- name: name
+  message: Enter the name of the Civilization. 
   type: input
-- name: Civilization name
-  type: input
-- name: Culture
-  main: 
-  clothing: 
-  architecture: 
-  genetic: 
-  diet: 
-  music: 
-  structures: 
-  wall_sets: 
-  ai_names: 
-- name: deities
-  type: list
-- name: getOptions('deities')
 
-  description:
-emblem: session/portraits/emblems/emblem_athenians.png
-history: Athens, is the capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence started somewhere between the 11th and 7th millennium BC.
+- name: code
+  message: Enter a short code to be used as an abbreviation for the Civilization.
+  type: input
+
+- name: default_culture
+  message: Select the closest culture from the list to use as a default for empty configuration values. 
+  type: list
+  choices: getOptions('default_culture')
+
+- name: clothing
+  message: Select the types of clothing that will be worn by the entities.
+  type: checkbox
+
+- name: architecture
+  message: Select the type of architecture used by your civilization. This will set the art set to be used for the structures.
+  type: checkbox
+
+- name: genetic
+  message: Select the closest genetic groups to your civilization. This will affect the skin tone to be used by units.
+  type: checkbox
+
+- name: diet
+  message: Select the kind of diet eaten by your Civilization. This will affect plants that can be grown, animals that can be raised, and trickle foods like milk, cheese and eggs.
+  type: checkbox
+
+- name: music
+  message: Select the in game music to be played for your Civilization.
+  type: checkbox
+
+- name: dieties
+  message: Select the gods/godesses that are worshiped by your Civilization. This may affect temple names. Type in a comma separated list.
+  type: input
+
+- name: philosophies
+  message: Select the types of clothing that will be worn by the entities.
+  type: checkbox
+
+
+
+- name: build_tree_village
+  message: Modify the Village Phase build tree.
+  type: checkbox
+- name: build_tree_town
+  message: Modify the Town Phase build tree.
+  type: checkbox
+- name: build_tree_city
+  message: Modify the City Phase build tree.
+  type: checkbox
+
+- name: ai_names
+  message: Enter some names to use for AI. Comma separated.
+  type: input
+
+- name: history_kind
+  message: A short historical summary of your Civilization. Would you like to attempt to automatically download or enter a custom summary?
+  type: list
+  choices:
+  - Custom (Write a historical summary yourself)
+  - Auto (will download a historical summary from Wikipedia)
+  when:
+    custom:
+    - name: history
+      message: Give a historical summary of your Civilization.
+      type: input
+    auto: 
+    - name: wiki(civname)
+    - name: history
+      message: Unable to find a historical summary for ${civ.name}, please enter manually.
+      type: input
+    - name: history
+      message: Are you happy with the historical summary we found?
+      type: confirm
+
+- name: emblem
+  message: Enter a path or URL to an emblem to use for your civilization
+  type: input
+
 - name: selectable_in_game_setup
   type: confirm
 
+- name: start_entities
+  message: 
+  default: standard
+  type: checkbox
 
-start_entities: standard
-civ_bonuses: attic
-team_bonuses: attic
+- name: civ_bonuses
+  message: Select some civ bonuses you would like to have for your civilization.
+  type: list
+  choices:
+  - Weapons
+  - Shields
+  - Armor
+  - Economic
+  - Population
+- name: team_bonuses
+  message: Select some team bonuses for the allies of your civilization.
+  type: list
+  choices:
+  - Weapons
+  - Shields
+  - Armor
+  - Economic
+  - Population
 
-formations: attic
-combat:
-  preferred_distance: melee # defines starting entities and basic unit build tree
-  melee: getMeleeWeapons() 
-  ranged: getRangedWeapons()
-  cavalry: 
-  - javelin
-  - sword
-  weapons: attic
-  armor: leather
+- name: formations
+  message: Select the formations you would like to be available to your civilization.
+  default: standard
+  type: checkbox
+  choices: getOptions('formations')
+
+
+- name: units
+  class:
+  mount:
+  weapons:
+  armor:
   shield:
-    melee: aspis
-    ranged: pelte
-  mercenaries:
-    - thracians
-    - scythians
 
+- name: government
+  message: Select the organization of your civizilation. # <city states, league, empire, monarchy, tribe>
+  type: list
+  choices:
+  - City State
+  - League
+  - Empire
+  - Monarchy
+  - Tribe
+- name: communality
+  message: Select the level of communality of your civilization. # <Independent, communal>
+  type: list
+  choices:
+  - Isolated ( Houses are drop points for food and wood. Units +10% HP. Build and Research Time +10%. Batch Modifier +10%)
+  - Independent ( Units +5% HP. Build and Research Time +5% )
+  - Communal (Units -5%HP. Build and Research Time -5%)
+  - Civilized (Units -10%HP. Build and Research Time -10%)
 
-politics:
-  government: city states # <city states, league, empire, monarchy>
-  communality: civilized # <Independent, civilized>
+- name: mobility
+  message: select the level of mobility of your civilization
+  type: list
+  choices:
+  - Settled (Regular structures)
+  - Semi-Nomadic (Cheap, easy to capture structures)
+  - Nomadic (Cheap, easy to capture, movable structures)
 
-factions: attic
-house_size: large # <small|large> (celts, iberians, indians, ptol are small) 
+- name: factions
+  message: Enter faction names
+  type: input
+- name: house_size # <small|large> (celts, iberians, indians, ptol are small) 
+  message: Enter house size.(integer)
+  type: input

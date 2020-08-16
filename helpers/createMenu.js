@@ -7,7 +7,7 @@ async function createMenu(obj){
     } else {
       keys = Object.keys(obj)
     }
-    const questions=[]
+//    const questions=[]
     question = {
         type: 'list',
         name: 'property',
@@ -15,7 +15,9 @@ async function createMenu(obj){
         choices: keys,
         pageSize: 50
     }
-    questions.push(question)
+  //  questions.push(question)
+    const questions = obj
+    console.log(questions)
 
   const answers = inquirer
     .prompt(
