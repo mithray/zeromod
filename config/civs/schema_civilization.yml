@@ -1,13 +1,27 @@
 ---
-# Generic
-code: athen
-name: athenians
-deities: 
+- name: Civilization code
+  type: input
+- name: Civilization name
+  type: input
+- name: Culture
+  main: 
+  clothing: 
+  architecture: 
+  genetic: 
+  diet: 
+  music: 
+  structures: 
+  wall_sets: 
+  ai_names: 
+- name: deities
+  type: list
 - name: getOptions('deities')
+
   description:
 emblem: session/portraits/emblems/emblem_athenians.png
 history: Athens, is the capital and largest city of Greece. Athens dominates the Attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence started somewhere between the 11th and 7th millennium BC.
-selectable_in_game_setup: true
+- name: selectable_in_game_setup
+  type: confirm
 
 
 start_entities: standard
@@ -31,16 +45,6 @@ combat:
     - thracians
     - scythians
 
-culture:
-  main: 
-  clothing: 
-  architecture: 
-  genetic: 
-  diet: 
-  music: 
-  structures: 
-  wall_sets: 
-  ai_names: 
 
 politics:
   government: city states # <city states, league, empire, monarchy>
