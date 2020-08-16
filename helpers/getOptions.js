@@ -3,14 +3,16 @@ const path = require('path')
 const civsPath = path.join(process.cwd(),'./config/civs')
 const parse = require('./parse.js')
 
-async function getCivCodes(){
-    const civCodes = []
+async function getOptions(property){
+    const options = []
     for await (const entry of readdirp(civsPath)){
         let fullPath = entry.fullPath
         let data = parse(fullPath)
-        civCodes.push(data.code)
+        if (data[property]){
+            options.push(data[property])
+        }
     }
-    return civCodes
+    return options
 
 }
-module.exports = getCivCodes
+module.exports = getOptions
