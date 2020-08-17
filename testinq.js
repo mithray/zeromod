@@ -1,6 +1,16 @@
 'use strict';
 var inquirer = require('inquirer')
 
+
+
+
+function testFunc(somevar, other){
+    console.log(somevar)
+    console.log(other)
+    return ['a', 'x']
+
+}
+
 inquirer
   .prompt([
     {
@@ -17,17 +27,7 @@ inquirer
       type: 'list',
       message: 'Select the closest culture from the list to use as a default for empty configuration values.',
       name: 'default_culture',
-      choices: [
-        {
-          name: 'athens',
-        },
-        {
-          name: 'spartans',
-        },
-        {
-          name: 'epirotes',
-        },
-      ],
+      choices: testFunc
     },
     {
       type: 'checkbox',

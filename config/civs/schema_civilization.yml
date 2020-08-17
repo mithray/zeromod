@@ -10,7 +10,7 @@
 - name: default_culture
   message: Select the closest culture from the list to use as a default for empty configuration values. 
   type: list
-  choices: getOptions('default_culture')
+  choices: ${ getOptions('name') }
 
 - name: clothing
   message: Select the types of clothing that will be worn by the entities.
@@ -23,6 +23,7 @@
 - name: genes
   message: Select the closest genetic groups to your civilization. This will affect the skin tone to be used by units.
   type: checkbox
+
 
 - name: diet
   message: Select the kind of diet eaten by your Civilization. This will affect plants that can be grown, animals that can be raised, and trickle foods like milk, cheese and eggs.
@@ -45,6 +46,7 @@
 - name: build_tree_village
   message: Modify the Village Phase build tree.
   type: checkbox
+  choices:
 - name: build_tree_town
   message: Modify the Town Phase build tree.
   type: checkbox
@@ -70,7 +72,7 @@
     auto: 
     - name: wiki(civname)
     - name: history
-      message: Unable to find a historical summary for ${civ.name}, please enter manually.
+      message: Unable to find a historical summary for {civ.name}, please enter manually.
       type: input
     - name: history
       message: Are you happy with the historical summary we found?
