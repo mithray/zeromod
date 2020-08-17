@@ -20,7 +20,7 @@
   message: Select the type of architecture used by your civilization. This will set the art set to be used for the structures.
   type: checkbox
 
-- name: genetic
+- name: genes
   message: Select the closest genetic groups to your civilization. This will affect the skin tone to be used by units.
   type: checkbox
 
