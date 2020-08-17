@@ -7,31 +7,38 @@
   message: Enter a short code to be used as an abbreviation for the Civilization.
   type: input
 
-- name: default_culture
+- name: culture
   message: Select the closest culture from the list to use as a default for empty configuration values. 
   type: list
-  choices: ${ getOptions('name') }
+  pageSize: 40
+  choices: ${ getOptions('culture') }
 
 - name: clothing
   message: Select the types of clothing that will be worn by the entities.
   type: checkbox
+  pageSize: 40
+  choices: ${ getOptions('culture') }
 
 - name: architecture
   message: Select the type of architecture used by your civilization. This will set the art set to be used for the structures.
+  pageSize: 40
   type: checkbox
+  choices: ${ getOptions('culture') }
 
 - name: genes
   message: Select the closest genetic groups to your civilization. This will affect the skin tone to be used by units.
   type: checkbox
-
+  choices: ${ getOptions('culture') }
 
 - name: diet
   message: Select the kind of diet eaten by your Civilization. This will affect plants that can be grown, animals that can be raised, and trickle foods like milk, cheese and eggs.
   type: checkbox
+  choices: ${ getOptions('culture') }
 
 - name: music
   message: Select the in game music to be played for your Civilization.
   type: checkbox
+  choices: ${ getOptions('culture') }
 
 - name: dieties
   message: Select the gods/godesses that are worshiped by your Civilization. This may affect temple names. Type in a comma separated list.
@@ -46,13 +53,15 @@
 - name: build_tree_village
   message: Modify the Village Phase build tree.
   type: checkbox
-  choices:
+  choices: ${ getOptions('culture') }
 - name: build_tree_town
   message: Modify the Town Phase build tree.
   type: checkbox
+  choices: ${ getOptions('culture') }
 - name: build_tree_city
   message: Modify the City Phase build tree.
   type: checkbox
+  choices: ${ getOptions('culture') }
 
 - name: ai_names
   message: Enter some names to use for AI. Comma separated.
@@ -64,19 +73,20 @@
   choices:
   - Custom (Write a historical summary yourself)
   - Auto (will download a historical summary from Wikipedia)
-  when:
-    custom:
-    - name: history
-      message: Give a historical summary of your Civilization.
-      type: input
-    auto: 
-    - name: wiki(civname)
-    - name: history
-      message: Unable to find a historical summary for {civ.name}, please enter manually.
-      type: input
-    - name: history
-      message: Are you happy with the historical summary we found?
-      type: confirm
+
+    #  when:
+    #    custom:
+    #    - name: history
+    #      message: Give a historical summary of your Civilization.
+    #      type: input
+    #    auto: 
+    #    - name: wiki(civname)
+    #    - name: history
+    #      message: Unable to find a historical summary for {civ.name}, please enter manually.
+    #      type: input
+    #    - name: history
+    #      message: Are you happy with the historical summary we found?
+    #      type: confirm
 
 - name: emblem
   message: Enter a path or URL to an emblem to use for your civilization
@@ -89,6 +99,7 @@
   message: 
   default: standard
   type: checkbox
+  choices: ${ getOptions('culture') }
 
 - name: civ_bonuses
   message: Select some civ bonuses you would like to have for your civilization.
@@ -114,6 +125,7 @@
   default: standard
   type: checkbox
   choices: getOptions('formations')
+  #choices: ${ getOptions('culture') }
 
 
 - name: units
@@ -136,10 +148,10 @@
   message: Select the level of communality of your civilization. # <Independent, communal>
   type: list
   choices:
-  - Isolated ( Houses are drop points for food and wood. Units +10% HP. Build and Research Time +10%. Batch Modifier +10%)
-  - Independent ( Units +5% HP. Build and Research Time +5% )
-  - Communal (Units -5%HP. Build and Research Time -5%)
-  - Civilized (Units -10%HP. Build and Research Time -10%)
+  - Isolated    ( Units +10% HP. Build and Research Time +10%. Females +20% Attack. Biatch Modifier +20%. Houses are drop points for food and wood. )
+  - Independent ( Units +5% HP.  Build and Research Time +5%. Females +10% Attack)
+  - Communal    ( Units -5% HP.  Build and Research Time -5%)
+  - Civilized   ( Units -10% HP. Build and Research Time -10%. Females -10% Attack)
 
 - name: mobility
   message: select the level of mobility of your civilization
@@ -154,4 +166,6 @@
   type: input
 - name: house_size # <small|large> (celts, iberians, indians, ptol are small) 
   message: Enter house size.(integer)
-  type: input
+  type: list
+  choices: ['hele(10)',1,2,3,4,5,6,7,8,9,10]
+  default: hele(10)

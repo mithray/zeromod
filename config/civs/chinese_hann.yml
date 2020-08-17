@@ -1,5 +1,9 @@
 code: chihann
 culture: chinese
+name: Hann
+name_global: Hann (Chinese State)
+history: https://en.wikipedia.org/wiki/Han_(state)
+
 philosophy:
 - legalist
 civ_bonuses:

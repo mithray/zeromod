@@ -1,5 +1,8 @@
 code: chichu
 culture: chinese
+name: Chu
+name_global: Chu (Chinese State)
+history: https://en.wikipedia.org/wiki/Chu_(state)
 
 combat:
   preferred_distance: melee # defines starting entities and basic unit build tree

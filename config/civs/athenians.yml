@@ -1,7 +1,7 @@
 ---
 # Generic
 code: athen
-name: athenian
+name: Athenians
 demonym: athenian
 demonym_plural: athenian
 deities: 
@@ -43,16 +43,15 @@ combat:
   - spear
   - archer
 
-culture:
-  main: hele
-  clothing: attic, thracian
-  architecture: attic
-  genetic: attic
-  diet: mediterranean
-  music: attic
-  structures: attic
-  wall_sets: attic
-  ai_names: attic
+culture: hele
+clothing: attic, thracian
+architecture: attic
+genetic: attic
+diet: mediterranean
+music: attic
+structures: attic
+wall_sets: attic
+ai_names: attic
 
 politics:
   government: city states # <city states, league, empire, monarchy>

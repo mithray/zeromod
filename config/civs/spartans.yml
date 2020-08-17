@@ -1,5 +1,7 @@
 code: spar
 culture: spartan
+name: Spartans
+history: https://en.wikipedia.org/wiki/Sparta
 deities: 
 - Apollo
 - Artemis
