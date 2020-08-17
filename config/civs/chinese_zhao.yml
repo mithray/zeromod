@@ -1,8 +1,10 @@
 ---
 code: chizhao
-culture:
-  main: chinese
-  other: xiongnu
+name: Zhao
+name_global: Zhao (Chinese State)
+history: https://en.wikipedia.org/wiki/Zhao_(state)
+culture: chinese
+culture_2: xiongnu
 build: Can build Cav Archers + Chariot Archers
 civ_bonuses:
     - name: Frontier Defense

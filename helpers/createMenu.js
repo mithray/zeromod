@@ -24,14 +24,18 @@ async function createMenu(questions){
   const answers = inquirer
     .prompt(
         questions
-
     )
   .then(answers => {
+    console.log(answers)
       return answers
     })
     .catch(error => {
       if(error.isTtyError) {
+          console.log('ttyerror')
+
       } else {
+          console.log(error)
+
       }
   })
     return answers

@@ -3,17 +3,16 @@ code: seub
 name: Seubians
 emblem: 
 history: https://en.wikipedia.org/api/rest_v1/page/summary/Seubians
+#history: https://en.wikipedia.org/wiki/Suebi
 sources:
   - http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.02.0001:book=4:chapter=1&highlight=suevi
 selectableInGameSetup: true
 government: League
-culture: 
-  Primary: 
-    - Germanic
-    - Celtic
-  Architecture:
-    - Nomadic?
-  Genetic: 
+culture: germanic
+culture_2: Celtic
+Architecture:
+- Nomadic?
+Genetic: 
 Food: 
   Vegetables:
     - Corn

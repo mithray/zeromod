@@ -1,5 +1,8 @@
 code: chiyan
+name: Yan
+name_global: Yan ( Chinese State )
 culture: chinese
+history: https://en.wikipedia.org/wiki/Yan_(state)
 civ_bonuses:
 - Name: Defensive Formations
   History:
