@@ -1,6 +1,7 @@
 var inquirer = require('inquirer')
 
-async function createMenu(obj){
+async function createMenu(questions){
+    /*
     var keys
     if (Array.isArray(obj)){
       keys = obj
@@ -18,6 +19,7 @@ async function createMenu(obj){
   //  questions.push(question)
     const questions = obj
     console.log(questions)
+    */
 
   const answers = inquirer
     .prompt(
