@@ -1,0 +1,10 @@
+type: global
+affects:
+  - PLayer
+affectedPlayers:
+  - ExclusiveMutualAlly
+modifications:
+  - value: ResourceTrickle/Rates/water
+    add: 0.5
+auraName: Desert Peapole
+auraDescription: Loot +50 water.

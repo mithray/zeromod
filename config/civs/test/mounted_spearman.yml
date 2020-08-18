@@ -1,0 +1,16 @@
+type: garrisonedUnits
+affects:
+  - Spearman
+modifications:
+  - value: Attack/Melee/Damage/Hack
+    multiply: 1.1
+  - value: Attack/Melee/Damage/Pierce
+    multiply: 1.1
+  - value: Attack/Melee/Damage/Crush
+    multiply: 1.1
+  - value: Attack/Melee/Spread
+    multiply: 1.1
+  - value: VisualActor/Actor
+    replace: units/persians/cavalry_spearman_b_r.xml
+auraName: Mounted Spearman
+auraDescription: Mount effect on Spearman

@@ -1,0 +1,22 @@
+type: garrison
+affects:
+  - Unit
+modifications:
+  - value: Attack/Ranged/Damage/Hack
+    replace: "0"
+  - value: Attack/Ranged/Damage/Pierce
+    replace: "0"
+  - value: Attack/Ranged/Damage/Crush
+    replace: "0"
+  - value: Attack/Ranged/MaxRange
+    replace: "4.5"
+  - value: Attack/Melee/Damage/Hack
+    replace: "0"
+  - value: Attack/Melee/Damage/Pierce
+    replace: "0"
+  - value: Attack/Melee/Damage/Crush
+    replace: "0"
+  - value: Attack/Melee/MaxRange
+    replace: "4.5"
+auraName: Mount Switch Melee
+auraDescription: Mount Switch Melee

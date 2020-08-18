@@ -1,0 +1,9 @@
+type: global
+affects:
+  - Worker
+modifications:
+  - value: Builder/Rate
+    multiply: 1.2
+auraName: Patron Of Construction
+auraDescription: +20% build time and repair rate for workers.
+overlayIcon: art/textures/ui/session/auras/build_bonus.png

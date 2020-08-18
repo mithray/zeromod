@@ -1,0 +1,12 @@
+type: range
+radius: 40
+affects:
+  - Melee Cavalry
+affectedPlayers:
+  - Enemy
+modifications:
+  - value: Health/Max
+    multiply: 0.9
+auraName: Cavalry Union
+auraDescription: -10% health for nearby enemy melee cavalry.
+overlayIcon: art/textures/ui/session/auras/attack_bonus.png

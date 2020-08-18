@@ -1,0 +1,9 @@
+type: range
+radius: 72
+affects:
+  - Unit
+modifications:
+  - value: Health/Max
+    multiply: 1.05
+auraName: Protection of Ra
+auraDescription: +5 health for nearby units.

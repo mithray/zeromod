@@ -1,0 +1,11 @@
+type: global
+affects:
+  - Trade
+affectedPlayers:
+  - ExclusiveMutualAlly
+modifications:
+  - value: Market/InternationalBonus
+    add: 0.2
+auraName: Trademasters
+auraDescription: Exclusive allies with Carthage gain +20% trade profit for
+  international routes, via land and sea.

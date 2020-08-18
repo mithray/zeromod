@@ -1,0 +1,20 @@
+type: range
+radius: 2.75
+affects:
+  - Hoplite
+affectedPlayers:
+  - Player
+  - Ally
+modifications:
+  - value: Armour/Hack
+    add: 2
+  - value: Armour/Pierce
+    add: 2
+  - value: Armour/Crush
+    add: 2
+auraName: Shield Wall
+auraDescription: Hoplite-style infantry give other Hoplite-style infantry +2
+  hack, +2 pierce, and +2 crush armor within range of each other. This does not
+  stack or multiply.
+overlayIcon: art/textures/ui/session/auras/armor_bonus.png
+stackable: false

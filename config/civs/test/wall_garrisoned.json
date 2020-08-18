@@ -1,0 +1,14 @@
+type: garrisonedUnits
+affects:
+  - Soldier
+modifications:
+  - value: Armour/Pierce
+    add: 3
+  - value: Armour/Hack
+    add: 3
+  - value: Armour/Crush
+    add: 3
+  - value: Vision/Range
+    add: 20
+auraName: Wall Protection
+auraDescription: +3 armour and higher vision for soldiers on walls.

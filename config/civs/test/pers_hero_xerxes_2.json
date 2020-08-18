@@ -1,0 +1,9 @@
+type: range
+radius: 40
+affects:
+  - Immortal
+modifications:
+  - value: Health/Max
+    multiply: 1.15
+auraName: Elite Soldiers
+auraDescription: +15% health for nearby champion immortals.

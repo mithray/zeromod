@@ -1,0 +1,8 @@
+type: garrison
+affects:
+  - Unit
+modifications:
+  - value: Promotion/TrickleRate
+    add: 10
+auraName: Horse Training
+auraDescription: Horses gain experience by being ridden.
