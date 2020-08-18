@@ -1,44 +1,37 @@
 ---
 - name: name
-  message: Enter the name of the Civilization. 
+  message: Enter Civilization name
   type: input
+  validate: string().min(2)
 
 - name: code
-  message: Enter a short code to be used as an abbreviation for the Civilization.
+  message: Enter a short abbreviation
   type: input
+  validate: string().min(3)
 
 - name: culture
-  message: Select the closest culture from the list to use as a default for empty configuration values. 
+  message: Select the closest culture(to use as a default)
   type: list
-  pageSize: 40
-  choices: ${ getOptions('culture') }
 
 - name: clothing
-  message: Select the types of clothing that will be worn by the entities.
+  message: Select clothing for entities
   type: checkbox
-  pageSize: 40
-  choices: ${ getOptions('culture') }
 
 - name: architecture
-  message: Select the type of architecture used by your civilization. This will set the art set to be used for the structures.
-  pageSize: 40
+  message: Select the type of architecture used by your civilization. This will set the art set to be used for the structures
   type: checkbox
-  choices: ${ getOptions('culture') }
 
 - name: genes
   message: Select the closest genetic groups to your civilization. This will affect the skin tone to be used by units.
   type: checkbox
-  choices: ${ getOptions('culture') }
 
 - name: diet
   message: Select the kind of diet eaten by your Civilization. This will affect plants that can be grown, animals that can be raised, and trickle foods like milk, cheese and eggs.
   type: checkbox
-  choices: ${ getOptions('culture') }
 
 - name: music
   message: Select the in game music to be played for your Civilization.
   type: checkbox
-  choices: ${ getOptions('culture') }
 
 - name: dieties
   message: Select the gods/godesses that are worshiped by your Civilization. This may affect temple names. Type in a comma separated list.
@@ -48,32 +41,38 @@
   message: Select the types of clothing that will be worn by the entities.
   type: checkbox
 
-
-
 - name: build_tree_village
   message: Modify the Village Phase build tree.
   type: checkbox
-  choices: ${ getOptions('culture') }
 - name: build_tree_town
   message: Modify the Town Phase build tree.
   type: checkbox
-  choices: ${ getOptions('culture') }
 - name: build_tree_city
   message: Modify the City Phase build tree.
   type: checkbox
-  choices: ${ getOptions('culture') }
 
 - name: ai_names
   message: Enter some names to use for AI. Comma separated.
   type: input
 
-- name: history_kind
-  message: A short historical summary of your Civilization. Would you like to attempt to automatically download or enter a custom summary?
-  type: list
-  choices:
-  - Custom (Write a historical summary yourself)
-  - Auto (will download a historical summary from Wikipedia)
+- name: history
+  message: Historical summary. Download automatically or custom?
+  type: "editor"
+  default: func getWikiData
+    #- name: history
+    #  message: Accept this history?
+    #  type: confirm
+    #  when: 
+    #- name: history
+    #  message: History
+    #  type: list
+    #  choices:
+    #  - Confirm
+    #  - Edit
+    #  when: answers.history === 'auto'
 
+  #- name: history
+  #  message:
     #  when:
     #    custom:
     #    - name: history
@@ -98,8 +97,7 @@
 - name: start_entities
   message: 
   default: standard
-  type: checkbox
-  choices: ${ getOptions('culture') }
+  type: list
 
 - name: civ_bonuses
   message: Select some civ bonuses you would like to have for your civilization.
