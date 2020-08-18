@@ -6,9 +6,19 @@ const options = {
 }
 
 async function getWikiData(arg){
-    let res = wikijs(options)
+    if(arg.name){
+        arg = arg.name
+    }
+    let res = await wikijs(options)
         .page(arg)
-    return res
+
+    let summary = await res.summary()
+    return summary//await res.summary
 }
+/*
+getWikiData('Nigeria').then( async (res) => {
+    console.log(res)
+})
+*/
 
 module.exports = getWikiData

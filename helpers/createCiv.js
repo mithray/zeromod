@@ -1,9 +1,11 @@
+const Joi = require('@hapi/joi')
 const parse = require('./parse.js')
 const schemaPath = './config/civs/schema_civilization.yml'
 const path = require('path')
 const createMenu = require('./createMenu.js')
 const getConfig = require('./getConfig.js')
 const safeEval = require('safe-eval')
+const getWikiData = require('./getWikiData.js')
 //const getConfig = require('./getConfig.js')
 
 /*
@@ -46,11 +48,14 @@ async function createCiv(name){
         return uniqueOptions
     }
 
+    /*
     let questions = JSON.stringify(schema).replace(/\"\$\{(.*?)\}\"/g, function (match, p1){
         const evaled = safeEval(p1,{getOptions: getOptions})
         const json = JSON.stringify(evaled)
         return json
     })
+    */
+    let questions = JSON.stringify(schema)
 
     function setOptions(questions){
         function getDefault(answers){
@@ -91,13 +96,53 @@ async function createCiv(name){
         }
         return questions
     }
+    function setFunctionValues(questions){
+        for(let i = 0; i < questions.length; i++){
+            const question = questions[i]
+            const keys = Object.keys(question)
+            for(let j = 0; j < keys.length; j++){
+                const key = keys[j]
+//                console.log(key + ": " + question[key])
+                if(typeof question[key] === 'string'){
+                    if(question[key].startsWith("func ")){
+
+                        const val = question[key].replace(/func /,"")
+                        const funcVal = safeEval(val,{getWikiData})
+                        questions[i][key] = funcVal
+                    }
+                }
+            }
+        }
+        return questions
+
+    }
+    function setValidateValues(questions){
+        for(let i = 0; i < questions.length; i++){
+            if(questions[i].validate){
+                const schema = safeEval("Joi." + questions[i].validate,{Joi: Joi})
+                function validate(input){
+                    const err = schema.validate(input).error
+                    if(err){
+                        return err.details[0].message
+                    } else {
+                        return true
+                    }
+                }
+                questions[i].validate = validate
+            }
+        }
+        return questions
+    }
     questions = JSON.parse(questions)
     questions = setOptions(questions)
     questions = setPageSize(questions)
+    questions = setFunctionValues(questions)
 
+    questions = setValidateValues(questions)
+
+ //   console.log(questions)
  const answers = await createMenu(questions)
 //    console.log(tmp)
-    console.log(answers)
 
 }
 //    const selection = answers.property
