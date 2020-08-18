@@ -1,0 +1,10 @@
+type: global
+affects:
+  - Mercenary
+modifications:
+  - value: Loot/metal
+    multiply: 0.9
+  - value: Cost/Resources/metal
+    multiply: 0.9
+auraName: Mercenaries Recruitment
+auraDescription: -10% cost for mercenaries.

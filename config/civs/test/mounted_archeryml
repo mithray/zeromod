@@ -1,0 +1,16 @@
+type: garrisonedUnits
+affects:
+  - Archer
+modifications:
+  - value: Attack/Ranged/Damage/Hack
+    multiply: 1.1
+  - value: Attack/Ranged/Damage/Pierce
+    multiply: 1.1
+  - value: Attack/Ranged/Damage/Crush
+    multiply: 1.1
+  - value: Attack/Ranged/Spread
+    multiply: 1.1
+  - value: VisualActor/Actor
+    replace: units/persians/cavalry_archer_b_r.xml
+auraName: Mounted Archer
+auraDescription: Mount effect of archer

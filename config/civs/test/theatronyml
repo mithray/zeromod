@@ -1,0 +1,9 @@
+type: global
+affects:
+  - Structure
+modifications:
+  - value: TerritoryInfluence/Radius
+    multiply: 1.2
+auraDescription: +20% territory influence per theatron owned.
+auraName: Hellenization
+stackable: true

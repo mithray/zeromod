@@ -1,0 +1,10 @@
+type: garrison
+affects:
+  - Warship
+modifications:
+  - value: BuildingAI/MaxArrowCount
+    add: 0.2
+auraName: Marine Archers
+auraDescription: Garrison mariner inside the warships to increase the max of
+  arrows in +0.20 per mariner.
+stackable: true

@@ -1,0 +1,10 @@
+type: global
+affects:
+  - Player
+affectedPlayers:
+  - ExclusiveMutualAlly
+modifications:
+  - value: ResourceTrickle/Rates/stone
+    add: 2.5
+auraName: Conscription
+auraDescription: Allied Citizen Infantry −15% stone gather time.

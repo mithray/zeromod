@@ -1,0 +1,11 @@
+type: garrison
+affects:
+  - Ship
+affectedPlayers:
+  - Player
+  - MutualAlly
+modifications:
+  - value: Health/Max
+    multiply: 1.5
+auraName: Naval Commander
+auraDescription: When garrisoned inside a ship, his ship has +50% health.
