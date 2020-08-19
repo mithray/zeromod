@@ -1,0 +1,48 @@
+apply_status:
+  poison:
+    status_name: Poison
+    applier_tooltip: Poison Tips
+    receiver_tooltip: Poisoned
+    duration: 15000
+    stackability: Extend
+    modifiers:
+      poison:
+        paths: Health/RegenRate
+        affects: Organic
+        add: -1
+        paths: UnitMotion/WalkSpeed
+        affects: Organic
+        multiply: 0.9
+        paths: ResourceGatherer/WalkSpeed
+        affects: Organic
+        multiply: 0.9
+        paths: Builder/Rate
+        affects: Organic
+        multiply: 0.9
+        
+        paths: Attack/Melee/Damage/Hack
+        affects: Organic
+        multiply: 0.9
+        paths: Attack/Melee/Damage/Pierce
+        affects: Organic
+        multiply: 0.9
+        paths: Attack/Melee/Damage/Crush
+        affects: Organic
+        multiply: 0.9
+        paths: Attack/Melee/RepeatTime
+        affects: Organic
+        multiply: 0.9
+
+        paths: Attack/Ranged/Damage/Hack
+        affects: Organic
+        multiply: 0.9
+        paths: Attack/Ranged/Damage/Pierce
+        affects: Organic
+        multiply: 0.9
+        paths: Attack/Ranged/Damage/Crush
+        affects: Organic
+        multiply: 0.9
+        paths: Attack/Ranged/RepeatTime
+        affects: Organic
+        multiply: 0.9
+
