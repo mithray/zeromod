@@ -15,14 +15,14 @@ function parse(inputPath){
     var jsobj
     var data
     try {
-        data = fs.readFileSync(inputPath,{encoding: 'utf-8'})
+        data = fs.readFileSync(inputPath,{encoding: 'utf-8'}).trim()
     } catch (e){
-        data = fs.readFileSync(inputPath,{encoding: 'utf-16'})
+        console.log(e)
     }
 
     if (inputPath.endsWith('.json')){
-       try{
            jsobj = JSON.parse(data)
+       try{
         } catch(e) {
             console.log(e)
         }
