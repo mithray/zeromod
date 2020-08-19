@@ -1,0 +1,27 @@
+<element name='SeasonalManager' a:help='Will modify the entity as the seasons change.'>
+  <oneOrMore>
+    <choice>
+      <element name='Spring'>
+        ModificationsSchema
+      </element>
+      <element name='Summer'>
+        ModificationsSchema
+      </element>
+      <element name='Autumn'>
+        ModificationsSchema
+	  </element>
+      <element name='Winter'>
+        ModificationsSchema
+      </element>
+      <element name='Dry'>
+        ModificationsSchema
+      </element>
+      <element name='Wet'>
+        ModificationsSchema
+      </element>
+      <element name='Harmattan'>
+        ModificationsSchema
+	  </element>
+    </choice>
+  </oneOrMore>
+</element>
