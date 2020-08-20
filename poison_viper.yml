@@ -1,0 +1,26 @@
+ApplyStatus:
+  Poison:
+    StatusName: Poison
+    ApplierTooltip: Viper Poison
+    ReceiverTooltip: Viper Poison
+    Duration: 15000
+    Stackability: Stack
+    Modifiers:
+      PoisonDamage:
+        Paths: Health/RegenRate
+        Affects: Organic
+        Add: -1
+      PoisonSlow: 
+        Paths: |
+          UnitMotion/WalkSpeed
+          ResourceGatherer/WalkSpeed
+          Builder/Rate
+          Attack/Melee/Damage/Hack
+          Attack/Melee/Damage/Pierce
+          Attack/Melee/Damage/Crush
+          Attack/Melee/RepeatTime
+          Attack/Ranged/Damage/Hack
+          Attack/Ranged/Damage/Pierce
+          Attack/Ranged/Damage/Crush
+        Affects: Organic
+        Multiply: 0.96
