@@ -1,8 +1,8 @@
 ApplyStatus:
   Poison:
-    StatusName: Poison
-    ApplierTooltip: Viper Poison
-    ReceiverTooltip: Viper Poison
+    StatusName: Scythicon Poison
+    ApplierTooltip: Scythicon Poison
+    ReceiverTooltip: Scythicon Poison
     Duration: 15000
     Stackability: Stack
     Modifiers:
