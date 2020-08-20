@@ -1,8 +1,8 @@
 ApplyStatus:
   Poison:
-    StatusName: Poison
-    ApplierTooltip: Frog Poison
-    ReceiverTooltip: Frog Poison
+    StatusName: Antiaris Poison
+    ApplierTooltip: Antiaris Poison
+    ReceiverTooltip: Antiaris Poison
     Duration: 15000
     Stackability: Stack
     Modifiers:
