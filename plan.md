@@ -1,4 +1,4 @@
-init
+# init
 - createHeirarchy
 - getModList
 - saveModList
@@ -6,7 +6,7 @@ init
 - generate Source
 
 
-Heirarchy
+# Heirarchy
 - .config
 - .gitignore  -node_modules, .config
 - mods
