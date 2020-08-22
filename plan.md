@@ -2,14 +2,14 @@
 - createHeirarchy
 - getModList
 - saveModList
-- generate Heirarchy
+- generate Folder Heirarchy
 - generate Source
 
 
 # Heirarchy
 - .config
 - .gitignore  -node_modules, .config
-- mods
+- dist
 - src
   - .cache
   - public
