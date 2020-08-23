@@ -1,0 +1,13 @@
+{
+	"type": "range",
+    "radius": 40,
+	"affects": ["Storehouse","DropsiteStone"],
+    "affectedPlayers": ["Enemy"],
+	"modifications": [
+		{ "value": "ResourceTrickle/Rates/stone", "add": 5 },
+		{ "value": "ResourceTrickle/Rates/food", "add": -1 },
+		{ "value": "ResourceTrickle/Rates/wood", "add": -1 }
+	],
+	"auraName": "Metal Miners",
+	"auraDescription": "Build an adjacent storehouse to gain trickle of stone."
+}
