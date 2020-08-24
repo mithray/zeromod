@@ -2,19 +2,10 @@
 <Entity parent="structures/athen_civil_centre">
   <Identity>
     <GenericName>Town Centre</GenericName>
-    <VisibleClasses datatype="tokens">
-	  Defensive
-	</VisibleClasses>
-    <Classes datatype="tokens">
-	  TownCentre
-	</Classes>
-    <History></History>
+    <Classes datatype="tokens">TownCentre</Classes>
   </Identity>
-    <Promotion>
-      <RequiredXp>20000</RequiredXp>
-      <Entity>structures/athen_civil_centre_city</Entity>
-    </Promotion>
-  <VisualActor>
-    <Actor>structures/athenians/civil_centre.xml</Actor>
-  </VisualActor>
+  <Promotion>
+    <RequiredXp>20000</RequiredXp>
+    <Entity>structures/athen_civil_centre_city</Entity>
+  </Promotion>
 </Entity>

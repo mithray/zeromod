@@ -14,11 +14,11 @@
       units/{civ}_cavalry_javelinist_b
     </Entities>
   </ProductionQueue>
+  <VisualActor>
+    <Actor>structures/athenians/civil_centre.xml</Actor>
+  </VisualActor>
   <Promotion>
     <RequiredXp>10000</RequiredXp>
     <Entity>structures/athen_civil_centre_town</Entity>
   </Promotion>
-  <VisualActor>
-    <Actor>structures/athenians/civil_centre.xml</Actor>
-  </VisualActor>
 </Entity>

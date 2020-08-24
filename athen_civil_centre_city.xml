@@ -2,12 +2,7 @@
 <Entity parent="structures/athen_civil_centre_town">
   <Identity>
     <GenericName>City Center</GenericName>
-    <Classes datatype="tokens">
-	  CityCentre
-	</Classes>
+    <Classes datatype="tokens">CityCentre</Classes>
   </Identity>
-  <VisualActor>
-    <Actor>structures/athenians/civil_centre.xml</Actor>
-  </VisualActor>
   <Promotion disable=""/>
 </Entity>
