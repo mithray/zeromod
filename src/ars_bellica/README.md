@@ -25,7 +25,7 @@
 - [ ] Armor Cost dependent on hitpoints of unit to be armed
 - [ ] Citizen Training Speed is based on your population, with a slightly higher dependence upon the female population.
 
-<img src="https://latex.codecogs.com/gif.latex?t_{max}%20-%20t_{min}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})}"/>
+<img src="https://latex.codecogs.com/gif.latex?train%20time%20=%20t_{high}%20-%20t_{low}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})}"/>
 
 ## Flora & Fauna
 
