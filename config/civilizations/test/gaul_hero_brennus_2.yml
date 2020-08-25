@@ -1,9 +1,0 @@
-type: range
-radius: 60
-affects:
-  - Soldier
-modifications:
-  - value: Attack/Capture/Value
-    add: 1
-auraName: Invasion
-auraDescription: +1 capture attack for nearby soldiers.

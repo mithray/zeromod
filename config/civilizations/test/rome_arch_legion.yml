@@ -1,9 +1,0 @@
-type: global
-affects:
-  - Legionaire
-modifications:
-  - value: Attack/Melee/Hack
-    multiply: 1.1
-auraName: Roma Triumphant
-auraDescription: +10% attack for legionaires.
-overlayIcon: art/textures/ui/session/auras/attack_bonus.png
