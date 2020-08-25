@@ -2,10 +2,10 @@
 ![Sunga_Empire](images/shunga_empire.jpg)
 [Shunga Empire](https://en.m.wikipedia.org/wiki/Shunga_Empire)
 
-![Indo-Greek_Kingdom - 100BC](Indo-Greek_Kingdom_-_100BC.jpg)
+![Indo-Greek_Kingdom - 100BC](images/indo-greek_kingdom_-_100bc.jpg)
 [Indo-Greek Kingdom](https://en.m.wikipedia.org/wiki/Indo-Greek_Kingdom)
 
-![Greco-Bactrian_Kingdom](Greco-Bactrian_Kingdom.jpg)
+![Greco-Bactrian_Kingdom](images/greco-bactrian_kingdom.jpg)
 [Greco-Bactrian_Kingdom](https://en.m.wikipedia.org/wiki/Greco-Bactrian_Kingdom)
 
 ## Central Asia
