@@ -30,6 +30,7 @@ $$
 t_{max} - t_{min}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})}
 $$
 <img src="https://latex.codecogs.com/gif.latex?t_{max}%20-%20t_{min}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})}"/>
+![Citizen Train Speed Equation](https://latex.codecogs.com/gif.latex?t_{max}%20-%20t_{min}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})})
 
 ## Flora & Fauna
 
