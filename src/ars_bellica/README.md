@@ -1,10 +1,14 @@
-# Muse
+# Ars Bellica
 
 * High Damage
 * Permaculture & City Building
 * Mountable Units
 * Experience
 * Loot
+* Seasons
+* Upkeep
+* More Visible Garrisons
+* Defensible Houses
 
 ## High Damage
 
@@ -31,7 +35,7 @@
 - [ ] To reduce micromanagement, "Large Farms" are now available which includes a corral, farmstead, farm and animals together, with a wooden fence to wall in animals
 - [ ] Possibly, Corrals will automatically generate farm animals
 - [ ] Possibly, animals leave dung on the ground, the dung helps farms, but the animals, if on the farmland, will reduce its productivity(because they eat the crops)
-- [ ] Fauna have a negative aura of 1(they are directly over and "eat" the crops), and dung has a positive aura of 30(nearby villagers "use" the dung)
+- [ ] Graze Aura - Fauna have a negative aura of 1(they are directly over and "eat" the crops), and dung has a positive aura of 30(nearby villagers "use" the dung)
 
 ### City Building
 - [ ] Build 
@@ -93,3 +97,60 @@ Unit Experience, Stats, Configuration
 - [ ] Can garrison up to four men and two(or four?) horse, depending on the siege weapon. A horse enables movement. Each man increase the movement rate and attack rate.
 
 
+- seasonal farms (4 minutes?)
+- unit food upkeep, 1/20sec female, 1/10sec male
+- switchable weapons
+- all units can get secondary weapons from blacksmith
+- mountable horses
+- defensible houses
+- temples improve morale
+  -  +1hp / 5 sec
+  - +10% work rate
+  - +10% hp
+  - +50% capture regen
+- barracks 
+  - have regen rate
+  - can repair equipment
+  - neutral territory
+- houses
+  - idle regen rate 1 / 10 sec, stackable
+  -  2% work/build rate
+- female
+  - idle regent rate, 1/20 sec, stackable
+  - 1% work/build rate, stackable
+
+Animals
+  - manure,growth rate +2% plants, long range
+  - eat, short range.
+
+Barricades
+- damage and slow
+Roads tiles, speed bonus
+
+Ships visible garrison
+Siege units on walls.
+Towers visible garrison
+
+
+Siege weapons garrison horses, men to get movement speed.
+
+
+Blacksmith
+- researches
+- produce weapons, wood and iron upkeep.
+
+More promotion classes.
+Civ-> civ soldier->pro soldier> champ> hero
+
+Horse archers can fire while riding at champ level, pro level for steppe nomads.
+
+Horses have mount "alarm"
+
+Blacksmiths garrison weapons, can be stolen.
+Farmsteads garrison food. Can be stolen.
+
+
+Max resources are affected by
+Food: farmsteads, civil centres.
+Weapons: Blacksmiths
+Wood, Stone, Metal: Storehouses, Civil centers.
