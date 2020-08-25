@@ -2,8 +2,8 @@ const weapons = {
     sword: {
         name: "Sword",
         cost: {
-            food: 0,
-            wood: 10,
+            food: 10,
+            wood: 0,
             stone: 0,
             metal: 40
         }
