@@ -1,14 +1,14 @@
 # Culture Packs 
 
 ## Bactria
-![Sunga_map](Sunga_map.jpg)
+![Sunga_Empire](images/sunga_map.jpg)
 [Shunga Empire](https://en.m.wikipedia.org/wiki/Shunga_Empire)
 
-![800px-Indo-Greeks_100bc](800px-Indo-Greeks_100bc.jpg)
+![Indo-Greek_Kingdom - 100BC](Indo-Greek_Kingdom_-_100BC.jpg)
 [Indo-Greek Kingdom](https://en.m.wikipedia.org/wiki/Indo-Greek_Kingdom)
 
-![800px-Greco-BactrianKingdomMap](800px-Greco-BactrianKingdomMap.jpg)
-[Greco-Bactrian](https://en.m.wikipedia.org/wiki/Greco-Bactrian_Kingdom)
+![Greco-Bactrian_Kingdom](Greco-Bactrian_Kingdom.jpg)
+[Greco-Bactrian_Kingdom](https://en.m.wikipedia.org/wiki/Greco-Bactrian_Kingdom)
 
 ### Central Asia
 - Indo-Greeks
@@ -42,7 +42,7 @@
 - Yuezhi
 
 ## Baltic Tribes
-![thracian_tribes+towns](thracian_tribes+towns.gif)
+![Thracian_Tribes](thracian_tribes.gif)
 [Thracian Tribes](http://home.exetel.com.au/thrace/tribes_main.htm)
 - Scordisci
 - Thracian
@@ -61,9 +61,7 @@
 - Kingdom of Pontus
 
 ## Germania
-![Imperium_Romanum_Germania](Imperium_Romanum_Germania.png)
-
+![Germania](germania.png)
 
 https://cgiarcsi.community/data/srtm-90m-digital-elevation-database-v4-1/
 http://srtm.csi.cgiar.org/srtmdata/
-
