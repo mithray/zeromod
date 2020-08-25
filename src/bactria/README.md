@@ -1,5 +1,5 @@
 # Bactria
-![Sunga_Empire](images/sunga_map.jpg)
+![Sunga_Empire](images/shunga_empire.jpg)
 [Shunga Empire](https://en.m.wikipedia.org/wiki/Shunga_Empire)
 
 ![Indo-Greek_Kingdom - 100BC](Indo-Greek_Kingdom_-_100BC.jpg)

@@ -1,7 +1,9 @@
 # Ars Bellica
 
 * High Damage
-* Permaculture & City Building
+* Experience
+* Permaculture
+* City Building
 * Mountable Units
 * Experience
 * Loot
@@ -13,52 +15,71 @@
 ## High Damage
 
 - [ ] Armor Reduced
-  - [ ] Armor Cost dependent on hitpoints of unit to be armed
 - [ ] Attack Increased
 - [ ] Archers Attack Speed Reduced
-- [ ] More Experience Levels
 
-## Permaculuter and City Building 
+## Basic Unit 
 
-### Permaculture
+- [ ] Train civilians, then arm them with weapons and armor at Blacksmith or Barracks.
+- [ ] Civilians are randomized between male and female
+- [ ] Armor Cost dependent on hitpoints of unit to be armed
+- [ ] Citizen Training Speed is based on your population, with a slightly higher dependence upon the female population.
+
+$$
+t_{max} - t_{min}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})}
+$$
+
+## Flora & Fauna
 
 - [ ] Fish Farms. 
 - [ ] Plant 
   - [ ] Fruit Trees
   - [ ] Wood Trees
   - [ ] Farms(Farms work like bushes, but also grow back)
-- [ ] Fauna have "manure" aura which make 
-  [x] workers collect from farms faster
-  - [ ] trees grow faster
+- [ ] Manure Aura -Flora grow more efficiently(gain more food). Range of 30(nearby villagers "use" the dung)
+- [ ] Graze Aura - Fauna have a negative aura of 1(they are directly over and "eat" the crops) 
 - [ ] Animals will attack each other
 - [ ] Animals will reproduce, maybe they will reproduce when they reach a certain level of sustainence, which they can get from the environment, and when another animals of the same type is present.
-- [ ] To reduce micromanagement, "Large Farms" are now available which includes a corral, farmstead, farm and animals together, with a wooden fence to wall in animals
+- [ ] To reduce micromanagement, add "Large Farms" which includes a corral, farmstead, farm and animals together, with a wooden fence to wall in animals
 - [ ] Possibly, Corrals will automatically generate farm animals
 - [ ] Possibly, animals leave dung on the ground, the dung helps farms, but the animals, if on the farmland, will reduce its productivity(because they eat the crops)
-- [ ] Graze Aura - Fauna have a negative aura of 1(they are directly over and "eat" the crops), and dung has a positive aura of 30(nearby villagers "use" the dung)
 
-### City Building
+
+## City Building
+
 - [ ] Build 
   - [ ] Roads[ move speed aura ]
   - [ ] Bridges[ can cross water ]
   - [ ] Pavement[ move speed aura ]
+  - [ ] Barricades [damage and slow]
 - [ ] City Building Features(auras). 
 
 ## Mountable Units
 
-* Horses, Elephants, and Camels are mountable units
-* Mountable units can be captured from the map
-* All these mountable units can be mounted and dismounted with your regular units.
+- [ ] Horses, Elephants, and Camels are mountable units
+- [ ] Mountable units can be captured from the map
+- [ ] All these mountable units can be mounted and dismounted with your regular units.
+- [ ] Horse archers can fire while riding at champ level, pro level for steppe nomads.
+- [ ] Horses have mount "alarm"
 
 ## Experience
 Unit Experience, Stats, Configuration
-- [ ] Units now have Agility, Strength, and Support Stats. 
-- [ ] Support Stats are called FSM:Fine Motor Skills. This makes female citizens a more interesting support class. 
-- [ ] Above a certain level of FSM and the unit provides a healing aura.
+- [ ] Units have Agility, Strength, and Support Stats. 
+- [ ] Support Stats are called FMS:Fine Motor Skills. This makes female citizens a more interesting support class. 
+- [ ] Above a certain level of FMS and the unit provides a healing aura.
+- [ ] Females have aura
+  - Idle regen rate, 1/20 sec, stackable
+  - 1% work/build rate, stackable
 - [ ] Healing is disabled while a unit is fighting.
 - [ ] Champions are just Citizens with a lot of combat experience. Heroes are just Champions with a lot of combat experience. 
 - [ ] Maps spawn more Gaia animals and soldiers, which also have more experience loot.
 - [ ] No Hero Limit Restriction. Heroes are automatically promoted.
+More promotion classes.
+- Civilian
+- Civilian Soldier
+- Professional Soldier
+- Champion
+- Hero
 
 ## Loot
 - [ ] Units Cost Less Wood
@@ -96,61 +117,49 @@ Unit Experience, Stats, Configuration
 - [ ] Must be garrisoned to move
 - [ ] Can garrison up to four men and two(or four?) horse, depending on the siege weapon. A horse enables movement. Each man increase the movement rate and attack rate.
 
+## Seasons
 
-- seasonal farms (4 minutes?)
+- Seasonal Flora. 4 minutes rotation?
+- 
+## Upkeep
 - unit food upkeep, 1/20sec female, 1/10sec male
+
+## Switchable Weapons
 - switchable weapons
 - all units can get secondary weapons from blacksmith
-- mountable horses
-- defensible houses
-- temples improve morale
+
+## Visible Garrisons
+- [ ] Ships visible garrison
+- [ ] Siege units on walls.
+- [ ] Towers visible garrison
+
+## Building Changes
+
+- [ ] Temples increase morale and loyalty. HP aura weaker.
   -  +1hp / 5 sec
   - +10% work rate
   - +10% hp
+  - +10% attack speed
   - +50% capture regen
-- barracks 
-  - have regen rate
-  - can repair equipment
-  - neutral territory
-- houses
+
+- [ ] Barracks (Forward bases, not Trainers)
+  - have idle regen rate aura
+  - Repairs equipment
+  - Build in Neutral territory
+  - Produces basic weapons
+ 
+- [ ] Houses 
   - idle regen rate 1 / 10 sec, stackable
   -  2% work/build rate
-- female
-  - idle regent rate, 1/20 sec, stackable
-  - 1% work/build rate, stackable
+  
+- [ ] Blacksmith
+  - Researches
+  - Produce weapons. Wood and iron upkeep.
 
-Animals
-  - manure,growth rate +2% plants, long range
-  - eat, short range.
-
-Barricades
-- damage and slow
-Roads tiles, speed bonus
-
-Ships visible garrison
-Siege units on walls.
-Towers visible garrison
-
-
-Siege weapons garrison horses, men to get movement speed.
-
-
-Blacksmith
-- researches
-- produce weapons, wood and iron upkeep.
-
-More promotion classes.
-Civ-> civ soldier->pro soldier> champ> hero
-
-Horse archers can fire while riding at champ level, pro level for steppe nomads.
-
-Horses have mount "alarm"
-
-Blacksmiths garrison weapons, can be stolen.
-Farmsteads garrison food. Can be stolen.
-
+- Storehouses, Farmhouses, Blacksmiths, Barracks produce resources/weapons. If past max capacity of resources, will drop the weapons outside. These can be stolen.
 
 Max resources are affected by
 Food: farmsteads, civil centres.
 Weapons: Blacksmiths
 Wood, Stone, Metal: Storehouses, Civil centers.
+
