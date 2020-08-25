@@ -1,9 +1,0 @@
-type: range
-radius: 6
-affects:
-  - Archer
-modifications:
-  - value: Armour/Pierce
-    add: 1
-auraName: "Large Sparas "
-auraDescription: +1 pierce armour for nearby archers.

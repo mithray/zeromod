@@ -1,9 +1,0 @@
-type: global
-affects:
-  - ArmyCamp
-  - SiegeWall
-modifications:
-  - value: Cost/BuildTime
-    multiply: 0.7
-auraName: Entrenchment
-auraDescription: -30% build time for military camp and siege wall.
