@@ -121,6 +121,7 @@ More promotion classes.
 
 - Seasonal Flora. 4 minutes rotation?
 
+- Poison Weapons
 
 ## Visible Garrisons
 - [ ] Ships visible garrison
@@ -130,13 +131,13 @@ More promotion classes.
 ## Buildings
 
 - [ ] Temples increase morale and loyalty. HP aura weaker.
-  -  +1hp / 5 sec
+  - +1hp / 5 sec
   - +10% work rate
   - +10% hp
   - +10% attack speed
   - +50% capture regen
+  - Have a build restriction to prevent building nearby
 
- 
 - [ ] Houses 
   - idle regen rate 1 / 10 sec, stackable
   -  2% work/build rate
@@ -170,3 +171,5 @@ Food: farmsteads, civil centres.
 Weapons: Blacksmiths
 Wood, Stone, Metal: Storehouses, Civil centers.
 
+- Hexagonal Aura?
+This would allow you to evenly space building that have a build restriction on being close to buildings of the same type to cover an entire area without gaps or ovelap.
