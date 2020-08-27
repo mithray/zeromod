@@ -1,0 +1,10 @@
+ages:
+- child
+- adolescent
+- adult
+- aged
+gender:
+- male
+- female
+civs:
+- athenians
