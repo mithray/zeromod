@@ -32,9 +32,9 @@
 <!-- 
 //train time = t_{high} - (t_{high} -t_{low})*{(1-.997^{m+f^{1.3}}})}
 //<img src="https://latex.codecogs.com/gif.latex?train%20time%20=%20t_{high}%20-%20t_{low}*{(1-\tfrac{99^{m+f^{1.3}}}{10^{4}})}"/>
-train\\>time = t_{high} - (t_{high} -t_{low})*(1-.997^{m+f^{1.3}})
+train\>time = t_{high} - (t_{high} -t_{low})*(1-.997^{m+f^{1.3}})
 -->
-<img src="https://latex.codecogs.com/gif.latex?train>time%20=%20t_{high}%20-%20(t_{high}%20-t_{low})*(1-.997^{m+f^{1.3}})"/>
+<img src="https://latex.codecogs.com/gif.latex?train\>time%20=%20t_{high}%20-%20(t_{high}%20-t_{low})*(1-.997^{m+f^{1.3}})"/>
 
 ## Flora & Fauna
 
