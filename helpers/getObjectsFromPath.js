@@ -11,7 +11,7 @@ function newLine2Array (val, parent) {
     return val
 }
 
-function parse(inputPath){
+function readFile(inputPath){
     var jsobj
     var data
     try {
@@ -36,7 +36,24 @@ function parse(inputPath){
         jsobj = YAML.parse(data)
     }
 
+
+}
+
+function getObjectsFromPath(inputPath){
+
+    const data = {}
+    for await (const entry of readdirp(readPath)){
+        let basename = entry.basename.replace(/.yml$/,'')
+        const fullPath = entry.fullPath
+        data[basename] = readFile(fullPath)
+        console.log(data[basename])
+        data[basename].fullPath = fullPath
+   //console.log(obj)
+    }
+    return data
+
+
     return jsobj
 }
 
-module.exports = parse
+module.exports = getObjectsFromPath
