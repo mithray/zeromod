@@ -3,7 +3,7 @@
       "radius": 200,
       "affects": ["CivilCentre"],
       "modifications": [
-            { "value": "Promotion/RequiredXp", "add": -2000 },
+            { "value": "Promotion/RequiredXp", "add": -1000 },
             { "value": "ResourceTrickle/Rates/food", "add": -0.5 },
             { "value": "ResourceTrickle/Rates/wood", "add": -0.5 }
       ],
