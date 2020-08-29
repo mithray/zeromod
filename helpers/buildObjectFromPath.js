@@ -15,7 +15,7 @@ function newLine2Array (val, parent) {
 }
 
 async function readFile(inputPath){
-    var jsobj
+    var obj
     var data
     try {
         data = fs.readFileSync(inputPath,{encoding: 'utf-8'}).trim()
@@ -24,7 +24,7 @@ async function readFile(inputPath){
     }
 
     if (inputPath.endsWith('.json')){
-           jsobj = JSON.parse(data)
+           obj = JSON.parse(data)
        try{
         } catch(e) {
             console.log(e)
@@ -33,26 +33,23 @@ async function readFile(inputPath){
     if (inputPath.endsWith('.xml')){
         let options = { tagValueProcessor:  newLine2Array}
         let tObj = parser.getTraversalObj(data,options)
-        jsobj = parser.convertToJson(tObj,{})
+        obj = parser.convertToJson(tObj,{})
     }
     if (inputPath.endsWith('.yml')){
-        jsobj = YAML.parse(data)
+        obj = YAML.parse(data)
     }
 
-  return jsObj
+  return obj
 }
 
-function createNestedObject( base, names ) {
+function setNestedProperty( obj, names, data ) {
     for( var i = 0; i < names.length; i++ ) {
-        base = base[ names[i] ] = base[ names[i] ] || {};
+        obj= obj[ names[i] ] = obj[ names[i] ] || data;
     }
 };
 
 async function buildObjectFromPath(inputPath){
 
-
-  console.log(inputPath)
-  const data = {}
   const toRead = []
   var commonPrefix
 
@@ -60,50 +57,34 @@ async function buildObjectFromPath(inputPath){
     toRead.push(entry)
   }
 
-  readdirp(inputPath)
+  const files = await readdirp.promise(inputPath)
 
-    .on('data', (entry) => {
-      const fullPath = entry.fullPath
-      if (!commonPrefix) commonPrefix = fullPath
-      else if(fullPath.length < commonPrefix.length){
-        commonPrefix = fullPath
-      }
-      toRead.push(entry)
-    })
-
-    .on('end', () => {
-      const jsobj = {}
-      commonPrefix = commonPrefix.replace(/(.*)\/.*/,'$1')
-      for (let i = 1; i < toRead.length; i++ ){
-        const fileObj = toRead[i]
-        const relPath = fileObj.fullPath
-          .replace(commonPrefix,'')
-          .replace(/^\//,'') 
-          .replace(/.yml$/,'')
-        var heirarchy = relPath.split('/')
-        createNestedObject( jsobj, heirarchy );
-      }
-      console.log(jsobj)
-    })
-
-/*
-  var commonPrefix = toRead[0].fullPath//initialize
-    const entry = toRead[i]
-    if ( entry.fullPath.length < commonPrefix.length ){
-      commonPrefix = entry.fullPath
-console.log(commonPrefix)  
+  for (let i = 0; i < files.length; i++){
+    const entry = files[i]
+    //toRead.push(entry)
+    const fullPath = entry.fullPath
+    if (!commonPrefix) commonPrefix = fullPath
+    else if(fullPath.length < commonPrefix.length){
+      commonPrefix = fullPath
     }
   }
 
-    let basename = entry.basename.replace(/.yml$/,'')
+  const obj = {}
+  commonPrefix = commonPrefix.replace(/(.*)\/.*/,'$1')
+  for (let i = 1; i < files.length; i++ ){
+    const entry = files[i]
     const fullPath = entry.fullPath
-    data[basename] = readFile(fullPath)
-    console.log(data[basename])
-    data[basename].fullPath = fullPath
-  */
+    const relPath = fullPath
+      .replace(commonPrefix,'')
+      .replace(/^\//,'') 
+      .replace(/.yml$/,'')
+    var heirarchy = relPath.split('/')
+  
+    const data = await readFile(fullPath)
+    setNestedProperty( obj, heirarchy, data );
+  }
 
-//  return data
+  return obj
 }
-buildObjectFromPath(path.join(process.cwd(),'config'))
 
 module.exports = buildObjectFromPath
