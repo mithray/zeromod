@@ -4,7 +4,7 @@ Entity:
     SpawnEntityOnDeath: decay|rubble/rubble_{civ.code}_cc
   Identity:
     Civ: {civ.code}
-    SpecificName: {civ.build_tree.}
+    SpecificName: {civ.build_tree.civil_centre.specific_name}
   ProductionQueue:
     _datatype: tokens
     Entities: {civ.build_tree.civil_centre.production_queue}
@@ -12,4 +12,4 @@ Entity:
     Actor: structures/{civ.demonym}/civil_centre.xml
   Promotion: 
     RequiredXp: '10000'
-    Entity: structures/{civ}_civil_centre_town
+    Entity: structures/{civ.code}_civil_centre_town
