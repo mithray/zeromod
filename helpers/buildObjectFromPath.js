@@ -1,4 +1,5 @@
 const path = require('path')
+const nestedProperty = require('nested-property')
 const readdirp = require('readdirp')
 const fs = require('fs')
 const YAML = require('yaml')
@@ -44,7 +45,7 @@ async function readFile(inputPath){
 
 function setNestedProperty( obj, names, data ) {
     for( var i = 0; i < names.length; i++ ) {
-        obj= obj[ names[i] ] = obj[ names[i] ] || data;
+        obj= obj[ names[i] ] = obj[ names[i] ] || {};
     }
 };
 
@@ -78,10 +79,10 @@ async function buildObjectFromPath(inputPath){
       .replace(commonPrefix,'')
       .replace(/^\//,'') 
       .replace(/.yml$/,'')
-    var heirarchy = relPath.split('/')
+    var heirarchy = changeCase.dotCase(relPath)
   
     const data = await readFile(fullPath)
-    setNestedProperty( obj, heirarchy, data );
+    nestedProperty.set(obj,heirarchy, data)
   }
 
   return obj
