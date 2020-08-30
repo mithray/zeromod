@@ -49,6 +49,7 @@ architecture: attic
 genetic: attic
 diet: mediterranean
 music: attic
+build_tree: attic
 structures: attic
 wall_sets: attic
 ai_names: attic
