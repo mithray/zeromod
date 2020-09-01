@@ -1,0 +1,13 @@
+town:
+  entities:
+  - trader
+  technologies:
+  - cartography
+  - diaspora
+  - trade_convoys_speed
+  - handicraft
+  - commercial treaty
+city:
+  technologies:
+  - trade_convoys_armor
+  - advanced handicraft

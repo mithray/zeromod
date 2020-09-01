@@ -1,15 +1,20 @@
 Entity:
   _parent: template_structure_civic_civil_centre
+  Class:
+  - Structure
+  - CivilCentre
+  - DropsiteWood
+  - DropsiteFood
   Health:
-    SpawnEntityOnDeath: decay|rubble/rubble_{civ.code}_cc
+    SpawnEntityOnDeath: decay|rubble/rubble_${code}_cc
   Identity:
-    Civ: {civ.code}
-    SpecificName: {civ.build_tree.civil_centre.specific_name}
+    Civ: {code}
+    SpecificName: Agora #${build_tree.civic_centre.specific_name}
   ProductionQueue:
     _datatype: tokens
-    Entities: {civ.build_tree.civil_centre.production_queue}
+    Entities: ${build_tree.civic_centre.production_queue}
   VisualActor: 
-    Actor: structures/{civ.demonym}/civil_centre.xml
+    Actor: structures/${demonym}/civil_centre.xml
   Promotion: 
     RequiredXp: '10000'
-    Entity: structures/{civ.code}_civil_centre_town
+    Entity: structures/${code}_civil_centre_town

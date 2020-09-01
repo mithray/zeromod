@@ -1,7 +1,0 @@
-siege_workshop:
-  city:
-  - ${civ.siege_units}
-  - siege_armor
-  - siege_attack
-  - siege_cost_metal
-  - siege_cost_wood

@@ -1,0 +1,22 @@
+village:
+- civic_center
+- house
+- farmstead
+- storehouse
+- field
+- corral
+- dock
+- outpost
+- palisade
+- sentry_tower
+- barracks
+town:
+- temple
+- market
+- blacksmith
+- defense_tower
+- stone_wall
+city:
+- wonder
+- siege_workshop
+- fortress

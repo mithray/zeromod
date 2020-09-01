@@ -1,0 +1,12 @@
+town:
+  entities:
+  - healer
+  technologies:
+  - healing_range_01
+  - healing_rate_01
+city:
+  technologies:
+  - healing_range_02
+  - healing_rate_02
+  - heal_temple #Divine Offerings
+  - health_regen_units #Battlefield Medicine

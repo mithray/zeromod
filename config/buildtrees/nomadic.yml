@@ -1,8 +1,0 @@
-nomad: &nomad
-  classes:
-  - standard
-  village:
-  - -farmstead
-  - farmstead_market
-  town:
-  - -market

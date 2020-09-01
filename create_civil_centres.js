@@ -3,49 +3,82 @@ const path = require('path')
 const buildObjectFromPath = require('./helpers/buildObjectFromPath.js') 
 const interpolate = require('./helpers/interpolate.js')
 const changeCase = require('change-case')
+const merge = require('deepmerge')
+const truePhase = true
+var config = {}
 
-/*
-*/
+function buildUnitTree(structureTree){
+  const buildTree = {}
+  delete structureTree.classes
+  const keys = Object.keys(structureTree)
+  for (let i = 0 ; i < keys.length; i++){
+    let phase = keys[i]
+    let availableStructures = structureTree[phase]
+    for (let j = 0; j < availableStructures.length; j++){
+      const structureName = availableStructures[j]
+      const structure = config.build_trees.structures[structureName]
+      buildTree[structureName]=structure
+    }
+
+  }
+  return buildTree
+}
+
+function buildStructureTree(tree){
+  const trees = []
+  if (typeof tree === 'string'){
+    tree = config.build_trees[tree]
+  } 
+  if (typeof tree === 'object'){
+    if (tree.classes){
+      for (let i = 0 ; i < tree.classes.length; i++ ){
+        basetree = buildStructureTree(tree.classes[i])
+        tree = merge(tree, basetree)
+      }
+    }    
+  }
+
+  return tree
+
+}
 
 async function createCivilCentres(){
-const target_civs = [
-	"athen",
-	"brit",
-	"gaul"
-]
-//console.log(target_civs)
-  const config = await buildObjectFromPath(path.join(process.cwd(),'./config'))
+  config = await buildObjectFromPath(path.join(process.cwd(),'./config'))
+  const target_civs = [
+    "athen",
+    "brit",
+    "gaul",
+"han"
+  ]
   const template = ''
   const civs = config.civilizations
   const keys = Object.keys(civs)
-//    console.log(keys)
-//    console.log(civs)
   for ( let i = 0; i < keys.length; i ++ ){
       
     const civ = civs[keys[i]]
-//console.log(civ.code)
-//console.log(target_civs)
     if( target_civs.includes(civ.code) ){
-console.log(civ)
-    }
-//  console.log(keys[i])
-//	civ = civs[i]
-//    let interpolated = interpolate(template,civ)
-//	console.log(interpolated)
-  }
-}
-createCivilCentres()
-/*
-var cache = [];
-JSON.stringify(circ, (key, value) => {
-  if (typeof value === 'object' && value !== null) {
-    // Duplicate reference found, discard key
-    if (cache.includes(value)) return;
+      const structureTree = buildStructureTree(civ.build_tree)
+      const buildTree = buildUnitTree(structureTree)
+      civ.buildTree = buildTree
+      const tmp = await buildObjectFromPath(path.join(process.cwd(),'./civil_centre.yml'))
+      const ccTemplate = interpolate(tmp.civil_centre, civ)
+  //    console.log(buildTree)
+//xmlData = convert.json2xml(JSON.stringify(ccTemplate), options);
 
-    // Store value in our collection
-    cache.push(value);
+
+const X2JS = require('./x2js.js')
+
+var x2js = new X2JS()
+var xml = x2js.json2xml_str( ccTemplate )
+
+console.log('<?xml version="1.0" encoding="utf-8"?>\n'+xml)
+
+
+
+    }
+
   }
-  return value;
-});
-cache = null
-*/
+
+}
+
+createCivilCentres()

@@ -1,0 +1,6 @@
+village: 
+  technologies:
+  - Sentries
+town:
+  upgrades:
+  - Defense Tower

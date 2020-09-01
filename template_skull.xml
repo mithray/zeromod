@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent="template_bird">
+  <Identity>
+    <Undeletable>true</Undeletable>
+    <GenericName>Arctic Wolf</GenericName>
+    <SpecificName>Canis lupus</SpecificName>
+    <Icon>gaia/fauna_arctic_wolf.png</Icon>
+  </Identity>
+  <VisualActor>
+    <Actor>fauna/hawk.xml</Actor>
+  </VisualActor>
+</Entity>
