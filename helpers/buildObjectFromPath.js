@@ -85,9 +85,13 @@ async function buildObjectFromPath(inputPath){
       .replace(commonPrefix,'')
       .replace(/^\//,'') 
       .replace(/.yml$/,'')
-    //var heirarchy = changeCase.dotCase(relPath)
-    var heirarchy = relPath.replace(/\//g,'.')
+    var heirarchy = relPath.split('/') 
+    heirarchy = heirarchy.map((el) => {
+      return changeCase.camelCase(el)
+    })
+    heirarchy = heirarchy.join('.')
     const data = await readFile(fullPath)
+
     nestedProperty.set(obj,heirarchy, data)
   }
   return obj
