@@ -1,5 +1,0 @@
-independent: &independent
-  classes: standard
-  village:
-  - -house
-  - house_dropsite

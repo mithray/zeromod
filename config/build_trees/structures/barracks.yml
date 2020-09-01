@@ -1,0 +1,10 @@
+village: 
+  entities:
+  - Infantry ${weapon.primary.melee}
+  - Infantry ${weapon.primary.ranged}
+  - Cavalry ${weapon.primary.default}
+town: 
+  entities:
+  - Infantry ${weapon.secondary.melee}
+  - Infantry ${weapon.secondary.ranged}
+  - Cavalry ${weapon.primary.default}

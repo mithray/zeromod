@@ -1,0 +1,4 @@
+town:
+  upgrade:
+  - gate
+  - wall_turret

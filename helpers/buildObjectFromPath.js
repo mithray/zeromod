@@ -54,11 +54,17 @@ async function buildObjectFromPath(inputPath){
   const toRead = []
   var commonPrefix
 
-  for await (const entry of readdirp(inputPath)){
-    toRead.push(entry)
+  var files
+  if (fs.statSync(inputPath).isFile()){
+    files = [{
+      fullPath: path.resolve(inputPath)
+    }]
+  } else {
+    for await (const entry of readdirp(inputPath)){
+      toRead.push(entry)
+    }
+    files = await readdirp.promise(inputPath)
   }
-
-  const files = await readdirp.promise(inputPath)
 
   for (let i = 0; i < files.length; i++){
     const entry = files[i]
@@ -72,19 +78,18 @@ async function buildObjectFromPath(inputPath){
 
   const obj = {}
   commonPrefix = commonPrefix.replace(/(.*)\/.*/,'$1')
-  for (let i = 1; i < files.length; i++ ){
+  for (let i = 0; i < files.length; i++ ){
     const entry = files[i]
     const fullPath = entry.fullPath
     const relPath = fullPath
       .replace(commonPrefix,'')
       .replace(/^\//,'') 
       .replace(/.yml$/,'')
-    var heirarchy = changeCase.dotCase(relPath)
-  
+    //var heirarchy = changeCase.dotCase(relPath)
+    var heirarchy = relPath.replace(/\//g,'.')
     const data = await readFile(fullPath)
     nestedProperty.set(obj,heirarchy, data)
   }
-
   return obj
 }
 

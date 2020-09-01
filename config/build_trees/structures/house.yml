@@ -1,0 +1,12 @@
+village: 
+  entities:
+  - Female Citizen
+  technologies:
+  - Loom
+  - Fertility Festival
+town: 
+  technologies:
+  - Home Garden
+city: 
+  technologies:
+  - Manors

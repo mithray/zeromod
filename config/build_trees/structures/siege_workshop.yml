@@ -1,0 +1,8 @@
+city:
+  entities:
+  - ${civ.siege_units}
+  technologies:
+  - siege_armor
+  - siege_attack
+  - siege_cost_metal
+  - siege_cost_wood

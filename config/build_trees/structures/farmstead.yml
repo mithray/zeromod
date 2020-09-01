@@ -1,0 +1,10 @@
+village:
+  technologies:
+  - Wicker Baskets
+  - Iron Plow
+town: 
+  technologies:
+  - Gather Training
+city: 
+  technologies:
+  - Fertilizer

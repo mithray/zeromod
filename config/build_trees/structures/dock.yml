@@ -1,0 +1,17 @@
+village: 
+  entities:
+  - Fishing Boat
+  technologies:
+  - Fishing Net
+  - Reinforced Hull
+town: 
+  entities:
+  - Trade Ship
+  - Light Warship
+  technologies:
+  - Salting Fish
+  - Hyperzomata Undergirding
+city: 
+  technologies:
+  - Naval Architects
+  - Lead Hull Sheathing

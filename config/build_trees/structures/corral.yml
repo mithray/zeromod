@@ -1,0 +1,9 @@
+village: 
+  technologies:
+  - Stockbreeding
+town: 
+  technologies:
+  - Cavalry Breeding
+city:
+  technologies:
+  - Cavalry Speed Training

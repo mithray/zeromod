@@ -1,0 +1,15 @@
+village: 
+  entities:
+  - Female Citizen
+  - Infantry ${weapon.primary.melee}
+  - Infantry ${weapon.primary.ranged}
+  - Cavalry ${weapon.primary.default}
+  technologies:
+  - Town Phase
+town:
+  technologies:
+  - City Phase
+city:
+  technologies:
+  - Espionage
+  - Counterintelligence

@@ -1,0 +1,18 @@
+village:
+  technologies:
+  - Iron Axe Heads
+  - Servants
+  - Wedge and Mallet
+  - Baskets
+town:
+  technologies:
+  - Stronger Axe
+  - Serfs
+  - Shaft Mining
+  - Wheelbarrow
+city:
+  technologies:
+  - Sharp Axe Heads
+  - Slaves
+  - Silver Mining
+  - Horse Drawn Carts

@@ -1,24 +1,42 @@
-const readdirp = require('readdirp');
-
-// 2) Streams example, non for-await.
-// Print out all JS files along with their size within the current folder & subfolders.
-
-
-
-
-
-readdirp('.')
-  .on('data', (entry) => {
-    console.log(JSON.stringify(entry))
-  })
-
-
-
-
 /*
-  // Optionally call stream.destroy() in `warn()` in order to abort and cause 'close' to be emitted
-  .on('warn', error => console.error('non-fatal error', error))
-  .on('error', error => console.error('fatal error', error))
-  .on('end', () => console.log('done'));
+var Parser = require("fast-xml-parser").j2xParser;
+//default options need not to set
+var defaultOptions = {
+    attributeNamePrefix : "@_",
+    attrNodeName: "@", //default is false
+    textNodeName : "#text",
+    ignoreAttributes : false,
+    cdataTagName: "__cdata", //default is false
+    cdataPositionChar: "\\c",
+    format: false,
+    indentBy: "  ",
+    supressEmptyNode: false,
+};
+var obj=
 
+var parser = new Parser(defaultOptions);
+var xml = parser.parse(obj);
+console.log(xml)
 */
+var XML = require('xml')
+
+var xml = XML(
+//      Class: 'e',
+//      Health: 'aoeu',
+//      Identity: 'eueou'
+  {
+    nested: [{ 
+      keys: [{ 
+          fun: 'hi',
+        }, {
+          nested: [{ 
+          keys: [{ 
+            _fun: 'hi' 
+          }]
+        }]}
+]
+    }]
+  }
+)
+console.log(xml)
+

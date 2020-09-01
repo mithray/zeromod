@@ -1,0 +1,9 @@
+town:
+  technologies:
+  - sentries
+  - crenallations
+  - arrow shooters
+city:
+  technologies:
+  - murder_holes
+  - sturdy foundations
