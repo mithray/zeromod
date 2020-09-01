@@ -6,6 +6,7 @@ https://maps.gsi.go.jp/development/tileCoordCheck.html#12/39.0409/1580.6483
 https://observablehq.com/@azgaar/fmg-3d-map-with-three-js
 https://cyberjapandata.gsi.go.jp/xyz/dem/13/7262/3232.txt
 
+https://observablehq.com/@ehouais/heightmap-rendering-using-a-floorcasting-algorithm
 
 The following two links might be enough to get arbitrary images:
 https://observablehq.com/@sw1227/reusable-2d-array-image-function
