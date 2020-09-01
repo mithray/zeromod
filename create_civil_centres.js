@@ -27,7 +27,7 @@ function buildUnitTree(structureTree){
 function buildStructureTree(tree){
   const trees = []
   if (typeof tree === 'string'){
-    tree = config.build_trees[tree]
+    tree = config.buildTrees[tree]
   } 
   if (typeof tree === 'object'){
     if (tree.classes){
@@ -52,15 +52,25 @@ async function createCivilCentres(){
   ]
   const template = ''
   const civs = config.civilizations
+console.log(civs)
   const keys = Object.keys(civs)
+  console.log('keys')
+  console.log(keys)
   for ( let i = 0; i < keys.length; i ++ ){
       
     const civ = civs[keys[i]]
-    if( target_civs.includes(civ.code) ){
-      const structureTree = buildStructureTree(civ.build_tree)
+console.log(target_civs)
+    if( target_civs.includes(civ.Code) ){
+console.log(civ.Build)
+      const structureTree = buildStructureTree(civ.BuildTree)
       const buildTree = buildUnitTree(structureTree)
       civ.buildTree = buildTree
       const tmp = await buildObjectFromPath(path.join(process.cwd(),'./civil_centre.yml'))
+console.log('1---')
+console.log(tmp)
+console.log('2---')
+console.log(civ)
+console.log('3---')
       const ccTemplate = interpolate(tmp.civil_centre, civ)
   //    console.log(buildTree)
 //xmlData = convert.json2xml(JSON.stringify(ccTemplate), options);
