@@ -1,62 +1,62 @@
 ---
 # Generic
-Code: athen
-Name: athenians
-Demonym: athenian
-DemonymPlural: athenian
-Deities: 
-- Name: Athena
-  Description:
-Emblem: session/portraits/emblems/emblem_athenians.png
-History: Athens, is the capital and largest city of greece. athens dominates the attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence started somewhere between the 11th and 7th millennium bC.
-SelectableInGameSetup: True
+code: athen
+name: athenians
+demonym: athenian
+demonym_plural: athenians
+deities: 
+- name: Athena
+  description:
+emblem: session/portraits/emblems/emblem_athenians.png
+history: Athens, is the capital and largest city of greece. athens dominates the attica region and is one of the world's oldest cities, with its recorded history spanning over 3,400 years and its earliest human presence started somewhere between the 11th and 7th millennium bC.
+selectable_in_game_setup: True
 
-StartEntities: standard
-CivBonuses: attic
-TeamBonuses: attic
-Physical:
-  Height: 1.77 #metres
-  Weight: 90 #kg
+start_entities: standard
+civ_bonuses: attic
+team_bonuses: attic
+physical:
+  height: 1.77 #metres
+  weight: 90 #kg
 
-Formations: Attic
-Combat:
-  PreferredDistance: Melee # Defines Starting Entities And Basic Unit Build Tree
-  Melee: 
-  - Spear
-  - Sword
-  Ranged:
+formations: Attic
+combat:
+  preferred_distance: Melee # Defines Starting Entities And Basic Unit Build Tree
+  melee: 
+  - Spearman
+  - Swordsman
+  ranged:
   - Slinger
-  - Javelin
+  - Javelineer
   - Archer
-  Cavalry: 
-  - Javelin
-  - Sword
-  Weapons: Attic
-  Armor: Leather
-  Shield:
-    Melee: Aspis
-    Ranged: Pelte
-  Mercenaries:
+  cavalry: 
+  - Javelineer
+  - Swordsman
+  weapons: Attic
+  armor: Leather
+  shield:
+    melee: Aspis
+    ranged: Pelte
+  mercenaries:
   - Thracians
   - Scythians
-  Champions:
-  - Spear
+  champions:
+  - Spearman
   - Archer
 
-Culture: Hele
-Clothing: Attic, Thracian
-Architecture: Attic
-Genetic: Attic
-Diet: Mediterranean
-Music: Attic
-BuildTree: Attic
-Structures: Attic
-WallSets: Attic
-AiNames: Attic
+culture: Hele
+clothing: Attic, Thracian
+architecture: Attic
+genetic: Attic
+diet: Mediterranean
+music: Attic
+build_tree: athenian
+structures: Attic
+wall_sets: Attic
+ai_names: Attic
 
-Politics:
-  Government: City States # <city States, League, Empire, Monarchy>
-  Communality: Civilized # <Independent, Civilized>
+politics:
+  government: City States # <city States, League, Empire, Monarchy>
+  communality: Civilized # <Independent, Civilized>
 
-Factions: Attic
-HouseSize: Large # <small|large> (celts, Iberians, Indians, Ptol Are Small) 
+factions: Attic
+house_size: Large # <small|large> (celts, Iberians, Indians, Ptol Are Small) 

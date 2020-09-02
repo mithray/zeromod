@@ -1,0 +1,8 @@
+{
+  "name": "arcs_bellica",
+  "version": "0.0.1",
+  "label": "Ars Bellica",
+  "url": "",
+  "description": "Ars Bellica",
+  "dependencies": ["0ad=0.0.24"]
+}
