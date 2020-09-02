@@ -80,8 +80,8 @@ async function createCivilCentres(){
           var template = ccTemplate
           if( i+1 < phase_names.length){
             promotion = {
-              RequiredXp: 10000,
-              Entity: `structures/athenian/civil_centre_${phase_names[i+1]}`
+              RequiredXp: Math.round(10000 * (i+1)),
+              Entity: `structures/${civ.code}_civil_centre_${phase_names[i+1]}`
             } 
           } else {
             promotion = { "_disable": "" }
@@ -98,6 +98,16 @@ async function createCivilCentres(){
                     _datatype: "tokens",
                     __text: phase_names[i] + "Centre"
                   }
+                },
+                TerritoryInfluence: {
+                  Radius: {
+                    _op: "add",
+                    __text: 30
+                  }, 
+                  Weight: {
+                    _op: "add",
+                    __text: 30
+                  }
                 }
               }
             }
@@ -111,10 +121,16 @@ async function createCivilCentres(){
           if(i>1){
             template.Entity._parent = `structures/${civ.code}_civil_centre_${phase_names[i-1]}`
           }
-        template.Entity.Identity.GenericName = changeCase.capitalCase(phase_names[i]) + " Centre",
-        template.Entity.Promotion = promotion
-        templates.push(template)
+          template.Entity.Auras = {
+            _datatype: "tokens",
+            __text: "\n\t\tstructures/civil_centre_" + phase_names[i] + "_cs\n\t\tstructures/civil_centre_" + phase_names[i] + "_structure\n\t\t"
+          } 
+          template.Entity.Identity.GenericName = changeCase.capitalCase(phase_names[i]) + " Centre",
+          template.Entity.Promotion = promotion
+
+          templates.push(template)
         }
+
   //console.log(templates)
       } else {
         var template = ccTemplate
@@ -125,8 +141,8 @@ async function createCivilCentres(){
       const X2JS = require('./x2js.js')
       var x2js = new X2JS()
       for( let j = 0 ; j < templates.length; j++ ){
-var fileName = templates[j].fileName
-delete templates[j].fileName
+        var fileName = templates[j].fileName
+        delete templates[j].fileName
         var xml = pretty(x2js.json2xml_str( templates[j] ))
         xml = '<?xml version="1.0" encoding="utf-8"?>\n'+xml
        fs.writeFileSync(path.join(process.cwd(),'dist/ars_bellica/simulation/templates/structures/',fileName +'.xml'),xml)
@@ -135,6 +151,21 @@ delete templates[j].fileName
 
   }
 
+  //Write Auras
+  const auras = config.auras
+  const auraKeys = Object.keys(auras)
+  for(let i = 0; i < auraKeys.length; i++){
+    const key = auraKeys[i]
+    const aura = auras[key]  
+    const fileName = key
+
+    if(typeof aura === 'object'){
+console.log(aura)
+console.log(fileName)
+      json = JSON.stringify(aura, null, 2)
+      fs.writeFileSync(path.join(process.cwd(), 'dist/ars_bellica/simulation/data/auras/structures/',fileName+'.json'),json)
+    }
+  }
 }
 
 createCivilCentres()

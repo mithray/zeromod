@@ -1,0 +1,10 @@
+---
+type: range
+radius: 200
+affects:
+- Structure
+modifications:
+- value: Capturable/GarrisonRegenRate
+  multiply: 1.5
+auraName: Town Centre
+auraDescription: Gives a capture defense bonus.

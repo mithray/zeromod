@@ -5,8 +5,16 @@
     <VisibleClasses datatype='tokens'>townCentre</VisibleClasses>
     <GenericName>Town Centre</GenericName>
   </Identity>
+  <TerritoryInfluence>
+    <Radius op='add'>30</Radius>
+    <Weight op='add'>30</Weight>
+  </TerritoryInfluence>
+  <Auras datatype='tokens'>
+    structures/civil_centre_town_cs
+    structures/civil_centre_town_structure
+  </Auras>
   <Promotion>
-    <RequiredXp>10000</RequiredXp>
-    <Entity>structures/athenian/civil_centre_city</Entity>
+    <RequiredXp>20000</RequiredXp>
+    <Entity>structures/athen_civil_centre_city</Entity>
   </Promotion>
 </Entity>

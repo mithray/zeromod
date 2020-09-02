@@ -1,0 +1,20 @@
+{
+  "type": "range",
+  "radius": 200,
+  "affects": [
+    "CivilCentre"
+  ],
+  "modifications": [
+    {
+      "value": "Promotion/RequiredXp",
+      "add": -2000
+    },
+    {
+      "value": "ResourceTrickle/Rates/wood",
+      "add": -0.2
+    }
+  ],
+  "auraName": "Community",
+  "auraDescription": "Build near a Civil Centre to increase the Community Size(upgrades phase).",
+  "stackable": true
+}
