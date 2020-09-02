@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent='template_structure_civic_civil_centre'>
+  <Health>
+    <SpawnEntityOnDeath>decay|rubble/rubble_athen_cc</SpawnEntityOnDeath>
+  </Health>
+  <Identity>
+    <Civ>athen</Civ>
+    <SpecificName>Agora</SpecificName>
+    <Classes>
+      Structure
+      CivilCentre
+      DropsiteWood
+      DropsiteFood
+    </Classes>
+    <GenericName>Village Centre</GenericName>
+  </Identity>
+  <ProductionQueue>
+    <Entities datatype='tokens'>
+      units/athen_support_female_citizen
+      units/athen_infantry_spearman_b
+      units/athen_infantry_slinger_b
+      units/athen_cavalry_javelineer_b
+    </Entities>
+    <Technologies datatype='tokens'>
+      phase_town_athen
+      phase_city_athen
+      unlock_spies
+      spy_counter
+    </Technologies>
+  </ProductionQueue>
+  <VisualActor>
+    <Actor>structures/athenians/civil_centre.xml</Actor>
+  </VisualActor>
+  <Promotion>
+    <RequiredXp>10000</RequiredXp>
+    <Entity>structures/athenian/civil_centre_town</Entity>
+  </Promotion>
+</Entity>

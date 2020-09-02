@@ -1,20 +1,21 @@
 Entity:
   _parent: template_structure_civic_civil_centre
-  Class:
-  - Structure
-  - CivilCentre
-  - DropsiteWood
-  - DropsiteFood
   Health:
-    SpawnEntityOnDeath: decay|rubble/rubble_${code}_cc
+    SpawnEntityOnDeath: decay|rubble/rubble_${civ.code}_cc
   Identity:
-    Civ: {code}
+    Civ: ${civ.code}
     SpecificName: Agora #${build_tree.civic_centre.specific_name}
+    Classes:
+    - Structure
+    - CivilCentre
+    - DropsiteWood
+    - DropsiteFood
   ProductionQueue:
-    _datatype: tokens
-    Entities: ${build_tree.civic_centre.production_queue}
+    Entities: 
+      _datatype: "tokens"
+      __text: ${civ.build_tree.civic_centre.production_queue.entities}
+    Technologies: 
+      _datatype: "tokens"
+      __text: ${civ.build_tree.civic_centre.production_queue.technologies}
   VisualActor: 
-    Actor: structures/${demonym}/civil_centre.xml
-  Promotion: 
-    RequiredXp: '10000'
-    Entity: structures/${code}_civil_centre_town
+    Actor: structures/${civ.demonym_plural}/civil_centre.xml

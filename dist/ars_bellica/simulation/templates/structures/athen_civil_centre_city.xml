@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent='structures/athen_civil_centre_town'>
+  <Identity>
+    <Classes datatype='tokens'>cityCentre</Classes>
+    <VisibleClasses datatype='tokens'>cityCentre</VisibleClasses>
+    <GenericName>City Centre</GenericName>
+  </Identity>
+  <Promotion disable='' />
+</Entity>

@@ -31,6 +31,7 @@
     "mkdirp": "^1.0.4",
     "nested-property": "^2.0.2",
     "node-fetch": "^2.6.0",
+    "pretty": "^2.0.0",
     "readdirp": "^3.4.0",
     "safe-eval": "^0.4.1",
     "wikijs": "^6.0.1",

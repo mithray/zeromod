@@ -87,8 +87,9 @@ agriculture:
   fauna_trickle: true
   fauna_consume_farms: true
 
-phase:
+phases:
   type: phase # <phase|age> whether to make phase researchable or to apply automatically when certain conditions - such as number of buildings - are met 
-  territory: contiguous # <contiguous|global> whether to apply the phase to contiguous territories or globally.
+  names: ['village','town','city']
+territory: contiguous # <contiguous|global> whether to apply the phase to contiguous territories or globally.
 
 seasons: true

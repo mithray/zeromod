@@ -1,0 +1,11 @@
+production_queue: 
+  entities:
+  - units/${civ.code}_support_female_citizen
+  - units/${civ.code}_infantry_${civ.combat.melee[0]}_b
+  - units/${civ.code}_infantry_${civ.combat.ranged[0]}_b
+  - units/${civ.code}_cavalry_${civ.combat.cavalry[0]}_b
+  technologies:
+  - unlock_spies #Espionage
+  - spy_counter #Counterintelligence
+#  - phase_town_${civ.code} #Town Phase
+#  - phase_city_${civ.code} #City Phase

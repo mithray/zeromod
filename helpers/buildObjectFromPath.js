@@ -87,7 +87,7 @@ async function buildObjectFromPath(inputPath){
       .replace(/.yml$/,'')
     var heirarchy = relPath.split('/') 
     heirarchy = heirarchy.map((el) => {
-      return changeCase.camelCase(el)
+      return changeCase.snakeCase(el)
     })
     heirarchy = heirarchy.join('.')
     const data = await readFile(fullPath)
