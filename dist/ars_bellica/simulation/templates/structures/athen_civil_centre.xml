@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent='template_structure_civic_civil_centre'>
+  <Auras datatype='tokens'>
+    structures/civil_centre_village_cs
+    structures/civil_centre_village_structure
+  </Auras>
   <Health>
     <SpawnEntityOnDeath>decay|rubble/rubble_athen_cc</SpawnEntityOnDeath>
   </Health>
@@ -22,8 +26,6 @@
       units/athen_cavalry_javelineer_b
     </Entities>
     <Technologies datatype='tokens'>
-      phase_town_athen
-      phase_city_athen
       unlock_spies
       spy_counter
     </Technologies>
@@ -33,6 +35,6 @@
   </VisualActor>
   <Promotion>
     <RequiredXp>10000</RequiredXp>
-    <Entity>structures/athenian/civil_centre_town</Entity>
+    <Entity>structures/athen_civil_centre_town</Entity>
   </Promotion>
 </Entity>

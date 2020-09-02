@@ -1,5 +1,6 @@
 Entity:
   _parent: template_structure_civic_civil_centre
+  Auras:
   Health:
     SpawnEntityOnDeath: decay|rubble/rubble_${civ.code}_cc
   Identity:

@@ -1,0 +1,14 @@
+{
+  "type": "range",
+  "radius": 200,
+  "affects": [
+    "Citizen Soldier"
+  ],
+  "modifications": [
+    {
+      "value": "Health/Max",
+      "multiply": 1.2
+    }
+  ],
+  "auraName": "City Centre"
+}

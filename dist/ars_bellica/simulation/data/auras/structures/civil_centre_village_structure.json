@@ -1,0 +1,15 @@
+{
+  "type": "range",
+  "radius": 200,
+  "affects": [
+    "Structure"
+  ],
+  "modifications": [
+    {
+      "value": "Capturable/GarrisonRegenRate",
+      "multiply": 1.5
+    }
+  ],
+  "auraName": "Village Centre",
+  "auraDescription": "Gives a health and capture defense bonus within it's range."
+}
