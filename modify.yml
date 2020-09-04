@@ -1,0 +1,57 @@
+- name: template_structure_economic.xml
+  merge:
+    Auras:
+      _datatype: tokens
+      __text: civil_phase 
+- name: template_structure_.*_corral.xml
+  merge:
+    Auras:
+      _datatype: tokens
+      __text: civil_phase 
+- name: template_structure_special.xml
+  merge:
+    Auras:
+      _datatype: tokens
+      __text: civil_phase 
+- name: template_structure_military.xml
+  merge:
+    Auras:
+      _datatype: tokens
+      __text: civil_phase 
+- name: template_structure_.*_farmstead.xml
+  merge:
+    Auras:
+      _datatype: tokens
+      __text: civil_phase 
+
+
+
+- class: Village Structure
+  merge:
+    BuildRestrictions:
+      Distance:
+        FromClass: VillageCentre
+        MinDistance: 200
+  remove:
+    Identity:
+      RequiredTechnology:
+
+- class: Town Structure
+  merge:
+    BuildRestrictions:
+      Distance:
+        FromClass: TownCentre
+        MinDistance: 220
+  remove:
+    Identity:
+      RequiredTechnology:
+
+- class: City Structure
+  merge:
+    BuildRestrictions:
+      Distance:
+        FromClass: CityCentre
+        MinDistance: 240
+  remove:
+    Identity:
+      RequiredTechnology:

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Attack>
+  <Ranged>
+    <Damage>
+      <Pierce>12</Pierce>
+    </Damage>
+    <MaxRange>76</MaxRange>
+    <MinRange>10</MinRange>
+    <ElevationBonus>15</ElevationBonus>
+  </Ranged>
+</Attack>
+<Cost>
+  <BuildTime>150</BuildTime>
+  <Resources>
+    <wood>100</wood>
+    <stone>100</stone>
+  </Resources>
+</Cost>
+<Footprint>
+  <Square width='10.0' depth='10.0' />
+  <Height>15</Height>
+</Footprint>
+<GarrisonHolder>
+  <Max>5</Max>
+</GarrisonHolder>
+<Health>
+  <Max>1000</Max>
+</Health>
+<Identity>
+  <GenericName>Stone Tower</GenericName>
+  <SelectionGroupName>template_structure_defensive_tower_stone</SelectionGroupName>
+  <Tooltip>Garrison Infantry for additional arrows. Needs the “Murder Holes” technology to protect its foot.</Tooltip>
+  <VisibleClasses datatype='tokens'>
+    <#text>Town StoneTower</#text>
+  </VisibleClasses>
+  <Icon>structures/defense_tower.png</Icon>
+  <RequiredTechnology>phase_town</RequiredTechnology>
+</Identity>
+<Loot>
+  <wood>20</wood>
+  <stone>20</stone>
+</Loot>
+<Obstruction>
+  <Static width='7.0' depth='7.0' />
+</Obstruction>
+<ProductionQueue>
+  <Technologies datatype='tokens'>
+    <#text>tower_watch
+      tower_crenellations
+      tower_range
+      tower_murderholes
+      tower_armour</#text>
+  </Technologies>
+</ProductionQueue>
+<TerritoryInfluence>
+  <Root>false</Root>
+  <Radius>32</Radius>
+  <Weight>30000</Weight>
+</TerritoryInfluence>
+<BuildRestrictions>
+  <Distance>
+    <FromClass>TownCentre</FromClass>
+    <MinDistance>220</MinDistance>
+  </Distance>
+</BuildRestrictions>

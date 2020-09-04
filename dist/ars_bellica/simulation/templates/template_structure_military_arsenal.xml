@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Auras datatype='tokens'>
+  <#text>structures/arsenal_repair</#text>
+</Auras>
+<Cost>
+  <BuildTime>180</BuildTime>
+  <Resources>
+    <wood>300</wood>
+  </Resources>
+</Cost>
+<Footprint>
+  <Square width='30.0' depth='30.0' />
+  <Height>12</Height>
+</Footprint>
+<GarrisonHolder>
+  <Max>2</Max>
+  <List datatype='tokens'>
+    <#text>Siege</#text>
+  </List>
+</GarrisonHolder>
+<Health>
+  <Max>2000</Max>
+  <SpawnEntityOnDeath>decay|rubble/rubble_stone_5x5</SpawnEntityOnDeath>
+</Health>
+<Identity>
+  <GenericName>Arsenal</GenericName>
+  <SelectionGroupName>template_structure_military_arsenal</SelectionGroupName>
+  <Tooltip>Train Champion Infantry Crossbowmen, construct Siege Engines, and research Siege Engine technologies.</Tooltip>
+  <VisibleClasses datatype='tokens'>
+    <#text>City Arsenal</#text>
+  </VisibleClasses>
+  <Icon>structures/siege_workshop.png</Icon>
+  <RequiredTechnology>phase_city</RequiredTechnology>
+</Identity>
+<Loot>
+  <wood>60</wood>
+</Loot>
+<Obstruction>
+  <Static width='29.0' depth='29.0' />
+</Obstruction>
+<ProductionQueue>
+  <BatchTimeModifier>0.7</BatchTimeModifier>
+  <Entities datatype='tokens'>
+    <#text>units/{civ}_champion_infantry_crossbowman
+      units/{civ}_siege_scorpio_packed
+      units/{civ}_siege_polybolos_packed
+      units/{civ}_siege_oxybeles_packed
+      units/{civ}_siege_lithobolos_packed
+      units/{civ}_siege_ballista_packed
+      units/{civ}_siege_ram
+      units/{civ}_siege_tower</#text>
+  </Entities>
+  <Technologies datatype='tokens'>
+    <#text>siege_attack
+      siege_armor
+      siege_cost_metal
+      siege_cost_wood
+      siege_bolt_accuracy</#text>
+  </Technologies>
+</ProductionQueue>
+<Sound>
+  <SoundGroups>
+    <constructed>interface/complete/building/complete_barracks.xml</constructed><select>interface/select/building/sel_barracks.xml</select>
+  </SoundGroups>
+</Sound>
+<TerritoryInfluence>
+  <Radius>38</Radius>
+</TerritoryInfluence>
+<VisualActor>
+  <FoundationActor>structures/fndn_8x8.xml</FoundationActor>
+</VisualActor>
+<BuildRestrictions>
+  <Distance>
+    <FromClass>CityCentre</FromClass>
+    <MinDistance>240</MinDistance>
+  </Distance>
+</BuildRestrictions>

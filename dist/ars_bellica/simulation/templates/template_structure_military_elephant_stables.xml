@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Cost>
+  <BuildTime>240</BuildTime>
+  <Resources>
+    <wood>200</wood>
+    <stone>200</stone>
+  </Resources>
+</Cost>
+<Footprint>
+  <Square width='31' depth='29' />
+  <Height>8</Height>
+</Footprint>
+<GarrisonHolder>
+  <Max>5</Max>
+  <List datatype='tokens'>
+    <#text>Elephant</#text>
+  </List>
+  <BuffHeal>1</BuffHeal>
+</GarrisonHolder>
+<Health>
+  <Max>3000</Max>
+  <SpawnEntityOnDeath>decay|rubble/rubble_stone_6x6</SpawnEntityOnDeath>
+</Health>
+<Identity>
+  <GenericName>Elephant Stable</GenericName>
+  <SelectionGroupName>template_structure_military_elephant_stables</SelectionGroupName>
+  <Tooltip>Train Elephants and research Elephant technologies.</Tooltip>
+  <VisibleClasses datatype='tokens'>
+    <#text>City ElephantStable</#text>
+  </VisibleClasses>
+  <RequiredTechnology>phase_city</RequiredTechnology>
+  <Icon>structures/stable_elephant.png</Icon>
+</Identity>
+<Loot>
+  <wood>40</wood>
+  <stone>40</stone>
+</Loot>
+<Obstruction>
+  <Static width='29' depth='27' />
+</Obstruction>
+<ProductionQueue>
+  <BatchTimeModifier>0.7</BatchTimeModifier>
+  <Entities datatype='tokens'>
+    <#text>units/{civ}_support_elephant
+      units/{civ}_elephant_archer_b
+      units/{civ}_champion_elephant</#text>
+  </Entities>
+</ProductionQueue>
+<Sound>
+  <SoundGroups>
+    <constructed>interface/complete/building/complete_elephant_stables.xml</constructed><select>interface/select/building/sel_elephant_stables.xml</select>
+  </SoundGroups>
+</Sound>
+<TerritoryInfluence>
+  <Radius>38</Radius>
+</TerritoryInfluence>
+<VisualActor>
+  <FoundationActor>structures/fndn_9x8.xml</FoundationActor>
+</VisualActor>
+<BuildRestrictions>
+  <Distance>
+    <FromClass>CityCentre</FromClass>
+    <MinDistance>240</MinDistance>
+  </Distance>
+</BuildRestrictions>

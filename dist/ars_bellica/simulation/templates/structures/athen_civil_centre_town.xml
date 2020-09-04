@@ -14,7 +14,7 @@
     structures/civil_centre_town_structure
   </Auras>
   <Promotion>
-    <RequiredXp>20000</RequiredXp>
+    <RequiredXp>36000</RequiredXp>
     <Entity>structures/athen_civil_centre_city</Entity>
   </Promotion>
 </Entity>

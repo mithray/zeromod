@@ -3,7 +3,8 @@ const YAML = require('yaml')
 const fs = require('fs')
 const readdirp = require('readdirp')
 const changeCase = require('change-case')
-const parse = require('../helpers/parse.js')
+//const parse = require('../helpers/parse.js')
+const buildObjectFromPath = require('../helpers/buildObjectFromPath.js')
 
 async function getResourceFileList(detectedMods,resourceTypePaths){
     const files = []
@@ -15,7 +16,9 @@ async function getResourceFileList(detectedMods,resourceTypePaths){
                 let obj = {}
                 obj.modname = modname
                 obj.fullPath = entry.fullPath
-                obj.modRelativePath=path.join(modname,resourceTypePaths[j],entry.basename)
+                let modRelativePath = obj.fullPath.substring(detectedMods[i].length + 1)
+                obj.modRelativePath=modRelativePath//path.join(modname,resourceTypePaths[j],entry.basename)
+                obj.classes = changeCase.snakeCase(modRelativePath).split('_')
                 files.push(obj)
             }
         }
@@ -24,8 +27,9 @@ async function getResourceFileList(detectedMods,resourceTypePaths){
     return files
 }
 var resourceTypePaths = [
-    'simulation/data/civs',
-    'simulation/data/auras'
+//    'simulation/data/civs',
+//    'simulation/data/auras',
+    'simulation/templates'
     /*
     'art/animation',
     'art/icons',
@@ -40,7 +44,7 @@ var resourceTypePaths = [
 ]
 const mods_paths = [
     //    process.env.zero_ad_mod_path_1,
-        process.env.zero_ad_mod_path_2
+        process.env.zero_ad_mod_path_1
 ]
 
 function detectMods(mods_paths){
@@ -61,33 +65,33 @@ function detectMods(mods_paths){
     return detectedMods
 
 }
-async function getConfigsFromMods(){
+async function getModData(){
     console.log('getting configuration files from target mods...')
 
     const detectedMods = detectMods(mods_paths)
     const files = getResourceFileList(detectedMods, resourceTypePaths)
 
-    const abbreviations = parse('./abbreviations.yml')
-    const categories = parse('./categories.yml')
+ //   const abbreviations = parse('./abbreviations.yml')
+   // const categories = parse('./categories.yml')
 
-    await files
+/*
     try {
       fs.accessSync(path.join(process.cwd(), 'config/civs/test'), fs.constants.R_OK | fs.constants.W_OK);
     } catch (err) {
       fs.mkdirSync(path.join(process.cwd(), 'config/civs/test'))
     }
-
+*/
+    resList = []
     await files.then(files=>{
-      resList = {}
-      files.forEach(file=>{
-        const data = parse(file.fullPath)
-         const yaml = YAML.stringify(data)
-          const name = path.basename(file.fullPath,'.json') + '.yml'
-          fs.writeFileSync(path.join(process.cwd(),'config/civs/test',name),yaml)
-    //      console.log(file)
+      files.forEach( async (file) => {
+        const data = await buildObjectFromPath(file.fullPath)
+        const obj = file 
+        const key = Object.keys(data)[0]
+        obj.data = data[key]
+        
+        resList.push(obj)
       })
     })
-
+  return resList
 }
-module.exports = getConfigsFromMods
-getConfigsFromMods()
+module.exports = getModData

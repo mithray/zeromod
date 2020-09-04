@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<BuildRestrictions>
+  <Category>House</Category>
+  <Distance>
+    <FromClass>VillageCentre</FromClass>
+    <MinDistance>200</MinDistance>
+  </Distance>
+</BuildRestrictions>
+<Capturable>
+  <CapturePoints>300</CapturePoints>
+  <GarrisonRegenRate>4</GarrisonRegenRate>
+</Capturable>
+<Cost>
+  <PopulationBonus>5</PopulationBonus>
+  <BuildTime>30</BuildTime>
+  <Resources>
+    <wood>75</wood>
+  </Resources>
+</Cost>
+<Footprint>
+  <Square width='13.0' depth='13.0' />
+  <Height>5</Height>
+</Footprint>
+<GarrisonHolder>
+  <Max>3</Max>
+  <BuffHeal>0</BuffHeal>
+  <EjectHealth>0.1</EjectHealth>
+  <EjectClassesOnDestroy datatype='tokens'>
+    <#text>Unit</#text>
+  </EjectClassesOnDestroy>
+  <List datatype='tokens'>
+    <#text>Support+!Elephant</#text>
+  </List>
+  <LoadingRange>1</LoadingRange>
+</GarrisonHolder>
+<Health>
+  <Max>800</Max>
+  <SpawnEntityOnDeath>decay|rubble/rubble_stone_2x2</SpawnEntityOnDeath>
+</Health>
+<Identity>
+  <GenericName>House</GenericName>
+  <SelectionGroupName>template_structure_civic_house</SelectionGroupName>
+  <VisibleClasses datatype='tokens'>
+    <#text>Village House</#text>
+  </VisibleClasses>
+  <Icon>structures/house.png</Icon>
+  <RequiredTechnology>phase_village</RequiredTechnology>
+</Identity>
+<Loot>
+  <wood>15</wood>
+</Loot>
+<Obstruction>
+  <Static width='11.0' depth='11.0' />
+</Obstruction>
+<ProductionQueue>
+  <Entities datatype='tokens'>
+    <#text>units/{civ}_support_female_citizen_house</#text>
+  </Entities>
+  <Technologies datatype='tokens'>
+    <#text>health_females_01
+      pop_house_01
+      pop_house_02
+      unlock_females_house</#text>
+  </Technologies>
+</ProductionQueue>
+<Sound>
+  <SoundGroups><select>interface/select/building/sel_house.xml</select>
+    <constructed>interface/complete/building/complete_house.xml</constructed>
+  </SoundGroups>
+</Sound>
+<StatusBars>
+  <BarWidth>6</BarWidth>
+  <BarHeight>0.6</BarHeight>
+  <HeightOffset>8</HeightOffset>
+</StatusBars>
+<TerritoryDecay>
+  <DecayRate>10</DecayRate>
+</TerritoryDecay>
+<TerritoryInfluence>
+  <Root>false</Root>
+  <Radius>16</Radius>
+  <Weight>65535</Weight>
+</TerritoryInfluence>
+<Vision>
+  <Range>20</Range>
+</Vision>
+<VisualActor>
+  <FoundationActor>structures/fndn_3x3.xml</FoundationActor>
+</VisualActor>
