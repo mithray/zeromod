@@ -1,20 +1,19 @@
 const fs = require('fs')
+const getModData = require("./helpers/getModData.js")
 var pretty = require('pretty')
 const path = require('path')
 const buildObjectFromPath = require('./helpers/buildObjectFromPath.js') 
 const interpolate = require('./helpers/interpolate.js')
 const changeCase = require('change-case')
-const snake = changeCase.snakeCase
-const pascal = changeCase.pascal
-const camel = changeCase.camel
 const merge = require('deepmerge')
+const X2JS = require('./x2js.js')
+const x2js = new X2JS()
+
 const truePhase = true
 var config = {}
 
 function buildUnitTree(structureTree){
   const buildTree = {}
-//console.log('structureTree')
-//console.log(structureTree)
   delete structureTree.classes
   const keys = Object.keys(structureTree)
   for (let i = 0 ; i < keys.length; i++){
@@ -51,9 +50,11 @@ function buildStructureTree(tree){
 
 async function createCivilCentres(){
   config = await buildObjectFromPath(path.join(process.cwd(),'./config'))
-  var templates = []
   
+  var templates = []
+  var modify = await buildObjectFromPath(path.join(__dirname,'./modify.yml')) 
   config.active_mod = config.ars_bellica
+  
   const target_civs = [
     "athen",
     "brit",
@@ -80,7 +81,7 @@ async function createCivilCentres(){
           var template = ccTemplate
           if( i+1 < phase_names.length){
             promotion = {
-              RequiredXp: Math.round(10000 * (i+1)),
+              RequiredXp: Math.round(12000 * (i*2+1)),
               Entity: `structures/${civ.code}_civil_centre_${phase_names[i+1]}`
             } 
           } else {
@@ -131,15 +132,12 @@ async function createCivilCentres(){
           templates.push(template)
         }
 
-  //console.log(templates)
       } else {
         var template = ccTemplate
         template.Entity.Identity.GenericName = "Civil Centre"
         templates.push(template)
       }
 
-      const X2JS = require('./x2js.js')
-      var x2js = new X2JS()
       for( let j = 0 ; j < templates.length; j++ ){
         var fileName = templates[j].fileName
         delete templates[j].fileName
@@ -160,12 +158,79 @@ async function createCivilCentres(){
     const fileName = key
 
     if(typeof aura === 'object'){
-console.log(aura)
-console.log(fileName)
       json = JSON.stringify(aura, null, 2)
       fs.writeFileSync(path.join(process.cwd(), 'dist/ars_bellica/simulation/data/auras/structures/',fileName+'.json'),json)
     }
   }
+  const baseMods = await getModData()
+
+  var filtered = []
+  modify = modify.modify
+  for ( let i = 0; i < modify.length; i++ ){
+    if(modify[i].name){
+      const tmp = baseMods.filter(nameMatcher)
+      filtered = filtered.concat(tmp)
+    }
+
+    if(modify[i].class){
+      const tmp = baseMods.filter(classMatcher)
+      filtered = filtered.concat(tmp)
+    }
+    if(modify[i].merge){
+      for (let j = 0; j< tmp.length; j++){
+        const entity = filtered[j].data.Entity
+        const merge_data = modify[i].merge
+        filtered[j].data.Entity = merge(entity, merge_data)
+      }
+    }
+  }
+  for( let m = 0 ; m < filtered.length; m++ ){
+    const data = filtered[m].data
+    var xml = pretty(x2js.json2xml_str( data ))
+    xml = '<?xml version="1.0" encoding="utf-8"?>\n'+xml
+//    console.log(xml)
+
+    const writePath = path.join(__dirname, 'dist/ars_bellica/', filtered[m].modRelativePath)
+    fs.writeFileSync(writePath,xml)
+  }
+
 }
 
 createCivilCentres()
+
+
+
+
+function nameFilter(el){
+        return el.modRelativePath.match(modify[i].name)
+}
+
+
+
+
+
+
+function filterEntities(el){
+        var classes = el.classes
+        var visibleClasses 
+        try{
+          visibleClasses = el.data.Entity.Identity.VisibleClasses['#text'].split(' ')
+        } catch {}
+        if (visibleClasses) {
+          classes = classes.concat(visibleClasses)
+        }
+        const requiredClasses = modify[i].class.split(' ')
+        for (let k=0; k<requiredClasses.length; k++){
+          classes = classes.map((el)=>{
+            return changeCase.pascalCase(el)
+          })
+          requiredClases= requiredClasses.map((el)=>{
+            return changeCase.pascalCase(el)
+          })
+          const hasClass = classes.includes(requiredClasses[k])
+          if(!hasClass){
+            return false
+          }
+        }
+        return true
+}

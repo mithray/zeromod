@@ -10,5 +10,6 @@
       "multiply": 1.2
     }
   ],
-  "auraName": "City Centre"
+  "auraName": "City Centre",
+  "auraDescription": "Gives a health bonus."
 }

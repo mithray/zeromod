@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Auras datatype='tokens'>
+  <#text>structures/temple_heal</#text>
+</Auras>
+<BuildRestrictions>
+  <Category>Temple</Category>
+  <Distance>
+    <FromClass>TownCentre</FromClass>
+    <MinDistance>220</MinDistance>
+  </Distance>
+</BuildRestrictions>
+<Cost>
+  <PopulationBonus>5</PopulationBonus>
+  <BuildTime>200</BuildTime>
+  <Resources>
+    <stone>300</stone>
+  </Resources>
+</Cost>
+<Footprint>
+  <Square width='19.0' depth='31.5' />
+  <Height>12</Height>
+</Footprint>
+<GarrisonHolder>
+  <Max>20</Max>
+  <EjectHealth>0.1</EjectHealth>
+  <EjectClassesOnDestroy datatype='tokens'>
+    <#text>Unit</#text>
+  </EjectClassesOnDestroy>
+  <List datatype='tokens'>
+    <#text>Support Infantry Cavalry</#text>
+  </List>
+  <BuffHeal>3</BuffHeal>
+  <LoadingRange>2</LoadingRange>
+</GarrisonHolder>
+<Health>
+  <Max>2000</Max>
+  <SpawnEntityOnDeath>decay|rubble/rubble_stone_4x6</SpawnEntityOnDeath>
+</Health>
+<Identity>
+  <GenericName>Temple</GenericName>
+  <SelectionGroupName>template_structure_civic_temple</SelectionGroupName>
+  <Tooltip>Train Healers and research healing technologies.</Tooltip>
+  <VisibleClasses datatype='tokens'>
+    <#text>Town Temple</#text>
+  </VisibleClasses>
+  <Icon>structures/temple.png</Icon>
+  <RequiredTechnology>phase_town</RequiredTechnology>
+</Identity>
+<Loot>
+  <stone>60</stone>
+</Loot>
+<Obstruction>
+  <Static width='17.5' depth='30.0' />
+</Obstruction>
+<ProductionQueue>
+  <BatchTimeModifier>0.8</BatchTimeModifier>
+  <Entities datatype='tokens'>
+    <#text>units/{civ}_support_healer_b</#text>
+  </Entities>
+  <Technologies datatype='tokens'>
+    <#text>heal_range
+      heal_range_2
+      heal_rate
+      heal_rate_2
+      heal_temple
+      health_regen_units</#text>
+  </Technologies>
+</ProductionQueue>
+<Sound>
+  <SoundGroups><select>interface/select/building/sel_temple.xml</select>
+    <constructed>interface/complete/building/complete_temple.xml</constructed>
+  </SoundGroups>
+</Sound>
+<TerritoryInfluence>
+  <Root>false</Root>
+  <Radius>40</Radius>
+  <Weight>30000</Weight>
+</TerritoryInfluence>
+<Vision>
+  <Range>40</Range>
+</Vision>
+<VisualActor>
+  <FoundationActor>structures/fndn_4x6.xml</FoundationActor>
+</VisualActor>

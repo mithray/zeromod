@@ -4,42 +4,57 @@ const readdirp = require('readdirp')
 const fs = require('fs')
 const YAML = require('yaml')
 const changeCase = require('change-case')
-
+      const X2JS = require('../x2js.js')
+      const x2js = new X2JS()
+var parser = require('fast-xml-parser');
+var options = {
+    attributeNamePrefix : "_",
+    attrNodeName: false, //default is 'false'
+    textNodeName : "__text",
+    ignoreAttributes : false,
+    ignoreNameSpace : false,
+    allowBooleanAttributes : false,
+    parseNodeValue : true,
+    parseAttributeValue : false,
+    trimValues: true,
+    cdataTagName: "__cdata", //default is 'false'
+    cdataPositionChar: "\\c",
+    parseTrueNumberOnly: false,
+    arrayMode: false, //"strict"
+};
+/*
 function newLine2Array (val, parent) {
     val = val.trim()
     if(val.includes('\n')){
-        val = val.split("\n")
-        val = val.map(s => s.trim());
+      val = val.split("\n")
+      val = val.map(s => s.trim());
     }
 
     return val
 }
+*/
 
 async function readFile(inputPath){
-    var obj
-    var data
-    try {
-        data = fs.readFileSync(inputPath,{encoding: 'utf-8'}).trim()
-    } catch (e){
-        console.log(e)
-    }
+  var obj
+  var data
 
-    if (inputPath.endsWith('.json')){
-           obj = JSON.parse(data)
-       try{
-        } catch(e) {
-            console.log(e)
-        }
-    }
-    if (inputPath.endsWith('.xml')){
-        let options = { tagValueProcessor:  newLine2Array}
-        let tObj = parser.getTraversalObj(data,options)
-        obj = parser.convertToJson(tObj,{})
-    }
-    if (inputPath.endsWith('.yml')){
-        obj = YAML.parse(data)
-    }
-
+  try {
+    data = fs.readFileSync(inputPath,{encoding: 'utf-8'}).trim()
+  } catch (e) {
+    console.log(e)
+  }
+  if (inputPath.endsWith('.json')){
+    obj = JSON.parse(data)
+  }
+  if (inputPath.endsWith('.xml')){
+    //obj = x2js.xml2json(data)
+//    options = {}
+    var tObj = parser.getTraversalObj(data,options);
+    var obj = parser.convertToJson(tObj,options);
+  }
+  if (inputPath.endsWith('.yml')){
+    obj = YAML.parse(data)
+  } 
   return obj
 }
 

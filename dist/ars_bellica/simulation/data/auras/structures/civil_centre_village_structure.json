@@ -11,5 +11,5 @@
     }
   ],
   "auraName": "Village Centre",
-  "auraDescription": "Gives a health and capture defense bonus within it's range."
+  "auraDescription": "Gives a capture defense bonus."
 }

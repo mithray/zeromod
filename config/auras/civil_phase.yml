@@ -5,7 +5,7 @@ affects:
 - CivilCentre
 modifications:
 - value: Promotion/RequiredXp
-  add: -2000
+  add: -1000
 - value: ResourceTrickle/Rates/wood
   add: -0.2
 auraName: Community

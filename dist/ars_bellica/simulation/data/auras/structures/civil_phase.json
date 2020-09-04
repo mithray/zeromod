@@ -7,7 +7,7 @@
   "modifications": [
     {
       "value": "Promotion/RequiredXp",
-      "add": -2000
+      "add": -1000
     },
     {
       "value": "ResourceTrickle/Rates/wood",
