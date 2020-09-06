@@ -11,6 +11,7 @@ const x2js = new X2JS()
 
 const truePhase = true
 var config = {}
+var modify = {}
 
 function buildUnitTree(structureTree){
   const buildTree = {}
@@ -50,16 +51,16 @@ function buildStructureTree(tree){
 
 async function createCivilCentres(){
   config = await buildObjectFromPath(path.join(process.cwd(),'./config'))
+  modify = config.modify 
   
   var templates = []
-  var modify = await buildObjectFromPath(path.join(__dirname,'./modify.yml')) 
   config.active_mod = config.ars_bellica
   
   const target_civs = [
     "athen",
     "brit",
     "gaul",
-"han"
+    "han"
   ]
   const civs = config.civilizations
   const keys = Object.keys(civs)

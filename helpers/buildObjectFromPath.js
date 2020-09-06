@@ -115,11 +115,10 @@ async function buildObjectFromPath(inputPath){
     nestedProperty.set(obj,heirarchy, data)
   }
 //  console.log(obj.var.lib.transmission_daemon.downloads['0ad'].binaries.data.mods.public.simulation.templates)
-console.log(obj.template_structure_economic)
+//console.log(obj.template_structure_economic)
   return obj
 }
 
 //buildObjectFromPath(path.join(process.cwd(),'config/'))
-buildObjectFromPath('/var/lib/transmission-daemon/downloads/0ad/binaries/data/mods/public/simulation/templates')
 
 module.exports = buildObjectFromPath
