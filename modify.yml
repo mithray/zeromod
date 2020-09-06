@@ -1,57 +1,129 @@
-- name: template_structure_economic.xml
-  merge:
+###############################################
+# True Phase - Structures Promote CivilCentre #
+###############################################
+
+- name: template_structure_economic
+  Entity:
     Auras:
-      _datatype: tokens
       __text: civil_phase 
-- name: template_structure_.*_corral.xml
-  merge:
+- name: template_structure_special
+  Entity:
     Auras:
-      _datatype: tokens
       __text: civil_phase 
-- name: template_structure_special.xml
-  merge:
+- name: template_structure_military
+  Entity:
     Auras:
-      _datatype: tokens
       __text: civil_phase 
-- name: template_structure_military.xml
-  merge:
+- classes: Farmstead
+  Entity:
     Auras:
-      _datatype: tokens
       __text: civil_phase 
-- name: template_structure_.*_farmstead.xml
-  merge:
+- classes: Corral
+  Entity:
     Auras:
-      _datatype: tokens
       __text: civil_phase 
 
+#########################################################################
+# True Phase - Structures Require Appropriate Sized, Nearby CivilCentre #
+#########################################################################
 
-
-- class: Village Structure
-  merge:
+- classes: Village Structure
+  Entity:
     BuildRestrictions:
       Distance:
         FromClass: VillageCentre
         MinDistance: 200
-  remove:
     Identity:
       RequiredTechnology:
 
-- class: Town Structure
-  merge:
+- classes: Town Structure
+  Entity:
     BuildRestrictions:
       Distance:
         FromClass: TownCentre
         MinDistance: 220
-  remove:
     Identity:
       RequiredTechnology:
 
-- class: City Structure
-  merge:
+- classes: City Structure
+  Entity:
     BuildRestrictions:
       Distance:
         FromClass: CityCentre
         MinDistance: 240
-  remove:
     Identity:
       RequiredTechnology:
+
+#######################################################
+# True Phase - Remove Phase Research                  #
+#######################################################
+
+- classes: CivilCentre
+  Entity:
+    ProductionQueue:
+      Technologies:
+        - unlock_spies
+        - spy_counter
+
+#######################################################
+# True Phase - Add TownCentre and CityCentre Entities #
+#######################################################
+
+- classes: CivilCentre
+  Entity:
+    Identity:
+      Classes: 
+      - VillageCentre
+      VisibleClasses: 
+      - VillageCentre
+      GenericName: Village Centre
+    Auras:
+    - structures/civil_centre_village_cs
+    - structures/civil_centre_village_structure
+    Promotion:
+      RequiredXp: 10000
+      Entity: structures/{civ.code}_civil_centre_town
+
+- name: structures/{civ.code}_civil_centre_town
+  Entity:
+    _parent: structures/{civ.code}_civil_centre
+    Identity:
+      Classes:
+      - TownCentre
+      VisibleClasses:
+      - TownCentre
+      GenericName: Town Centre
+    Auras:
+    - structures/civil_centre_town_cs
+    - structures/civil_centre_town_structure
+    TerritoryInfluence:
+      Radius:
+        _op: add
+        __text: 30
+      Weight:
+        _op: add
+        __text: 30
+    Promotion:
+      RequiredXp: 20000
+      Entity: structures/{civ.code}_civil_centre_city
+
+- name: structures/{civ.code}_civil_centre_city
+  Entity:
+    _parent: structures/{civ.code}_civil_centre_town
+    Identity:
+      Classes:
+      - CityCentre
+      VisibleClasses: 
+      - CityCentre
+      GenericName: City Centre
+    Auras:
+    - structures/civil_centre_city_cs
+    - structures/civil_centre_city_structure
+    TerritoryInfluence:
+      Radius:
+        _op: add
+        __text: 30
+      Weight:
+        _op: add
+        __text: 30
+    Promotion: ""
