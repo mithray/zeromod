@@ -3,6 +3,7 @@ const YAML = require('yaml')
 const fs = require('fs')
 const readdirp = require('readdirp')
 const changeCase = require('change-case')
+//const parse = require('../helpers/parse.js')
 const buildObjectFromPath = require('../helpers/buildObjectFromPath.js')
 
 async function getResourceFileList(detectedMods,resourceTypePaths){
@@ -26,7 +27,20 @@ async function getResourceFileList(detectedMods,resourceTypePaths){
     return files
 }
 var resourceTypePaths = [
+//    'simulation/data/civs',
+//    'simulation/data/auras',
     'simulation/templates'
+    /*
+    'art/animation',
+    'art/icons',
+    'art/materials',
+    'art/meshes',
+    'art/particles',
+    'art/skeletons',
+    'art/terrains',
+    'art/textures',
+    'art/variants'
+    */
 ]
 const mods_paths = [
     //    process.env.zero_ad_mod_path_1,

@@ -80,14 +80,18 @@ async function buildObjectFromPath(inputPath){
     }
     files = await readdirp.promise(inputPath)
   }
+//console.log(files)
 
   for (let i = 0; i < files.length; i++){
     const entry = files[i]
     //toRead.push(entry)
     const fullPath = entry.fullPath
-    if (!commonPrefix) commonPrefix = fullPath
-    else if(fullPath.length < commonPrefix.length){
-      commonPrefix = fullPath
+    const basename = entry.basename
+    const index = fullPath.indexOf(basename)
+    const dir = fullPath.substring(0,index)
+    if (!commonPrefix) commonPrefix = dir
+    else if(dir.length < commonPrefix.length){
+      commonPrefix = dir
     }
   }
 
@@ -100,6 +104,7 @@ async function buildObjectFromPath(inputPath){
       .replace(commonPrefix,'')
       .replace(/^\//,'') 
       .replace(/.yml$/,'')
+      .replace(/.xml$/,'')
     var heirarchy = relPath.split('/') 
     heirarchy = heirarchy.map((el) => {
       return changeCase.snakeCase(el)
@@ -109,7 +114,12 @@ async function buildObjectFromPath(inputPath){
 
     nestedProperty.set(obj,heirarchy, data)
   }
+//  console.log(obj.var.lib.transmission_daemon.downloads['0ad'].binaries.data.mods.public.simulation.templates)
+console.log(obj.template_structure_economic)
   return obj
 }
+
+//buildObjectFromPath(path.join(process.cwd(),'config/'))
+buildObjectFromPath('/var/lib/transmission-daemon/downloads/0ad/binaries/data/mods/public/simulation/templates')
 
 module.exports = buildObjectFromPath
