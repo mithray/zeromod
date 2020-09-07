@@ -58,12 +58,12 @@
 # True Phase - Remove Phase Research                  #
 #######################################################
 
-- classes: CivilCentre
+- name: template_structure_civic_civil_centre
   Entity:
     ProductionQueue:
-      Technologies:
-        - unlock_spies
-        - spy_counter
+      Technologies: 
+      - unlock_spies 
+      - spy_counter
 
 #######################################################
 # True Phase - Add TownCentre and CityCentre Entities #
@@ -82,11 +82,11 @@
     - structures/civil_centre_village_structure
     Promotion:
       RequiredXp: 10000
-      Entity: structures/{civ.code}_civil_centre_town
+      Entity: structures/${civ.code}_civil_centre_town
 
-- name: structures/{civ.code}_civil_centre_town
+- name: structures/${civ.code}_civil_centre_town
   Entity:
-    _parent: structures/{civ.code}_civil_centre
+    _parent: structures/${civ.code}_civil_centre
     Identity:
       Classes:
       - TownCentre
@@ -105,11 +105,11 @@
         __text: 30
     Promotion:
       RequiredXp: 20000
-      Entity: structures/{civ.code}_civil_centre_city
+      Entity: structures/${civ.code}_civil_centre_city
 
-- name: structures/{civ.code}_civil_centre_city
+- name: structures/${civ.code}_civil_centre_city
   Entity:
-    _parent: structures/{civ.code}_civil_centre_town
+    _parent: structures/${civ.code}_civil_centre_town
     Identity:
       Classes:
       - CityCentre
