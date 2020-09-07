@@ -64,7 +64,7 @@ function setNestedProperty( obj, names, data ) {
     }
 };
 
-async function buildObjectFromPath(inputPath){
+async function buildObjectFromPath(inputPath, options={}){
 
   const toRead = []
   var commonPrefix
@@ -96,6 +96,7 @@ async function buildObjectFromPath(inputPath){
   }
 
   const obj = {}
+  const arr = []
   commonPrefix = commonPrefix.replace(/(.*)\/.*/,'$1')
   for (let i = 0; i < files.length; i++ ){
     const entry = files[i]
@@ -105,17 +106,32 @@ async function buildObjectFromPath(inputPath){
       .replace(/^\//,'') 
       .replace(/.yml$/,'')
       .replace(/.xml$/,'')
+      .replace(/.json$/,'')
     var heirarchy = relPath.split('/') 
     heirarchy = heirarchy.map((el) => {
       return changeCase.snakeCase(el)
     })
+//console.log(heirarchy)
     heirarchy = heirarchy.join('.')
     const data = await readFile(fullPath)
+    try{
+      data.classes = changeCase.snakeCase(heirarchy).split('_').filter((el)=>{return el != 'template'})
+    } catch{}
 
-    nestedProperty.set(obj,heirarchy, data)
+    if (options.array){
+       data.path=heirarchy
+       arr.push(data) 
+    } else {
+      nestedProperty.set(obj,heirarchy, data)
+    }
   }
 //  console.log(obj.var.lib.transmission_daemon.downloads['0ad'].binaries.data.mods.public.simulation.templates)
 //console.log(obj.template_structure_economic)
+    if (options.array){
+      
+      return arr
+    }
+
   return obj
 }
 

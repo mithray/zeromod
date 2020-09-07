@@ -6,6 +6,7 @@ description: Presently just a test mod
 dependencies: ["0ad>=0.0.23"]
 civilizations: 
 - athen
+- mace
   # disable: all
 #  enable: ["hellenic"]   
     # athen: true
