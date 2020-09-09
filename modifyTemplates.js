@@ -1,4 +1,5 @@
 const fs = require('fs')
+var pretty = require('pretty')
 //const getModData = require("./helpers/getModData.js")
 //var pretty = require('pretty')
 const path = require('path')
@@ -7,31 +8,46 @@ const interpolate = require('./helpers/interpolate.js')
 const changeCase = require('change-case')
 const merge = require('deepmerge')
 const YAML = require('yaml')
-//const X2JS = require('./x2js.js')
-//const x2js = new X2JS()
+const X2JS = require('./x2js.js')
+const x2js = new X2JS()
+const c = require('ansi-colors')
 
 function getClasses(obj){
 
   var classes = []
 
   try{
-    classes.concat(modData[j].path.split('_'))     //.Entity.Identity.VisibleClasses['#text'].split(' ')
+    classes = classes.concat(obj.path.split('_'))     //.Entity.Identity.VisibleClasses['#text'].split(' ')
   } catch {}
   try{
-    classes.concat(modData[j].Entity.Identity.VisibleClasses.split(' '))     //.Entity.Identity.VisibleClasses['#text'].split(' ')
+    classes = classes.concat(obj.Entity.Identity.VisibleClasses.split(' '))     //.Entity.Identity.VisibleClasses['#text'].split(' ')
   } catch {}
   try{
-    classes.concat(modData[j].Entity.Identity.Classes.split(' '))     //.Entity.Identity.VisibleClasses['#text'].split(' ')
+    classes = classes.concat(obj.Entity.Identity.Classes.split(' '))     //.Entity.Identity.VisibleClasses['#text'].split(' ')
   } catch {}
 
   classes = classes.map((el)=>{
     return changeCase.pascalCase(el)
   })
 
+  if (classes.length > 0){
+  //  console.log(classes)
+  }
   return classes
 }
 
 function xArrIncludesYArr(x, y){
+/*
+console.log('includes test called')
+console.log('x')
+console.log(x)
+console.log('y')
+console.log(y)
+console.log('/includes test called')
+*/
+  if(x.length > 0){
+//console.log(x)
+  }
   var includes = true
   for (let i = 0; i < y.length; i++){
     includes = x.includes(y[i])
@@ -82,14 +98,16 @@ async function generateTemplates(){
 //console.log(modData)
   for ( let i = 0; i < modify.length; i++ ){
     if(modify[i].classes){
-      console.log('classes')
-      console.log(modify[i])
+  //    console.log('classes')
+    //  console.log(modify[i])
       var requiredClasses = modify[i].classes.split(' ')
       for(let j = 0 ; j < modData.length; j++){
         var entityClasses = getClasses(modData[j])
         var includes = xArrIncludesYArr(entityClasses, requiredClasses)
 
         if(includes){
+console.log('includes')
+          modData[j].modified = true
           modData[j] = merge(modify[i].Entity,modData[j])
         }
       }
@@ -99,10 +117,11 @@ async function generateTemplates(){
       var matched = false
       for(let j = 0 ; j < modData.length; j++){
         if(modData[j].path === modify[i].name){
-          modData[j].Entity= merge(modify[i].Entity, modData[j].Entity)
-        console.log('modified Entity:\n')
+          modData[j].Entity = merge(modify[i].Entity, modData[j].Entity)
+          modData[j].modified = true
+//        console.log('modified Entity:\n')
 //        console.log(YAML.parse(modData[j].Entity))
-        console.log(modData[j].Entity)
+//        console.log(modData[j].Entity)
           matched = true
         }
       } 
@@ -110,10 +129,36 @@ async function generateTemplates(){
       if (!matched) {
         const newEntity = modify[i].Entity
         modData.push(newEntity)
-        console.log('newEntity:\n'+JSON.stringify(newEntity,null,2))
+      //  console.log('newEntity:\n'+JSON.stringify(newEntity,null,2))
+
       }
     }
   }
+var xmlTemplates = []
+  for ( let i = 0 ; i< modData.length; i++ ){
+    if (modData[i].modified){
+      message=`_____________________________________________________________________________
+${modData[i].path}
+${modData[i].classes}
+_____________________________________________________________________________`
+      delete modData[i].classes
+      delete modData[i].path
+      delete modData[i].modified
+      var xml = pretty(x2js.json2xml_str( modData[i] ))
+      xml = '<?xml version="1.0" encoding="utf-8"?>\n'+xml
+      xmlTemplates.push(xml)
+/*
+      console.log(c.bold.green(message))
+      console.log(xml)
+*/
+    }
+  //  var xml = pretty(x2js.json2xml_str( modData[0] ))
+//    xml = '<?xml version="1.0" encoding="utf-8"?>\n'+xml
+//console.log('--------'+xml)
+   // fs.writeFileSync(path.join(process.cwd(),'dist/ars_bellica/simulation/templates/structures/',fileName +'.xml'),xml)
+
+  }
+//console.log(xmlTemplates.length)
 }
 
 generateTemplates()
