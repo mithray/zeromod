@@ -51,11 +51,11 @@
   <VisualActor>
     <FoundationActor>structures/fndn_3x3.xml</FoundationActor>
   </VisualActor>
-  <Auras datatype='tokens'>civil_phase</Auras>
+  <Auras datatype='tokens'>structures/civil_phase</Auras>
   <BuildRestrictions>
     <Distance>
-      <FromClass>CityCentre</FromClass>
-      <MinDistance>240</MinDistance>
+      <FromClass>VillageCentre+</FromClass>
+      <MaxDistance>200</MaxDistance>
     </Distance>
   </BuildRestrictions>
 </Entity>

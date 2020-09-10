@@ -9,8 +9,8 @@
   <BuildRestrictions>
     <Category>Farmstead</Category>
     <Distance>
-      <FromClass>CityCentre</FromClass>
-      <MinDistance>240</MinDistance>
+      <FromClass>VillageCentre+</FromClass>
+      <MaxDistance>200</MaxDistance>
     </Distance>
   </BuildRestrictions>
   <Capturable>
@@ -71,5 +71,5 @@
   <VisualActor>
     <FoundationActor>structures/fndn_5x5.xml</FoundationActor>
   </VisualActor>
-  <Auras datatype='tokens'>civil_phase</Auras>
+  <Auras datatype='tokens'>structures/civil_phase</Auras>
 </Entity>

@@ -1,40 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Entity parent='template_structure_civic_civil_centre'>
-  <Auras datatype='tokens'>
-    structures/civil_centre_village_cs
-    structures/civil_centre_village_structure
-  </Auras>
   <Health>
-    <SpawnEntityOnDeath>decay|rubble/rubble_athen_cc</SpawnEntityOnDeath>
+    <SpawnEntityOnDeath>decay|rubble/rubble_hele_cc</SpawnEntityOnDeath>
   </Health>
   <Identity>
     <Civ>athen</Civ>
     <SpecificName>Agora</SpecificName>
-    <Classes>
-      Structure
-      CivilCentre
-      DropsiteWood
-      DropsiteFood
-    </Classes>
+    <Classes>VillageCentre+ VillageCentre CivCentre Defensive CivilCentre Village</Classes>
+    <VisibleClasses>Village Centre</VisibleClasses>
     <GenericName>Village Centre</GenericName>
   </Identity>
   <ProductionQueue>
-    <Entities datatype='tokens'>
-      units/athen_support_female_citizen
-      units/athen_infantry_spearman_b
-      units/athen_infantry_slinger_b
-      units/athen_cavalry_javelineer_b
-    </Entities>
-    <Technologies datatype='tokens'>
-      unlock_spies
-      spy_counter
-    </Technologies>
+    <Entities datatype='tokens'>units/{civ}_infantry_spearman_b
+      units/{civ}_infantry_slinger_b
+      units/{civ}_cavalry_javelineer_b</Entities>
   </ProductionQueue>
   <VisualActor>
     <Actor>structures/athenians/civil_centre.xml</Actor>
   </VisualActor>
+  <Auras datatype='tokens'>structures/civil_centre_village_cs structures/civil_centre_village_structure</Auras>
   <Promotion>
-    <RequiredXp>12000</RequiredXp>
+    <RequiredXp>5000</RequiredXp>
     <Entity>structures/athen_civil_centre_town</Entity>
   </Promotion>
 </Entity>

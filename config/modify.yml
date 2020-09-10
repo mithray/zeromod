@@ -5,97 +5,114 @@
 - name: template_structure_economic
   Entity:
     Auras:
-      __text: civil_phase 
+      _datatype: tokens
+      __text: structures/civil_phase 
+- name: template_structure_defensive
+  Entity:
+    Auras:
+      _datatype: tokens
+      __text: structures/civil_phase 
+- name: template_structure_civic
+  Entity:
+    Auras:
+      _datatype: tokens
+      __text: structures/civil_phase 
 - name: template_structure_special
   Entity:
     Auras:
-      __text: civil_phase 
+      _datatype: tokens
+      __text: structures/civil_phase 
 - name: template_structure_military
   Entity:
     Auras:
-      __text: civil_phase 
-- classes: Farmstead
+      _datatype: tokens
+      __text: structures/civil_phase 
+- name: template_structure_economic_farmstead
   Entity:
     Auras:
-      __text: civil_phase 
-- classes: Corral
+      _datatype: tokens
+      __text: structures/civil_phase 
+- name: template_structure_resource_corral
   Entity:
     Auras:
-      __text: civil_phase 
+      _datatype: tokens
+      __text: structures/civil_phase 
 
 #########################################################################
 # True Phase - Structures Require Appropriate Sized, Nearby CivilCentre #
 #########################################################################
+- name: template_structure_defensive_tower
+  Entity:
+    BuildRestrictions:
+      Distance:
+        FromClass: VillageCentre+
+        MinDistance: 1
+        MaxDistance: 200
 
 - classes: Village Structure
   Entity:
     BuildRestrictions:
       Distance:
-        FromClass: VillageCentre
-        MinDistance: 200
-    Identity:
-      RequiredTechnology:
+        FromClass: VillageCentre+
+        MaxDistance: 200
+#    Identity:
+#      RequiredTechnology: ""
 
 - classes: Town Structure
   Entity:
     BuildRestrictions:
       Distance:
-        FromClass: TownCentre
-        MinDistance: 220
-    Identity:
-      RequiredTechnology:
+        FromClass: TownCentre+
+        MaxDistance: 220
+#    Identity:
+#      RequiredTechnology: ""
 
 - classes: City Structure
   Entity:
     BuildRestrictions:
       Distance:
-        FromClass: CityCentre
-        MinDistance: 240
-    Identity:
-      RequiredTechnology:
+        FromClass: CityCentre+
+        MaxDistance: 240
+#    Identity:
+#      RequiredTechnology: ""
 
 #######################################################
 # True Phase - Remove Phase Research                  #
 #######################################################
 
-- name: template_structure_civic_civil_centre
-  Entity:
-    ProductionQueue:
-      Technologies: 
-      - unlock_spies 
-      - spy_counter
+#- name: template_structure_civic_civil_centre
+#  Entity:
+#    ProductionQueue:
+#      Technologies: 
+#        __text: unlock_spies spy_counter
 
 #######################################################
 # True Phase - Add TownCentre and CityCentre Entities #
 #######################################################
 
-- classes: CivilCentre
+- name: structures/${civ.code}_civil_centre
   Entity:
     Identity:
-      Classes: 
-      - VillageCentre
-      VisibleClasses: 
-      - VillageCentre
+      Classes: VillageCentre+ VillageCentre CivCentre Defensive CivilCentre Village
+      VisibleClasses: Village Centre
       GenericName: Village Centre
     Auras:
-    - structures/civil_centre_village_cs
-    - structures/civil_centre_village_structure
+      _datatype: tokens
+      __text: structures/civil_centre_village_cs structures/civil_centre_village_structure
     Promotion:
-      RequiredXp: 10000
+      RequiredXp: 5000
       Entity: structures/${civ.code}_civil_centre_town
 
 - name: structures/${civ.code}_civil_centre_town
   Entity:
     _parent: structures/${civ.code}_civil_centre
     Identity:
-      Classes:
-      - TownCentre
-      VisibleClasses:
-      - TownCentre
+      Classes: VillageCentre+ TownCentre+ TownCentre CivCentre Defensive CivilCentre Town
+      VisibleClasses: Town Centre
       GenericName: Town Centre
     Auras:
-    - structures/civil_centre_town_cs
-    - structures/civil_centre_town_structure
+      _datatype: tokens
+      __text: structures/civil_centre_town_cs structures/civil_centre_town_structure
     TerritoryInfluence:
       Radius:
         _op: add
@@ -104,21 +121,19 @@
         _op: add
         __text: 30
     Promotion:
-      RequiredXp: 20000
+      RequiredXp: 10000
       Entity: structures/${civ.code}_civil_centre_city
 
 - name: structures/${civ.code}_civil_centre_city
   Entity:
     _parent: structures/${civ.code}_civil_centre_town
     Identity:
-      Classes:
-      - CityCentre
-      VisibleClasses: 
-      - CityCentre
+      Classes: VillageCentre+ TownCentre+ CityCentre+ CityCentre CivCentre Defensive CivilCentre City
+      VisibleClasses: City Centre
       GenericName: City Centre
     Auras:
-    - structures/civil_centre_city_cs
-    - structures/civil_centre_city_structure
+      _datatype: tokens
+      __text: structures/civil_centre_city_cs structures/civil_centre_city_structure
     TerritoryInfluence:
       Radius:
         _op: add
@@ -126,4 +141,5 @@
       Weight:
         _op: add
         __text: 30
-    Promotion: ""
+    Promotion:
+      _disable: ""

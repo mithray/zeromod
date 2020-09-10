@@ -113,13 +113,15 @@ async function buildObjectFromPath(inputPath, options={}){
     })
 //console.log(heirarchy)
     heirarchy = heirarchy.join('.')
+//console.log(fullPath)
     const data = await readFile(fullPath)
     try{
       data.classes = changeCase.snakeCase(heirarchy).split('_').filter((el)=>{return el != 'template'})
     } catch{}
 
     if (options.array){
-       data.path=heirarchy
+//console.log(data)
+       data.path=heirarchy.replace(/\./g,'\/')
        arr.push(data) 
     } else {
       nestedProperty.set(obj,heirarchy, data)

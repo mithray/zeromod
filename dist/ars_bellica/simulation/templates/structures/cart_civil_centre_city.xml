@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent='structures/cart_civil_centre_town'>
+  <Identity>
+    <Classes>VillageCentre+ TownCentre+ CityCentre+ CityCentre CivCentre Defensive CivilCentre City</Classes>
+    <VisibleClasses>City Centre</VisibleClasses>
+    <GenericName>City Centre</GenericName>
+  </Identity>
+  <Auras datatype='tokens'>structures/civil_centre_city_cs structures/civil_centre_city_structure</Auras>
+  <TerritoryInfluence>
+    <Radius op='add'>30</Radius>
+    <Weight op='add'>30</Weight>
+  </TerritoryInfluence>
+  <Promotion disable='' />
+</Entity>

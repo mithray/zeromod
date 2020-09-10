@@ -20,11 +20,5 @@
       </Damage>
     </Foundation>
   </Resistance>
-  <Auras datatype='tokens'>civil_phase</Auras>
-  <BuildRestrictions>
-    <Distance>
-      <FromClass>CityCentre</FromClass>
-      <MinDistance>240</MinDistance>
-    </Distance>
-  </BuildRestrictions>
+  <Auras datatype='tokens'>structures/civil_phase</Auras>
 </Entity>

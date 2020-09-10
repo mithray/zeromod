@@ -6,7 +6,17 @@ description: Presently just a test mod
 dependencies: ["0ad>=0.0.23"]
 civilizations: 
 - athen
+- brit
+- cart
+- iber
+- kush
 - mace
+- maur
+- pers
+- ptol
+- rome
+- sele
+- spart
   # disable: all
 #  enable: ["hellenic"]   
     # athen: true

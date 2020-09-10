@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent='template_structure_civic_civil_centre'>
+  <Health>
+    <SpawnEntityOnDeath>decay|rubble/rubble_pers_cc</SpawnEntityOnDeath>
+  </Health>
+  <Identity>
+    <Civ>pers</Civ>
+    <GenericName>Village Centre</GenericName>
+    <SpecificName>Xšaçapāvan</SpecificName>
+    <Classes>VillageCentre+ VillageCentre CivCentre Defensive CivilCentre Village</Classes>
+    <VisibleClasses>Village Centre</VisibleClasses>
+  </Identity>
+  <ProductionQueue>
+    <Entities datatype='tokens'>units/{civ}_infantry_spearman_b
+      units/{civ}_infantry_archer_b
+      units/{civ}_cavalry_javelineer_b</Entities>
+    <Technologies datatype='tokens'>persians/persian_architecture</Technologies>
+  </ProductionQueue>
+  <VisualActor>
+    <Actor>structures/persians/civil_centre.xml</Actor>
+  </VisualActor>
+  <Auras datatype='tokens'>structures/civil_centre_village_cs structures/civil_centre_village_structure</Auras>
+  <Promotion>
+    <RequiredXp>5000</RequiredXp>
+    <Entity>structures/pers_civil_centre_town</Entity>
+  </Promotion>
+</Entity>

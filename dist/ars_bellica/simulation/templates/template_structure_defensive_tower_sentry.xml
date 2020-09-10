@@ -1,86 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Attack>
-  <Ranged>
-    <Damage>
-      <Pierce>9</Pierce>
-    </Damage>
-    <MaxRange>70</MaxRange>
-    <MinRange>10</MinRange>
-    <ElevationBonus>9</ElevationBonus>
-  </Ranged>
-</Attack>
-<Cost>
-  <BuildTime>40</BuildTime>
-  <Resources>
-    <wood>100</wood>
-  </Resources>
-</Cost>
-<Footprint>
-  <Square width='9.5' depth='8.5' />
-  <Height>9</Height>
-</Footprint>
-<GarrisonHolder>
-  <Max>3</Max>
-</GarrisonHolder>
-<Health>
-  <Max>500</Max>
-</Health>
-<Identity>
-  <GenericName>Sentry Tower</GenericName>
-  <SelectionGroupName>template_structure_defensive_tower_sentry</SelectionGroupName>
-  <Tooltip>Garrison Infantry for additional arrows. Needs the “Murder Holes” technology to protect its foot.</Tooltip>
-  <VisibleClasses datatype='tokens'>
-    <#text>Village SentryTower</#text>
-  </VisibleClasses>
-  <Icon>structures/sentry_tower.png</Icon>
-  <RequiredTechnology>phase_village</RequiredTechnology>
-</Identity>
-<Loot>
-  <wood>20</wood>
-</Loot>
-<Obstruction>
-  <Static width='9.0' depth='7.5' />
-</Obstruction>
-<ProductionQueue>
-  <Technologies datatype='tokens'>
-    <#text>tower_watch</#text>
-  </Technologies>
-</ProductionQueue>
-<Resistance>
-  <Entity>
-    <Damage>
-      <Hack op='add'>
-        <#text>-5</#text>
-      </Hack>
-      <Pierce op='add'>
-        <#text>-5</#text>
-      </Pierce>
-      <Crush op='add'>
-        <#text>-2</#text>
-      </Crush>
-    </Damage>
-  </Entity>
-</Resistance>
-<TerritoryInfluence>
-  <Root>false</Root>
-  <Radius>16</Radius>
-  <Weight>30000</Weight>
-</TerritoryInfluence>
-<Upgrade>
-  <Tower>
-    <Entity>structures/{civ}_defense_tower</Entity>
-    <Tooltip>Reinforce with stone and upgrade to a defense tower.</Tooltip>
-    <RequiredTechnology>phase_town</RequiredTechnology>
-    <Cost>
-      <wood>50</wood>
-      <stone>100</stone>
-    </Cost>
-    <Variant>upgrading</Variant><Time>100</Time>
-  </Tower>
-</Upgrade>
-<BuildRestrictions>
-  <Distance>
-    <FromClass>VillageCentre</FromClass>
-    <MinDistance>200</MinDistance>
-  </Distance>
-</BuildRestrictions>
+<Entity parent='template_structure_defensive_tower'>
+  <Attack>
+    <Ranged>
+      <Damage>
+        <Pierce>9</Pierce>
+      </Damage>
+      <MaxRange>70</MaxRange>
+      <MinRange>10</MinRange>
+      <ElevationBonus>9</ElevationBonus>
+    </Ranged>
+  </Attack>
+  <Cost>
+    <BuildTime>40</BuildTime>
+    <Resources>
+      <wood>100</wood>
+    </Resources>
+  </Cost>
+  <Footprint>
+    <Square width='9.5' depth='8.5' />
+    <Height>9</Height>
+  </Footprint>
+  <GarrisonHolder>
+    <Max>3</Max>
+  </GarrisonHolder>
+  <Health>
+    <Max>500</Max>
+  </Health>
+  <Identity>
+    <GenericName>Sentry Tower</GenericName>
+    <SelectionGroupName>template_structure_defensive_tower_sentry</SelectionGroupName>
+    <Tooltip>Garrison Infantry for additional arrows. Needs the “Murder Holes” technology to protect its foot.</Tooltip>
+    <VisibleClasses datatype='tokens'>Village SentryTower</VisibleClasses>
+    <Icon>structures/sentry_tower.png</Icon>
+    <RequiredTechnology>phase_village</RequiredTechnology>
+  </Identity>
+  <Loot>
+    <wood>20</wood>
+  </Loot>
+  <Obstruction>
+    <Static width='9.0' depth='7.5' />
+  </Obstruction>
+  <ProductionQueue>
+    <Technologies datatype='tokens'>tower_watch</Technologies>
+  </ProductionQueue>
+  <Resistance>
+    <Entity>
+      <Damage>
+        <Hack op='add'>-5</Hack>
+        <Pierce op='add'>-5</Pierce>
+        <Crush op='add'>-2</Crush>
+      </Damage>
+    </Entity>
+  </Resistance>
+  <TerritoryInfluence>
+    <Root>false</Root>
+    <Radius>16</Radius>
+    <Weight>30000</Weight>
+  </TerritoryInfluence>
+  <Upgrade>
+    <Tower>
+      <Entity>structures/{civ}_defense_tower</Entity>
+      <Tooltip>Reinforce with stone and upgrade to a defense tower.</Tooltip>
+      <RequiredTechnology>phase_town</RequiredTechnology>
+      <Cost>
+        <wood>50</wood>
+        <stone>100</stone>
+      </Cost>
+      <Variant>upgrading</Variant><Time>100</Time>
+    </Tower>
+  </Upgrade>
+  <BuildRestrictions>
+    <Distance>
+      <FromClass>VillageCentre+</FromClass>
+      <MaxDistance>200</MaxDistance>
+    </Distance>
+  </BuildRestrictions>
+</Entity>

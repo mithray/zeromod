@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Entity parent='template_structure_civic_civil_centre'>
+  <Footprint>
+    <Square width='32.0' depth='32' />
+    <Height>10</Height>
+  </Footprint>
+  <Identity>
+    <Civ>kush</Civ>
+    <SpecificName>Pr-nsw</SpecificName>
+    <Classes>VillageCentre+ VillageCentre CivCentre Defensive CivilCentre Village</Classes>
+    <VisibleClasses>Village Centre</VisibleClasses>
+    <GenericName>Village Centre</GenericName>
+  </Identity>
+  <Obstruction>
+    <Static width='31.0' depth='31' />
+  </Obstruction>
+  <ProductionQueue>
+    <Entities datatype='tokens'>units/{civ}_infantry_spearman_b
+      units/{civ}_infantry_archer_b
+      units/{civ}_cavalry_javelineer_b</Entities>
+    <Technologies datatype='tokens'>kushites/monumental_architecture</Technologies>
+  </ProductionQueue>
+  <VisualActor>
+    <Actor>structures/kushites/civic_centre_kush.xml</Actor>
+  </VisualActor>
+  <Auras datatype='tokens'>structures/civil_centre_village_cs structures/civil_centre_village_structure</Auras>
+  <Promotion>
+    <RequiredXp>5000</RequiredXp>
+    <Entity>structures/kush_civil_centre_town</Entity>
+  </Promotion>
+</Entity>

@@ -3,8 +3,8 @@
   <BuildRestrictions>
     <Category>Special</Category>
     <Distance>
-      <FromClass>CityCentre</FromClass>
-      <MinDistance>240</MinDistance>
+      <FromClass>CityCentre+</FromClass>
+      <MaxDistance>240</MaxDistance>
     </Distance>
   </BuildRestrictions>
   <Footprint>
@@ -60,5 +60,5 @@
   <VisualActor>
     <FoundationActor>structures/fndn_5x5.xml</FoundationActor>
   </VisualActor>
-  <Auras datatype='tokens'>civil_phase</Auras>
+  <Auras datatype='tokens'>structures/civil_phase</Auras>
 </Entity>

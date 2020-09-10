@@ -2,10 +2,6 @@
 <Entity parent='template_structure'>
   <BuildRestrictions>
     <Category>Military</Category>
-    <Distance>
-      <FromClass>CityCentre</FromClass>
-      <MinDistance>240</MinDistance>
-    </Distance>
   </BuildRestrictions>
   <GarrisonHolder>
     <EjectHealth>0.1</EjectHealth>
@@ -39,5 +35,5 @@
     <Radius>50</Radius>
     <Weight>40000</Weight>
   </TerritoryInfluence>
-  <Auras datatype='tokens'>civil_phase</Auras>
+  <Auras datatype='tokens'>structures/civil_phase</Auras>
 </Entity>
